@@ -2035,6 +2035,21 @@ focus_tree = {
 
         completion_reward = {
             unlock_decision_tooltip = USF_artillery
+			set_technology = {
+				USF_light_artillery = 1
+                USF_medium_artillery  = 1
+                USF_heavy_artillery  = 1
+			}
+            add_equipment_to_stockpile = {
+                type = artillery_equipment_1
+                amount = 1
+                producer = USF
+            }
+            add_equipment_to_stockpile = {
+                type = artillery_equipment_3
+                amount = 1
+                producer = USF
+            }
         }
     }
 
@@ -2224,6 +2239,31 @@ focus_tree = {
                 category = cat_grand_battle_plan
                 category = cat_mass_assault
 			}
+        }
+    }
+
+    #投资海军
+    focus = {
+        id = USF_invest_navy
+        icon = GFX_focus_generic_strike_at_democracy2
+ 
+        ai_will_do = {
+            base = 10
+            modifier = {
+                #条件
+                add = 0
+            }
+        }
+ 
+        cost = 10
+ 
+        x = -8
+        y = 2
+ 
+        relative_position_id = USF_titan_awakes
+
+        completion_reward = {
+            add_ideas = USF_millitary_investment
         }
     }
 
