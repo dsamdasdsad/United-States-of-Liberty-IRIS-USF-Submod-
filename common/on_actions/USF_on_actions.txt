@@ -1,0 +1,11 @@
+on_actions = {
+    on_startup = {
+		effect = {
+			USF = {
+				set_variable = {USF_SUN_members_mixed_language_value = 0}
+				set_variable = {USF_SUN_members_mixed_politics_value = 0}
+				set_variable = {USF_SUN_members_mixed_history_value = 0}
+			}
+		}
+	}
+}

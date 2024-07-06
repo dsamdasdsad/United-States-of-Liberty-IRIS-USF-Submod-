@@ -1,0 +1,842 @@
+ideas = {
+	industrial_concern = {
+		USR_kuromorimine_industrial_department = {
+			allowed = { tag = USR }
+			cost = 150
+            available = { has_completed_focus = USR_kuromorimine_industrial_department }
+			research_bonus = {
+				industry = 0.15
+			}
+            traits = { USR_kuromorimine_industrial_department }
+			ai_will_do = {
+				base = 10
+			}
+		}
+    }
+	country = {
+		#谁是共和的主人？
+		USR_who_owns_the_republic = {
+			picture = USR_who_owns_the_republic
+			allowed = { tag = USR }
+			on_remove = { }
+			allowed_civil_war = { always = yes }
+			modifier = {
+				neutrality_drift = -0.03
+				democratic_drift = -0.03
+				political_power_gain = -0.2
+				stability_factor = -0.1
+			}
+		}
+		#克莱门条约
+		USR_the_clemen_treaty = {
+			picture = planning_speed
+			allowed = { tag = USR }
+			allowed_civil_war = { always = yes }
+			on_remove = {
+				if = { 
+					limit = { USR_the_clemen_treaty_exists = NO }
+					if = {
+						limit = { NOT = { is_in_array = { USR.Stamp_ID_list = 1 } } }
+						add_to_array = { USR.Stamp_ID_list = 1 }
+						USR_add_stamp_utility = yes
+					}
+				}
+			}
+			modifier = {
+				production_speed_arms_factory_factor = -0.2
+				consumer_goods_factor = 0.5
+				army_advisor_cost_factor = 1
+				air_advisor_cost_factor = 1
+				navy_advisor_cost_factor = 1
+				theorist_cost_factor = 1
+				high_command_cost_factor = 1
+				experience_gain_army_factor = -0.5
+				experience_gain_air_factor = -0.5
+				experience_gain_navy_factor = -0.5
+				custom_modifier_tooltip = USR_tooltip2
+			}
+		}
+		#重新修订的克莱门条约
+		USR_the_clemen_treaty_1 = {
+			picture = planning_speed
+			allowed = { tag = USR }
+			on_remove = { 
+				if = { 
+					limit = { USR_the_clemen_treaty_exists = NO }
+					if = {
+						limit = { NOT = { is_in_array = { USR.Stamp_ID_list = 1 } } }
+						add_to_array = { USR.Stamp_ID_list = 1 }
+						USR_add_stamp_utility = yes
+					}
+				}
+			}
+			allowed_civil_war = { always = yes }
+			modifier = {
+				production_speed_arms_factory_factor = -0.15
+				consumer_goods_factor = 0.35
+				army_advisor_cost_factor = 0.75
+				air_advisor_cost_factor = 0.75
+				navy_advisor_cost_factor = 0.75
+				theorist_cost_factor = 0.75
+				high_command_cost_factor = 0.75
+				experience_gain_army_factor = -0.3
+				experience_gain_air_factor = -0.3
+				experience_gain_navy_factor = -0.3
+				custom_modifier_tooltip = USR_tooltip2
+			}
+		}
+		#重新修订的克莱门条约
+		USR_the_clemen_treaty_2 = {
+			picture = planning_speed
+			allowed = { tag = USR }
+			on_remove = { 
+				if = { 
+					limit = { USR_the_clemen_treaty_exists = NO }
+					if = {
+						limit = { NOT = { is_in_array = { USR.Stamp_ID_list = 1 } } }
+						add_to_array = { USR.Stamp_ID_list = 1 }
+						USR_add_stamp_utility = yes
+					}
+				}
+			}
+			allowed_civil_war = { always = yes }
+			modifier = {
+				production_speed_arms_factory_factor = -0.1
+				consumer_goods_factor = 0.2
+				army_advisor_cost_factor = 0.5
+				air_advisor_cost_factor = 0.5
+				navy_advisor_cost_factor = 0.5
+				theorist_cost_factor = 0.5
+				high_command_cost_factor = 0.5
+				experience_gain_army_factor = -0.12
+				experience_gain_air_factor = -0.12
+				experience_gain_navy_factor = -0.12
+				custom_modifier_tooltip = USR_tooltip2
+			}
+		}
+		#重新修订的克莱门条约
+		USR_the_clemen_treaty_3 = {
+			picture = planning_speed
+			allowed = { tag = USR }
+			on_remove = { 
+				if = {
+					limit = { NOT = { is_in_array = { USR.Stamp_ID_list = 1 } } }
+					add_to_array = { USR.Stamp_ID_list = 1 }
+					USR_add_stamp_utility = yes
+				}
+			}
+			allowed_civil_war = { always = yes }
+			modifier = {
+				production_speed_arms_factory_factor = -0.05
+				consumer_goods_factor = 0.05
+				army_advisor_cost_factor = 0.25
+				air_advisor_cost_factor = 0.25
+				navy_advisor_cost_factor = 0.25
+				theorist_cost_factor = 0.25
+				high_command_cost_factor = 0.25
+				custom_modifier_tooltip = USR_tooltip2
+			}
+		}
+		#共和议会
+		USR_the_republic_congress = {
+			picture = planning_speed
+			allowed = { tag = USR }
+			on_remove = {
+				if= {
+					 limit = { USR = { has_government = fascism} } 
+				news_event = { id = usr_news.1 } 
+				}
+			}
+			allowed_civil_war = { always = yes }
+			modifier = {
+				political_advisor_cost_factor = 1
+				political_power_factor = -0.2
+				justify_war_goal_time = 2
+			}
+		}
+		#大时代编辑部
+		USR_big_time_editorial = {
+			picture = planning_speed
+			allowed = { tag = USR }
+			on_remove = { }
+			allowed_civil_war = { always = yes }
+			modifier = {
+				drift_defence_factor = -0.35
+				political_power_factor = 0.1
+				custom_modifier_tooltip = USR_tooltip1
+			}
+		}
+		#乌斯拉尔的暗中资助
+		USR_aid_UNG_MSA = {
+			picture = planning_speed
+			allowed = { OR = { tag = UNG tag = MSA } }
+			on_remove = { }
+			allowed_civil_war = { always = yes }
+			modifier = {
+				army_core_defence_factor = 0.1
+			}
+		}
+		#严重缺乏军官部门
+		USR_lacking_millitary_officer = {
+			picture = planning_speed
+			allowed = { OR = { tag = UNG tag = MSA } }
+			on_remove = { }
+			allowed_civil_war = { always = yes }
+			modifier = {
+				army_attack_factor = -0.1
+				army_defence_factor = -0.1
+				max_command_power = -50
+			}
+		}
+		#重燃工业热情
+		USR_rekindling_indstrial_passion = {
+			picture = planning_speed
+			allowed = { tag = USR }
+			on_remove = { }
+			allowed_civil_war = { always = yes }
+			modifier = {
+				production_factory_efficiency_gain_factor = 0.2
+				production_factory_max_efficiency_factor = 0.2
+				production_factory_start_efficiency_factor = 0.2
+				conscription_factor = -0.1
+			}
+		}
+		#建设未来
+		USR_build_future = {
+			picture = planning_speed
+			allowed = { tag = USR }
+			on_remove = { }
+			allowed_civil_war = { always = yes }
+			modifier = {
+				production_speed_buildings_factor = 0.15
+				conscription_factor = -0.15
+			}
+		}
+		#明娜的空军训练方案
+		USR_minna_training_strategy = {
+			picture = planning_speed
+			allowed = { tag = USR }
+			on_remove = { }
+			allowed_civil_war = { always = yes }
+			modifier = {
+				air_ace_bonuses_factor = 0.15
+				experience_gain_air_factor = 0.15
+				consumer_goods_factor = 0.05
+			}
+			equipment_bonus = {
+				fighter = {
+					instant = yes
+					air_superiority = 0.1
+					air_agility = 0.1
+					air_attack = 0.1
+				}
+			}
+		}
+		#格特鲁德的空军训练方案
+		USR_gertrude_training_strategy = {
+			picture = planning_speed
+			allowed = { tag = USR }
+			on_remove = { }
+			allowed_civil_war = { always = yes }
+			modifier = {
+				air_ace_bonuses_factor = 0.15
+				experience_gain_air_factor = 0.15
+				consumer_goods_factor = 0.05
+			}
+			equipment_bonus = {
+				cas = {
+					instant = yes
+					air_mission_efficiency = 0.1
+					air_defence = 0.1
+					air_ground_attack = 0.1
+				}
+			}
+		}
+		#帝国新生
+		USR_the_new_born_empire = {
+			picture = planning_speed
+			allowed = { tag = USR }
+			on_remove = { }
+			allowed_civil_war = { always = yes }
+			modifier = {
+				political_power_factor = 0.15
+				army_core_defence_factor = 0.05
+				army_core_attack_factor = 0.05
+				ai_focus_aggressive_factor = 1
+				ai_focus_war_production_factor = 0.5
+				ai_focus_military_equipment_factor = 0.5
+			}
+			equipment_bonus = {
+				
+			}
+		}
+		#乌斯拉尔陆军最高参谋部
+		USR_supreme_army_staff_committee = {
+			picture = planning_speed
+			allowed = { tag = USR }
+			on_remove = { }
+			allowed_civil_war = { always = yes }
+			modifier = {
+				max_command_power = 50
+				max_planning = 0.15
+				planning_speed = 0.15
+			}
+			equipment_bonus = {
+				
+			}
+		}
+		#集中收购私人工厂
+		USR_reinforce_control_of_personal_industry = {
+			picture = ETH_corrupt_bureaucracy
+			allowed = { tag = USR }
+			on_remove = { }
+			allowed_civil_war = { always = yes }
+			modifier = {
+				conversion_cost_civ_to_mil_factor = -0.5
+			}
+			equipment_bonus = {
+				
+			}
+		}
+		#战车道学院
+		USR_senshado_school = {
+			picture = USR_senshado_school
+			allowed = { tag = USR }
+			on_remove = { }
+			allowed_civil_war = { always = yes }
+			modifier = {
+				experience_gain_army_factor = 0.05
+				experience_gain_army_unit_factor = 0.05
+				experience_gain_medium_armor_combat_factor = 0.1
+				experience_gain_light_armor_combat_factor = 0.1
+				experience_gain_heavy_armor_combat_factor = 0.1
+			}
+		}
+		#战车道学院1
+		USR_senshado_school_1 = {
+			picture = USR_senshado_school
+			allowed = { tag = USR }
+			on_remove = { }
+			allowed_civil_war = { always = yes }
+			modifier = {
+				experience_gain_army_factor = 0.1
+				experience_gain_medium_armor_combat_factor = 0.2
+				experience_gain_light_armor_combat_factor = 0.2
+				experience_gain_heavy_armor_combat_factor = 0.2
+				experience_gain_army_unit_factor = 0.1
+				combat_width_factor = -0.05
+				air_superiority_bonus_in_combat = 0.05
+			}
+			research_bonus = {
+				armor = 0.05
+				artillery = 0.05
+			}
+		}
+		#战车道学院2
+		USR_senshado_school_2 = {
+			picture = USR_senshado_school
+			allowed = { tag = USR }
+			on_remove = { }
+			allowed_civil_war = { always = yes }
+			modifier = {
+				experience_gain_army_factor = 0.15
+				experience_gain_medium_armor_combat_factor = 0.3
+				experience_gain_light_armor_combat_factor = 0.3
+				experience_gain_heavy_armor_combat_factor = 0.3
+				experience_gain_army_unit_factor = 0.15
+				combat_width_factor = -0.05
+				air_superiority_bonus_in_combat = 0.1
+				army_speed_factor = 0.05
+				org_loss_when_moving = -0.1
+			}
+			research_bonus = {
+				armor = 0.1
+				artillery = 0.1
+			}
+		}
+		#战场生命线
+		USR_battlefiled_lifeline = {
+			picture = generic_supply_lines
+			allowed = { tag = USR }
+			on_remove = { }
+			allowed_civil_war = { always = yes }
+			modifier = {
+				attrition = -0.1
+				supply_consumption_factor = -0.05
+				supply_node_range = 0.15
+				land_reinforce_rate = 0.02
+			}
+		}
+		#红茶前线
+		USR_darjeelingfront = {
+			picture = USR_darjeelingfront
+			allowed = { tag = USR }
+			on_remove = { }
+			available = { is_in_faction_with = STG }
+			allowed_civil_war = { is_in_faction_with = STG }
+			modifier = {
+				attrition = -0.025
+				supply_factor = 0.1
+				supply_combat_penalties_on_core_factor = -0.1
+				out_of_supply_factor = -0.1
+				supply_node_range = 0.1
+			}
+		}
+		#民生救济补贴
+		USR_livelihood_relief_subsidies = {
+			picture = planning_speed
+			allowed = { tag = USR }
+			on_remove = { }
+			allowed_civil_war = { always = yes }
+			modifier = {
+				consumer_goods_factor = -0.15
+				war_support_factor = -0.15
+			}
+		}
+		#战车道的亲和力
+		USR_senshado_affinity = {
+			picture = planning_speed
+			allowed = { tag = USR }
+			on_add = { }
+			on_remove = { }
+			allowed_civil_war = { always = yes }
+			modifier = {
+				neutrality_drift = 0.05
+				fascism_acceptance = 80
+				democratic_acceptance = -80
+			}
+			rule = {
+				can_join_opposite_factions = yes
+			}
+		}
+		#真正的西住流
+		USR_real_nishizumi_ryu = {
+			picture = planning_speed
+			allowed = { tag = USR }
+			on_remove = { }
+			allowed_civil_war = { always = yes }
+			modifier = {
+				army_morale_factor = 0.1
+				army_org_factor = 0.1
+			}
+			equipment_bonus = {
+				armor = {
+					instant = yes
+					breakthrough = 0.05
+					defense = 0.05
+					reliability =0.1
+				}
+			}
+		}
+		#口径就是正义
+		USR_calibar_is_the_justice = {
+			picture = planning_speed
+			allowed = { tag = USR }
+			on_remove = { }
+			allowed_civil_war = { always = yes }
+			modifier = {
+				naval_critical_score_chance_factor = 0.15
+				naval_hit_chance = 0.15
+				navy_capital_ship_attack_factor = 0.15
+			}
+		}
+		#存活才有输出
+		USR_survival_takes_precedence = {
+			picture = planning_speed
+			allowed = { tag = USR }
+			on_remove = { }
+			allowed_civil_war = { always = yes }
+			modifier = {
+				naval_accidents_chance = -0.15
+				naval_retreat_speed = 0.15
+				naval_detection = 0.15
+				naval_coordination = 0.15
+				naval_speed_factor = 0.15
+			}
+		}
+		#kriegsmarine
+		USR_kriegsmarine = {
+			picture = planning_speed
+			allowed = { tag = USR }
+			on_remove = { }
+			allowed_civil_war = { always = yes }
+			modifier = {
+				naval_hit_chance = 0.1
+				naval_attrition = -0.1
+				naval_coordination = 0.1
+			}
+			equipment_bonus = {
+				ship_hull_submarine = {
+					instant = yes
+					build_cost_ic = -0.1
+				}
+				ship_hull_heavy = {
+					instant = yes
+					build_cost_ic = -0.1
+				}
+				ship_hull_cruiser = {
+					instant = yes
+					build_cost_ic = -0.1
+				}
+				ship_hull_light = {
+					instant = yes
+					build_cost_ic = -0.1
+				}
+			}
+		}
+		#卡尔斯兰的黑夜猎手
+		USR_NJG = {
+			picture = planning_speed
+			allowed = { tag = USR }
+			on_remove = { }
+			allowed_civil_war = { always = yes }
+			modifier = {
+				air_night_penalty = -0.5
+				air_mission_efficiency = 0.1
+				air_superiority_bonus_in_combat = 0.1
+				air_cas_present_factor = 0.1
+			}
+		}
+		#乌斯拉尔志愿军
+		USR_volunteers = {
+			allowed = { tag = USR }
+			on_remove = { }
+			allowed_civil_war = { always = yes }
+			picture = generic_volunteer_expedition_bonus
+			modifier = {
+				air_volunteer_cap = 2
+				send_volunteer_size = 3
+				send_volunteers_tension = -0.8
+			}
+		}
+		#保护盎格利亚政要与难民
+		USR_protect_refugee = {
+			allowed = { tag = USR }
+			on_remove = { }
+			allowed_civil_war = { always = yes }
+			picture = generic_manpower_bonus
+			modifier = {
+				stability_factor = -0.1
+				weekly_manpower = 1000
+				consumer_goods_factor = -0.1
+				research_speed_factor = 0.05
+			}
+		}
+		#精益求精
+		USR_constantly_improving = {
+			allowed = { tag = USR }
+			on_remove = { }
+			allowed_civil_war = { always = yes }
+			picture = generic_manpower_bonus
+			modifier = {
+				
+			}
+			equipment_bonus = {
+				armor = {
+					instant = yes
+					soft_attack = 0.08
+					hard_attack = 0.08
+					reliability = 0.1
+					hardness = 0.1
+					build_cost_ic = 0.08
+				}
+				infantry_equipment = {
+					instant = yes
+					reliability = 0.05
+					defense = 0.12
+					build_cost_ic = 0.05
+				}
+				artillery_equipment = {
+					instant = yes
+					soft_attack = 0.12
+					reliability = 0.05
+					build_cost_ic = 0.05
+				}
+			}
+		}
+		#集体专业化
+		USR_collective_specialization_sets = {
+			allowed = { tag = USR }
+			on_remove = { }
+			allowed_civil_war = { always = yes }
+			picture = generic_manpower_bonus
+			modifier = {
+				industrial_capacity_factory = 0.1
+				production_factory_efficiency_gain_factor = 0.1
+				equipment_conversion_speed = 0.1
+			}
+		}
+		#热情洋溢的新乌斯拉尔人
+		USR_enthusiastic_new_uslarian = {
+			allowed = { tag = USR }
+			on_remove = { }
+			allowed_civil_war = { always = yes }
+			picture = generic_manpower_bonus
+			modifier = {
+				monthly_population = 0.15
+				conscription = 0.02
+			}
+		}
+		#施工中的人民大厅
+		USR_volkshalle_in_construction = {
+			allowed = { tag = USR }
+			allowed_civil_war = { always = yes }
+			picture = SOV_third_five_year_plan_civilian
+			modifier = {
+				civilian_factory_use = 15
+				consumer_goods_factor = 0.15
+			}
+		}
+		#施工中的人民大厅2
+		USR_volkshalle_in_construction_1 = {
+			allowed = { tag = USR }
+			allowed_civil_war = { always = yes }
+			picture = SOV_third_five_year_plan_civilian
+			modifier = {
+				civilian_factory_use = 22
+				consumer_goods_factor = 0.22
+			}
+		}
+		#施工中的人民大厅3
+		USR_volkshalle_in_construction_2 = {
+			allowed = { tag = USR }
+			allowed_civil_war = { always = yes }
+			picture = SOV_third_five_year_plan_civilian
+			modifier = {
+				civilian_factory_use = 22
+				consumer_goods_factor = 0.22
+				conscription_factor = -0.15
+			}
+		}
+		#乌斯拉尔民族意志的里程碑1
+		USR_milestone_of_nation_and_will_1 = {
+			allowed = { tag = USR }
+			allowed_civil_war = { always = yes }
+			on_add = {
+				add_dynamic_modifier = {
+					modifier = USR_milestone_dynamic_modifier
+				}
+			}
+			picture = vittoria_mutilata
+			modifier = {
+				stability_factor = 0.25
+				war_stability_factor = 0.5
+				surrender_limit = 0.15
+				mobilization_speed = 0.25
+				fascism_drift = 0.2
+				custom_modifier_tooltip = USR_tooltip34
+			}
+		}
+		#乌斯拉尔民族意志的里程碑2
+		USR_milestone_of_nation_and_will_2 = {
+			allowed = { tag = USR }
+			allowed_civil_war = { always = yes }
+			on_add = {
+				add_dynamic_modifier = {
+					modifier = USR_milestone_dynamic_modifier
+				}
+			}
+			picture = vittoria_mutilata
+			modifier = {
+				war_support_factor = 0.25
+				war_stability_factor = 0.5
+				surrender_limit = 0.15
+				mobilization_speed = 0.25
+				fascism_drift = 0.2
+				custom_modifier_tooltip = USR_tooltip34
+			}
+		}
+		#乌斯拉尔民族意志的里程碑3
+		USR_milestone_of_nation_and_will_3 = {
+			allowed = { tag = USR }
+			allowed_civil_war = { always = yes }
+			on_add = {
+				add_dynamic_modifier = {
+					modifier = USR_milestone_dynamic_modifier
+				}
+			}
+			picture = vittoria_mutilata
+			modifier = {
+				research_speed_factor = 0.1
+				surrender_limit = 0.15
+				mobilization_speed = 0.25
+				fascism_drift = 0.2
+				custom_modifier_tooltip = USR_tooltip34
+			}
+		}
+		#企业家精神
+		USR_entrepreneurship = {
+			allowed = { tag = USR }
+			allowed_civil_war = { always = yes }
+			on_add = { }
+			picture = generic_manpower_bonus
+			modifier = {
+				local_resources_factor = 0.2
+				research_speed_factor = 0.1
+				consumer_goods_factor = 0.1
+				cic_construction_boost_factor = 0.25
+				global_building_slots_factor = 0.15
+				production_speed_buildings_factor = 0.1
+			}
+		}
+		#重规编制
+		USR_reformulation = {
+			allowed = { tag = USR }
+			allowed_civil_war = { always = yes }
+			on_add = { }
+			picture = generic_manpower_bonus
+			modifier = {
+				org_loss_when_moving = -0.08
+				army_org_factor = 0.08
+			}
+			equipment_bonus = {
+				category_support_battalions = {
+					instant = yes
+					soft_attack = 0.15
+				}
+			}
+		}
+		#黑森峰啤酒
+		USR_kuromorimine_beer = {
+			allowed = { tag = USR }
+			allowed_civil_war = { always = yes }
+			on_add = { }
+			picture = generic_manpower_bonus
+			modifier = {
+				consumer_goods_factor = 0.1
+				supply_factor = 0.1
+				org_loss_at_low_org_factor = -0.1
+			}
+			equipment_bonus = {
+				armor = {
+					default_morale = 0.1
+					supply_consumption = -0.1
+					fuel_consumption_factor = -0.1
+				}
+			}
+		}
+
+		#团结，正义与自由的胜利
+		USR_triumph_of_solidarity_justice_and_freedom = {
+			allowed = { tag = USR }
+			allowed_civil_war = { always = yes }
+			on_add = { }
+			picture = triumphant_will
+			modifier = {
+				stability_weekly_factor = 0.005
+				non_core_manpower = 0.15
+				compliance_growth = 0.2
+				army_core_attack_factor = 0.1
+				army_core_defence_factor = 0.1
+				ai_focus_aggressive_factor = 1
+				ai_focus_war_production_factor = 0.5
+				ai_focus_military_equipment_factor = 0.5
+			}
+		}
+
+		#HK416的战术发卡
+		USR_tactical_hair_clip = {
+			allowed = { tag = USR }
+			allowed_civil_war = { always = yes }
+			on_add = { }
+			picture = triumphant_will
+			equipment_bonus = {
+				neural_cloud_equipment_1 = {
+					soft_attack = 0.1
+					defense = 0.1
+					instant = yes
+				}
+			}
+		}
+
+		#战车道联盟
+		USR_senshado_alliance_idea = {
+			allowed = {  }
+			allowed_civil_war = { always = yes }
+			on_add = { }
+			picture = triumphant_will
+			modifier = {
+				experience_loss_factor = -0.075
+				experience_gain_army_unit_factor = 0.075
+				training_time_factor = -0.15
+			}
+		}
+
+		#与合众国的交易
+		USR_USF_trade_deal = {
+			allowed = {}
+			allowed_civil_war = yes
+			removal_cost = -1
+			allowed = {
+				tag = USR
+			}
+			modifier = {
+				consumer_goods_factor = 0.1
+				production_speed_buildings_factor = -0.05
+				industrial_capacity_factory = -0.05
+				industrial_capacity_dockyard = -0.05
+				conscription_factor = -0.05
+			}
+		}
+	}
+
+	
+##     ## #### ########  ########  ######## ##    ## 
+##     ##  ##  ##     ## ##     ## ##       ###   ## 
+##     ##  ##  ##     ## ##     ## ##       ####  ## 
+#########  ##  ##     ## ##     ## ######   ## ## ## 
+##     ##  ##  ##     ## ##     ## ##       ##  #### 
+##     ##  ##  ##     ## ##     ## ##       ##   ### 
+##     ## #### ########  ########  ######## ##    ## 
+		
+	hidden_ideas = {
+		USR_tw_delay = {
+			allowed = { tag = USR has_idea = USR_big_time_editorial }
+		}
+		#副手-明娜
+		USR_another_leader_Minna = {
+			allowed = { tag = USR }
+			allowed_civil_war = { always = no }
+			modifier = { }
+		}
+		#副手-艾丽卡
+		USR_another_leader_Erika = {
+			allowed = { tag = USR }
+			allowed_civil_war = { always = no }
+			modifier = {
+				production_speed_arms_factory_factor = 0.1
+				stability_factor = -0.05
+			}
+		}
+		#副手-阿道芬
+		USR_another_leader_Adolfine = {
+			allowed = { tag = USR }
+			allowed_civil_war = { always = no }
+			modifier = {
+				war_stability_factor = 0.5
+				air_accidents_factor = -0.1
+				stability_factor = 0.05
+			}
+		}
+		#副手-瓦格纳-列考德尼
+		USR_another_leader_Wagner = {
+			allowed = { tag = USR }
+			allowed_civil_war = { always = no }
+			modifier = {
+				stability_weekly_factor = 0.005
+				war_support_weekly_factor = 0.005
+				army_attack_factor = 0.15
+				army_defence_factor = 0.15
+				surrender_limit = 1
+				terrain_penalty_reduction = -0.5
+			}
+		}
+		#副手-艾迪莎罗斯曼
+		USR_another_leader_Edytha = {
+			allowed = { tag = USR }
+			modifier = {
+				training_time_army = -0.3
+			}
+		}
+	}
+}
