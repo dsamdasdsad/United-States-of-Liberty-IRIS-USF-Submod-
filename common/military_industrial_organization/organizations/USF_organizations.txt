@@ -9,7 +9,7 @@
  ####################
  
  #轻型装甲，斯拉目
- USF_slam_organization = {
+USF_slam_organization = {
 	icon = GFX_idea_materiel_sunders
 	allowed = {	
 		tag = USF
@@ -33,18 +33,18 @@
 	}
 
 	tree_header_text = {
-		text = mio_suspension_production
-		x = 0
+		text = mio_suspension_production_slam
+		x = 2
 	}
 
 	tree_header_text = {
-		text = mio_turret_production
+		text = mio_turret_production_slam
 		x = 6
 	}
 
 	tree_header_text = {
-		text = mio_armour_production
-		x = 8
+		text = mio_armour_production_slam
+		x = 9
 	}
 
 	initial_trait = {
@@ -65,8 +65,8 @@
 
 	#底盘
 	trait = {
-		token = USF_mio_trait_improved_suspension
-		name = USF_mio_trait_improved_suspension
+		token = USF_mio_trait_improved_suspension_light_tank
+		name = USF_mio_trait_improved_suspension_light_tank
 		icon = GFX_generic_mio_trait_icon_reliability
 
 		position = { x=1 y=0 }
@@ -84,12 +84,12 @@
 
 	#冬季履带
 	trait = {
-		token = USF_mio_trait_wide_tracks
-		name = USF_mio_trait_wide_tracks
-		icon = GFX_generic_mio_trait_icon_reliability
+		token = USF_mio_trait_wide_tracks_light_tank
+		name = USF_mio_trait_wide_tracks_light_tank
+		icon = GFX_generic_mio_trait_icon_armor_value
 
-		relative_position_id = USF_mio_trait_improved_suspension
-		any_parent = {USF_mio_trait_improved_suspension }
+		relative_position_id = USF_mio_trait_improved_suspension_light_tank
+		any_parent = {USF_mio_trait_improved_suspension_light_tank }
 
 		position = { x=0 y=2 }
 
@@ -102,20 +102,20 @@
 
 	#发动机带动转轮
 	trait = {
-		token = USF_mio_trait_engine_moves_turret
-		name = USF_mio_trait_engine_moves_turret
-		icon = GFX_generic_mio_trait_icon_reliability
+		token = USF_mio_trait_engine_moves_turret_light_tank
+		name = USF_mio_trait_engine_moves_turret_light_tank
+		icon = GFX_generic_mio_trait_icon_hard_attack
 
-		relative_position_id = USF_mio_trait_improved_suspension
-		any_parent = {USF_mio_trait_wide_tracks }
-		any_parent = {USF_mio_trait_recon_binoculars }
-		any_parent = {USF_mio_trait_combined_turret_ammo }
+		relative_position_id = USF_mio_trait_improved_suspension_light_tank
+		any_parent = {USF_mio_trait_wide_tracks_light_tank }
+		any_parent = {USF_mio_trait_recon_binoculars_light_tank }
+		any_parent = {USF_mio_trait_combined_turret_ammo_light_tank }
 
 		position = { x=3 y=3 }
 
 		equipment_bonus = {
 			build_cost_ic = -0.03
-			defence = 0.1
+			#defence = 0.1
 			breakthrough = 0.1
 			soft_attack = 0.05
 			hard_attack = 0.15
@@ -131,13 +131,13 @@
 
 	#火炮减震
 	trait = {
-		token = USF_mio_trait_less_shake
-		name = USF_mio_trait_less_shake
-		icon = GFX_generic_mio_trait_icon_reliability
+		token = USF_mio_trait_less_shake_light_tank
+		name = USF_mio_trait_less_shake_light_tank
+		icon = GFX_generic_mio_trait_icon_naval_strike_targetting
 
-		relative_position_id = USF_mio_trait_improved_suspension
-		any_parent = {USF_mio_trait_improved_suspension }
-		any_parent = {USF_mio_trait_improved_turret_speed }
+		relative_position_id = USF_mio_trait_improved_suspension_light_tank
+		any_parent = {USF_mio_trait_improved_suspension_light_tank }
+		any_parent = {USF_mio_trait_improved_turret_speed_light_tank }
 		position = { x=2 y=1 }
 
 		equipment_bonus = {
@@ -149,13 +149,13 @@
 
 	#更快
 	trait = {
-		token = USF_mio_trait_faster
-		name = USF_mio_trait_faster
-		icon = GFX_generic_mio_trait_icon_reliability
+		token = USF_mio_trait_faster_light_tank
+		name = USF_mio_trait_faster_light_tank
+		icon = GFX_generic_mio_trait_icon_maximum_speed
 
-		relative_position_id = USF_mio_trait_improved_suspension
-		any_parent = {USF_mio_trait_improved_suspension }
-		any_parent = {USF_mio_trait_improved_turret_speed }
+		relative_position_id = USF_mio_trait_improved_suspension_light_tank
+		any_parent = {USF_mio_trait_improved_suspension_light_tank }
+		any_parent = {USF_mio_trait_improved_turret_speed_light_tank }
 		position = { x=4 y=1 }
 
 		equipment_bonus = {
@@ -166,13 +166,13 @@
 
 	#侦查望远镜
 	trait = {
-		token = USF_mio_trait_recon_binoculars
-		name = USF_mio_trait_recon_binoculars
-		icon = GFX_generic_mio_trait_icon_reliability
+		token = USF_mio_trait_recon_binoculars_light_tank
+		name = USF_mio_trait_recon_binoculars_light_tank
+		icon = GFX_generic_mio_trait_icon_surface_detection
 
-		relative_position_id = USF_mio_trait_improved_suspension
-		any_parent = {USF_mio_trait_faster }
-		any_parent = {USF_mio_trait_less_shake }
+		relative_position_id = USF_mio_trait_improved_suspension_light_tank
+		any_parent = {USF_mio_trait_faster_light_tank }
+		any_parent = {USF_mio_trait_less_shake_light_tank }
 		position = { x=3 y=2 }
 
 		equipment_bonus = {
@@ -182,9 +182,9 @@
 
 	#炮塔转速
 	trait = {
-		token = USF_mio_trait_improved_turret_speed
-		name = USF_mio_trait_improved_turret_speed
-		icon = GFX_generic_mio_trait_icon_reliability
+		token = USF_mio_trait_improved_turret_speed_light_tank
+		name = USF_mio_trait_improved_turret_speed_light_tank
+		icon = GFX_generic_mio_trait_icon_air_agility
 
 		position = { x=7 y=0 }
 
@@ -202,12 +202,12 @@
 
 	#一体式弹药架
 	trait = {
-		token = USF_mio_trait_combined_turret_ammo
-		name = USF_mio_trait_combined_turret_ammo
-		icon = GFX_generic_mio_trait_icon_reliability
+		token = USF_mio_trait_combined_turret_ammo_light_tank
+		name = USF_mio_trait_combined_turret_ammo_light_tank
+		icon = GFX_generic_mio_trait_icon_breakthrough
 
-		relative_position_id = USF_mio_trait_improved_turret_speed
-		any_parent = {USF_mio_trait_improved_turret_speed }
+		relative_position_id = USF_mio_trait_improved_turret_speed_light_tank
+		any_parent = {USF_mio_trait_improved_turret_speed_light_tank }
 
 		position = { x=0 y=2 }
 		
@@ -221,9 +221,9 @@
 
 	#装甲
 	trait = {
-		token = USF_mio_trait_good_metal
-		name = USF_mio_trait_good_metal
-		icon = GFX_generic_mio_trait_icon_reliability
+		token = USF_mio_trait_good_metal_light_tank
+		name = USF_mio_trait_good_metal_light_tank
+		icon = GFX_generic_mio_trait_icon_max_strength
 
 		position = { x=9 y=0 }
 		
@@ -235,14 +235,14 @@
 
 	#灭火装置
 	trait = {
-		token = USF_mio_trait_fire_extinquisher
-		name = USF_mio_trait_fire_extinquisher
-		icon = GFX_generic_mio_trait_icon_reliability
+		token = USF_mio_trait_fire_extinquisher_light_tank
+		name = USF_mio_trait_fire_extinquisher_light_tank
+		icon = GFX_generic_mio_trait_icon_supply_consumption
 
-		relative_position_id = USF_mio_trait_good_metal 
+		relative_position_id = USF_mio_trait_good_metal_light_tank 
 		position = {x=0 y=2} 
 
-		any_parent = {USF_mio_trait_good_metal}
+		any_parent = {USF_mio_trait_good_metal_light_tank}
 		
 		equipment_bonus = {
 			reliability = 0.07
@@ -254,10 +254,10 @@
 	trait = {
 		token = USF_mio_trait_interchangeable_piecies
 		name = USF_mio_trait_interchangeable_piecies
-		icon = GFX_generic_mio_trait_icon_reliability
+		icon = GFX_generic_mio_trait_icon_production_capacity
 
-		relative_position_id = USF_mio_trait_improved_turret_speed
-		any_parent = {USF_mio_trait_engine_moves_turret }
+		relative_position_id = USF_mio_trait_improved_turret_speed_light_tank
+		any_parent = {USF_mio_trait_engine_moves_turret_light_tank }
 		
 
 		position = { x=-3 y=4 }
@@ -270,15 +270,13 @@
 
 	#自行火炮升级
 	trait = {
-		token = USF_mio_trait_spg_upgrade
-		name = USF_mio_trait_spg_upgrade
-		icon = GFX_generic_mio_trait_icon_reliability
+		token = USF_mio_trait_spg_upgrade_light_tank
+		name = USF_mio_trait_spg_upgrade_light_tank
+		icon = GFX_generic_mio_department_icon_facilities
 
 		position = { x=0 y=4 }
 
 		visible = {FROM = {has_completed_focus = USF_spg_upgrade}}
-
-		available = { tag = USF}
 
 		limit_to_equipment_type = { 
 			light_tank_artillery_chassis
@@ -297,15 +295,15 @@
 
 	#坦歼升级
 	trait = {
-		token = USF_mio_trait_td_upgrade
-		name = USF_mio_trait_td_upgrade
-		icon = GFX_generic_mio_trait_icon_reliability
+		token = USF_mio_trait_td_upgrade_light_tank
+		name = USF_mio_trait_td_upgrade_light_tank
+		icon = GFX_generic_mio_department_icon_facilities
 
 		position = { x=0 y=3 }
 
 		visible = {FROM = {has_completed_focus = USF_spg_upgrade}}
 
-		available = { tag = USF}
+		
 
 		limit_to_equipment_type = { 
 			light_tank_destroyer_chassis
@@ -325,15 +323,13 @@
 
 	#自行防空炮升级
 	trait = {
-		token = USF_mio_trait_spaa_upgrade
-		name = USF_mio_trait_spaa_upgrade
-		icon = GFX_generic_mio_trait_icon_reliability
+		token = USF_mio_trait_spaa_upgrade_light_tank
+		name = USF_mio_trait_spaa_upgrade_light_tank
+		icon = GFX_generic_mio_department_icon_facilities
 
 		position = { x=0 y=2 }
 
 		visible = {FROM = {has_completed_focus = USF_spg_upgrade}}
-
-		available = { tag = USF}
 
 		limit_to_equipment_type = { 
 			light_tank_aa_chassis
@@ -351,15 +347,15 @@
 
 	#两栖坦克升级
 	trait = {
-		token = USF_mio_trait_amp_upgrade
-		name = USF_mio_trait_amp_upgrade
-		icon = GFX_generic_mio_trait_icon_reliability
+		token = USF_mio_trait_amp_upgrade_light_tank
+		name = USF_mio_trait_amp_upgrade_light_tank
+		icon = GFX_generic_mio_department_icon_facilities
 
 		position = { x=0 y=1 }
 
 		visible = {FROM = {has_completed_focus = USF_spg_upgrade}}
 
-		available = { tag = USF}
+		
 
 		limit_to_equipment_type = { 
 			amphibious_tank_chassis
@@ -379,10 +375,10 @@
 		}
 	}
 
- }
+}
 
 #中型装甲，桑达斯
- USF_saunders_organization = {
+USF_saunders_organization = {
 	icon = GFX_idea_materiel_sunders
 	allowed = {	
 		tag = USF
@@ -408,24 +404,21 @@
 	research_categories = {
 		mio_cat_eq_all_medium_tank 
 		mio_cat_eq_main_battle_tank 
-		mio_cat_eq_all_tank_destroyers
-		mio_cat_eq_all_tank_artillery
-		mio_cat_eq_all_tank_anti_air
 	}
 
 	tree_header_text = {
-		text = mio_suspension_production
-		x = 0
+		text = mio_suspension_production_saunders
+		x = 1
 	}
 
 	tree_header_text = {
-		text = mio_turret_production
-		x = 4
+		text = mio_turret_production_saunders
+		x = 5
 	}
 
 	tree_header_text = {
-		text = mio_armour_production
-		x = 8
+		text = mio_armour_production_saunders
+		x = 9
 	}
 
 	initial_trait = {
@@ -465,7 +458,7 @@
 	trait = {
 		token = USF_mio_trait_wide_tracks
 		name = USF_mio_trait_wide_tracks
-		icon = GFX_generic_mio_trait_icon_reliability
+		icon = GFX_generic_mio_trait_icon_armor_value
 
 		relative_position_id = USF_mio_trait_improved_suspension
 		any_parent = {USF_mio_trait_improved_suspension }
@@ -482,7 +475,7 @@
 	trait = {
 		token = USF_mio_trait_engine_moves_turret
 		name = USF_mio_trait_engine_moves_turret
-		icon = GFX_generic_mio_trait_icon_reliability
+		icon = GFX_generic_mio_trait_icon_hard_attack
 		
 		relative_position_id = USF_mio_trait_improved_suspension
 		any_parent = {USF_mio_trait_wide_tracks }
@@ -512,7 +505,7 @@
 	trait = {
 		token = USF_mio_trait_less_shake
 		name = USF_mio_trait_less_shake
-		icon = GFX_generic_mio_trait_icon_reliability
+		icon = GFX_generic_mio_trait_icon_naval_strike_targetting
 
 		relative_position_id = USF_mio_trait_improved_suspension
 		any_parent = {USF_mio_trait_improved_suspension }
@@ -530,7 +523,7 @@
 	trait = {
 		token = USF_mio_trait_improved_turret_speed
 		name = USF_mio_trait_improved_turret_speed
-		icon = GFX_generic_mio_trait_icon_reliability
+		icon = GFX_generic_mio_trait_icon_air_agility
 
 		position = { x=5 y=0 }
 
@@ -551,7 +544,7 @@
 	trait = {
 		token = USF_mio_trait_combined_turret_ammo
 		name = USF_mio_trait_combined_turret_ammo
-		icon = GFX_generic_mio_trait_icon_reliability
+		icon = GFX_generic_mio_trait_icon_breakthrough
 
 		relative_position_id = USF_mio_trait_improved_turret_speed
 		any_parent = {USF_mio_trait_improved_turret_speed }
@@ -568,8 +561,8 @@
 	#炮塔增加装甲
 	trait = {
 		token = USF_mio_trait_turret_armour
-		name = USF_mio_trait_turret_armour
-		icon = GFX_generic_mio_trait_icon_reliability
+		name = generic_mio_trait_icon_hardness
+		icon = GFX_generic_mio_trait_icon_hardness
 
 		relative_position_id = USF_mio_trait_improved_turret_speed
 		any_parent = {USF_mio_trait_improved_turret_speed }
@@ -588,7 +581,7 @@
 	trait = {
 		token = USF_mio_trait_good_metal
 		name = USF_mio_trait_good_metal
-		icon = GFX_generic_mio_trait_icon_reliability
+		icon = GFX_generic_mio_trait_icon_max_strength
 
 		position = { x=9 y=0 }
 		
@@ -602,7 +595,7 @@
 	trait = {
 		token = USF_mio_trait_fire_extinquisher
 		name = USF_mio_trait_fire_extinquisher
-		icon = GFX_generic_mio_trait_icon_reliability
+		icon = GFX_generic_mio_trait_icon_supply_consumption
 
 		relative_position_id = USF_mio_trait_good_metal 
 		position = {x=0 y=2} 
@@ -614,11 +607,11 @@
 		}
 	}
 
-	#双联装360车顶机枪
+	#车顶机枪
 	trait = {
 		token = USF_mio_trait_360_hmg
 		name = USF_mio_trait_360_hmg
-		icon = GFX_generic_mio_trait_icon_reliability
+		icon = GFX_generic_mio_department_icon_tank_general_weapons
 
 		relative_position_id = USF_mio_trait_improved_turret_speed
 		any_parent = {USF_mio_trait_combined_turret_ammo }
@@ -638,7 +631,7 @@
 	trait = {
 		token = USF_mio_trait_interchangeable_piecies
 		name = USF_mio_trait_interchangeable_piecies
-		icon = GFX_generic_mio_trait_icon_reliability
+		icon = GFX_generic_mio_trait_icon_production_capacity
 
 		relative_position_id = USF_mio_trait_improved_turret_speed
 		any_parent = {USF_mio_trait_360_hmg }
@@ -656,13 +649,13 @@
 	trait = {
 		token = USF_mio_trait_spg_upgrade
 		name = USF_mio_trait_spg_upgrade
-		icon = GFX_generic_mio_trait_icon_reliability
+		icon = GFX_generic_mio_department_icon_facilities
 
 		position = { x=0 y=4 }
 
 		visible = {FROM = {has_completed_focus = USF_spg_upgrade}}
 
-		available = { tag = USF}
+		
 
 		limit_to_equipment_type = { 
 			medium_tank_artillery_chassis
@@ -683,13 +676,13 @@
 	trait = {
 		token = USF_mio_trait_td_upgrade
 		name = USF_mio_trait_td_upgrade
-		icon = GFX_generic_mio_trait_icon_reliability
+		icon = GFX_generic_mio_department_icon_facilities
 
 		position = { x=0 y=3 }
 
 		visible = {FROM = {has_completed_focus = USF_spg_upgrade}}
 
-		available = { tag = USF}
+		
 
 		limit_to_equipment_type = { 
 			medium_tank_destroyer_chassis
@@ -711,13 +704,13 @@
 	trait = {
 		token = USF_mio_trait_spaa_upgrade
 		name = USF_mio_trait_spaa_upgrade
-		icon = GFX_generic_mio_trait_icon_reliability
+		icon = GFX_generic_mio_department_icon_facilities
 
 		position = { x=0 y=2 }
 
 		visible = {FROM = {has_completed_focus = USF_spg_upgrade}}
 
-		available = { tag = USF}
+		
 
 		limit_to_equipment_type = { 
 			medium_tank_aa_chassis
@@ -741,13 +734,13 @@
 	trait = {
 		token = USF_mio_trait_mbt_upgrade
 		name = USF_mio_trait_mbt_upgrade
-		icon = GFX_generic_mio_trait_icon_reliability
+		icon = GFX_generic_mio_department_icon_facilities
 
 		position = { x=0 y=1 }
 
 		visible = {FROM = {has_completed_focus = USF_spg_upgrade}}
 
-		available = { tag = USF}
+		
 
 		limit_to_equipment_type = { 
 			modern_tank_chassis
@@ -805,17 +798,17 @@ USF_ka_co_organization = {
 	}
 
 	tree_header_text = {
-		text = mio_suspension_production
-		x = 0
+		text = mio_suspension_production_ka_co
+		x = 1
 	}
 
 	tree_header_text = {
-		text = mio_turret_production
-		x = 2
+		text = mio_turret_production_ka_co
+		x = 4
 	}
 
 	tree_header_text = {
-		text = mio_armour_production
+		text = mio_armour_production_ka_co
 		x = 8
 	}
 
@@ -839,8 +832,8 @@ USF_ka_co_organization = {
 
 	#底盘
 	trait = {
-		token = USF_mio_trait_improved_suspension
-		name = USF_mio_trait_improved_suspension
+		token = USF_mio_trait_improved_suspension_heavy_tank
+		name = USF_mio_trait_improved_suspension_heavy_tank
 		icon = GFX_generic_mio_trait_icon_reliability
 
 		position = { x=1 y=0 }
@@ -854,12 +847,12 @@ USF_ka_co_organization = {
 
 	#冬季履带
 	trait = {
-		token = USF_mio_trait_wide_tracks
-		name = USF_mio_trait_wide_tracks
-		icon = GFX_generic_mio_trait_icon_reliability
+		token = USF_mio_trait_wide_tracks_heavy_tank
+		name = USF_mio_trait_wide_tracks_heavy_tank
+		icon = GFX_generic_mio_trait_icon_armor_value
 
-		relative_position_id = USF_mio_trait_improved_suspension
-		any_parent = {USF_mio_trait_improved_suspension }
+		relative_position_id = USF_mio_trait_improved_suspension_heavy_tank
+		any_parent = {USF_mio_trait_improved_suspension_heavy_tank }
 
 		position = { x=0 y=2 }
 
@@ -873,9 +866,9 @@ USF_ka_co_organization = {
 
 	#炮塔转速
 	trait = {
-		token = USF_mio_trait_improved_turret_speed
-		name = USF_mio_trait_improved_turret_speed
-		icon = GFX_generic_mio_trait_icon_reliability	
+		token = USF_mio_trait_improved_turret_speed_heavy_tank
+		name = USF_mio_trait_improved_turret_speed_heavy_tank
+		icon = GFX_generic_mio_trait_icon_air_agility	
 
 		position = { x=3 y=0 }
 
@@ -894,12 +887,12 @@ USF_ka_co_organization = {
 
 	#一体式弹药架
 	trait = {
-		token = USF_mio_trait_combined_turret_ammo
-		name = USF_mio_trait_combined_turret_ammo
-		icon = GFX_generic_mio_trait_icon_reliability
+		token = USF_mio_trait_combined_turret_ammo_heavy_tank
+		name = USF_mio_trait_combined_turret_ammo_heavy_tank
+		icon = GFX_generic_mio_trait_icon_breakthrough
 
-		relative_position_id = USF_mio_trait_improved_turret_speed
-		any_parent = {USF_mio_trait_improved_turret_speed }
+		relative_position_id = USF_mio_trait_improved_turret_speed_heavy_tank
+		any_parent = {USF_mio_trait_improved_turret_speed_heavy_tank }
 
 		position = { x=0 y=2 }
 		
@@ -912,13 +905,13 @@ USF_ka_co_organization = {
 
 	#炮塔增加装甲
 	trait = {
-		token = USF_mio_trait_turret_armour
-		name = USF_mio_trait_turret_armour
-		icon = GFX_generic_mio_trait_icon_reliability
+		token = USF_mio_trait_turret_armour_heavy_tank
+		name = USF_mio_trait_turret_armour_heavy_tank
+		icon = GFX_generic_mio_trait_icon_hardness
 
-		relative_position_id = USF_mio_trait_improved_turret_speed
-		any_parent = {USF_mio_trait_improved_turret_speed }
-		any_parent = {USF_mio_trait_good_metal}
+		relative_position_id = USF_mio_trait_improved_turret_speed_heavy_tank
+		any_parent = {USF_mio_trait_improved_turret_speed_heavy_tank }
+		any_parent = {USF_mio_trait_good_metal_heavy_tank}
 
 		position = { x=2 y=1 }
 		
@@ -931,13 +924,13 @@ USF_ka_co_organization = {
 
 	#车身增加装甲
 	trait = {
-		token = USF_mio_trait_chassis_armour
-		name = USF_mio_trait_chassis_armour
-		icon = GFX_generic_mio_trait_icon_reliability
+		token = USF_mio_trait_chassis_armour_heavy_tank
+		name = USF_mio_trait_chassis_armour_heavy_tank
+		icon = GFX_generic_mio_trait_icon_weight
 
-		relative_position_id = USF_mio_trait_improved_turret_speed
-		any_parent = {USF_mio_trait_improved_turret_speed }
-		any_parent = {USF_mio_trait_good_metal}
+		relative_position_id = USF_mio_trait_improved_turret_speed_heavy_tank
+		any_parent = {USF_mio_trait_improved_turret_speed_heavy_tank }
+		any_parent = {USF_mio_trait_good_metal_heavy_tank}
 
 		position = { x=4 y=1 }
 		
@@ -950,13 +943,13 @@ USF_ka_co_organization = {
 
 	#呼叫火炮打击
 	trait = {
-		token = USF_mio_trait_artillery_strike
-		name = USF_mio_trait_artillery_strike
-		icon = GFX_generic_mio_trait_icon_reliability
+		token = USF_mio_trait_artillery_strike_heavy_tank
+		name = USF_mio_trait_artillery_strike_heavy_tank
+		icon = GFX_generic_mio_trait_icon_strategic_attack
 
-		relative_position_id = USF_mio_trait_improved_turret_speed
-		any_parent = {USF_mio_trait_chassis_armour }
-		any_parent = {USF_mio_trait_turret_armour}
+		relative_position_id = USF_mio_trait_improved_turret_speed_heavy_tank
+		any_parent = {USF_mio_trait_chassis_armour_heavy_tank }
+		any_parent = {USF_mio_trait_turret_armour_heavy_tank}
 
 		position = { x=3 y=2 }
 		
@@ -967,9 +960,9 @@ USF_ka_co_organization = {
 
 	#装甲
 	trait = {
-		token = USF_mio_trait_good_metal
-		name = USF_mio_trait_good_metal
-		icon = GFX_generic_mio_trait_icon_reliability
+		token = USF_mio_trait_good_metal_heavy_tank
+		name = USF_mio_trait_good_metal_heavy_tank
+		icon = GFX_generic_mio_trait_icon_max_strength
 
 		position = { x=9 y=0 }
 		
@@ -981,14 +974,14 @@ USF_ka_co_organization = {
 
 	#灭火装置
 	trait = {
-		token = USF_mio_trait_fire_extinquisher
-		name = USF_mio_trait_fire_extinquisher
-		icon = GFX_generic_mio_trait_icon_reliability
+		token = USF_mio_trait_fire_extinquisher_heavy_tank
+		name = USF_mio_trait_fire_extinquisher_heavy_tank
+		icon = GFX_generic_mio_trait_icon_supply_consumption
 
-		relative_position_id = USF_mio_trait_good_metal 
+		relative_position_id = USF_mio_trait_good_metal_heavy_tank 
 		position = {x=0 y=2} 
 
-		any_parent = {USF_mio_trait_good_metal}
+		any_parent = {USF_mio_trait_good_metal_heavy_tank}
 		
 		equipment_bonus = {
 			reliability = 0.07
@@ -997,14 +990,14 @@ USF_ka_co_organization = {
 
 	#双联装360车顶机枪
 	trait = {
-		token = USF_mio_trait_360_hmg
-		name = USF_mio_trait_360_hmg
-		icon = GFX_generic_mio_trait_icon_reliability
+		token = USF_mio_trait_360_hmg_heavy_tank
+		name = USF_mio_trait_360_hmg_heavy_tank
+		icon = GFX_generic_mio_department_icon_tank_general_weapons
 
-		relative_position_id = USF_mio_trait_improved_turret_speed
-		any_parent = {USF_mio_trait_combined_turret_ammo }
-		any_parent = {USF_mio_trait_fire_extinquisher}
-		any_parent = {USF_mio_trait_artillery_strike}
+		relative_position_id = USF_mio_trait_improved_turret_speed_heavy_tank
+		any_parent = {USF_mio_trait_combined_turret_ammo_heavy_tank }
+		any_parent = {USF_mio_trait_fire_extinquisher_heavy_tank}
+		any_parent = {USF_mio_trait_artillery_strike_heavy_tank}
 
 		position = { x=3 y=3 }
 		
@@ -1017,12 +1010,12 @@ USF_ka_co_organization = {
 
 	#通用配件
 	trait = {
-		token = USF_mio_trait_interchangeable_piecies
-		name = USF_mio_trait_interchangeable_piecies
-		icon = GFX_generic_mio_trait_icon_reliability
+		token = USF_mio_trait_interchangeable_piecies_heavy_tank
+		name = USF_mio_trait_interchangeable_piecies_heavy_tank
+		icon = GFX_generic_mio_trait_icon_production_capacity
 
-		relative_position_id = USF_mio_trait_improved_turret_speed
-		any_parent = {USF_mio_trait_360_hmg }
+		relative_position_id = USF_mio_trait_improved_turret_speed_heavy_tank
+		any_parent = {USF_mio_trait_360_hmg_heavy_tank }
 
 		position = { x=3 y=4 }
 		
@@ -1034,15 +1027,15 @@ USF_ka_co_organization = {
 
 	#自行火炮升级
 	trait = {
-		token = USF_mio_trait_spg_upgrade
-		name = USF_mio_trait_spg_upgrade
-		icon = GFX_generic_mio_trait_icon_reliability
+		token = USF_mio_trait_spg_upgrade_heavy_tank
+		name = USF_mio_trait_spg_upgrade_heavy_tank
+		icon = GFX_generic_mio_department_icon_facilities
 
 		position = { x=0 y=4 }
 
 		visible = {FROM = {has_completed_focus = USF_spg_upgrade}}
 
-		available = { tag = USF}
+		
 
 		limit_to_equipment_type = { 
 			heavy_tank_artillery_chassis
@@ -1061,15 +1054,15 @@ USF_ka_co_organization = {
 
 	#坦歼升级
 	trait = {
-		token = USF_mio_trait_td_upgrade
-		name = USF_mio_trait_td_upgrade
-		icon = GFX_generic_mio_trait_icon_reliability
+		token = USF_mio_trait_td_upgrade_heavy_tank
+		name = USF_mio_trait_td_upgrade_heavy_tank
+		icon = GFX_generic_mio_department_icon_facilities
 
 		position = { x=0 y=3 }
 
 		visible = {FROM = {has_completed_focus = USF_spg_upgrade}}
 
-		available = { tag = USF}
+		
 
 		limit_to_equipment_type = { 
 			heavy_tank_destroyer_chassis
@@ -1089,15 +1082,15 @@ USF_ka_co_organization = {
 
 	#自行防空炮升级
 	trait = {
-		token = USF_mio_trait_spaa_upgrade
-		name = USF_mio_trait_spaa_upgrade
-		icon = GFX_generic_mio_trait_icon_reliability
+		token = USF_mio_trait_spaa_upgrade_heavy_tank
+		name = USF_mio_trait_spaa_upgrade_heavy_tank
+		icon = GFX_generic_mio_department_icon_facilities
 
 		position = { x=0 y=2 }
 
 		visible = {FROM = {has_completed_focus = USF_spg_upgrade}}
 
-		available = { tag = USF}
+		
 
 		limit_to_equipment_type = { 
 			heavy_tank_aa_chassis
@@ -1116,15 +1109,15 @@ USF_ka_co_organization = {
 
 	#超重坦升级
 	trait = {
-		token = USF_mio_trait_superheavy_upgrade
-		name = USF_mio_trait_superheavy_upgrade
-		icon = GFX_generic_mio_trait_icon_reliability
+		token = USF_mio_trait_superheavy_upgrade_heavy_tank
+		name = USF_mio_trait_superheavy_upgrade_heavy_tank
+		icon = GFX_generic_mio_department_icon_facilities
 
 		position = { x=0 y=1 }
 
 		visible = {FROM = {has_completed_focus = USF_spg_upgrade}}
 
-		available = { tag = USF}
+		
 
 		limit_to_equipment_type = { 
 			super_heavy_tank_chassis
@@ -1196,22 +1189,22 @@ USF_EllenS_organization = {
 
 	tree_header_text = {
 		text = mio_destroyer_production
-		x = 2
+		x = 1
 	}
 
 	tree_header_text = {
 		text = mio_cruiser_production
-		x = 7
+		x = 6
 	}
 
-	#驱逐舰主炮
+	#巡洋舰主炮
 	trait = {
 		token = USF_mio_trait_light_crusier_battery
 		name = USF_mio_trait_light_crusier_battery
 
 		position = { x = 6 y=0 }
 
-		icon = GFX_generic_mio_trait_icon_reliability
+		icon = GFX_generic_mio_trait_icon_lg_attack
 
 		
 		equipment_bonus = {
@@ -1233,7 +1226,7 @@ USF_EllenS_organization = {
 
 		position = { x = -1 y=2 }
 
-		icon = GFX_generic_mio_trait_icon_reliability
+		icon = GFX_generic_mio_trait_icon_torpedo_attack
 
 		relative_position_id = USF_mio_trait_light_crusier_battery
 
@@ -1255,7 +1248,7 @@ USF_EllenS_organization = {
 
 		position = { x = 0 y=4 }
 
-		icon = GFX_generic_mio_trait_icon_reliability
+		icon = GFX_generic_mio_trait_icon_sub_detection
 
 		relative_position_id = USF_mio_trait_light_crusier_torpedo
 
@@ -1286,7 +1279,7 @@ USF_EllenS_organization = {
 
 		position = { x = 1 y=2	 }
 
-		icon = GFX_generic_mio_trait_icon_reliability
+		icon = GFX_generic_mio_trait_icon_max_strength
 
 		relative_position_id = USF_mio_trait_light_crusier_battery
 
@@ -1306,14 +1299,14 @@ USF_EllenS_organization = {
 		}
 	}
 
-	#装甲
+	#引擎
 	trait = {
 		token = USF_mio_trait_light_crusier_engine
 		name = USF_mio_trait_light_crusier_engine
 
 		position = { x = 0 y=4	 }
 
-		icon = GFX_generic_mio_trait_icon_reliability
+		icon = GFX_generic_mio_trait_icon_maximum_speed
 
 		relative_position_id = USF_mio_trait_light_crusier_armour
 
@@ -1338,7 +1331,7 @@ USF_EllenS_organization = {
 
 		position = { x = -1 y=2	 }
 
-		icon = GFX_generic_mio_trait_icon_reliability
+		icon = GFX_generic_mio_trait_icon_anti_air_attack
 
 		relative_position_id = USF_mio_trait_light_crusier_engine
 
@@ -1362,7 +1355,7 @@ USF_EllenS_organization = {
 
 		position = { x = 1 y=1 }
 
-		icon = GFX_generic_mio_trait_icon_reliability
+		icon = GFX_generic_mio_trait_icon_lg_attack
 
 		
 		equipment_bonus = {
@@ -1384,7 +1377,7 @@ USF_EllenS_organization = {
 
 		position = { x = -1 y=2 }
 
-		icon = GFX_generic_mio_trait_icon_reliability
+		icon = GFX_generic_mio_trait_icon_detection	
 
 		any_parent = {
 			USF_mio_trait_destroyer_qf
@@ -1409,7 +1402,7 @@ USF_EllenS_organization = {
 
 		position = { x = 1 y=2 }
 
-		icon = GFX_generic_mio_trait_icon_reliability
+		icon = GFX_generic_mio_trait_icon_maximum_speed
 
 		any_parent = {
 			USF_mio_trait_destroyer_qf
@@ -1435,7 +1428,7 @@ USF_EllenS_organization = {
 
 		position = { x = -1 y=5 }
 
-		icon = GFX_generic_mio_trait_icon_reliability
+		icon = GFX_generic_mio_trait_icon_torpedo_attack
 
 		mutually_exclusive = {
 			USF_mio_trait_destroyer_depth_charge
@@ -1464,7 +1457,7 @@ USF_EllenS_organization = {
 
 		position = { x = 1 y=5 }
 
-		icon = GFX_generic_mio_trait_icon_reliability
+		icon = GFX_generic_mio_trait_icon_sub_attack
 
 		any_parent = {
 			USF_mio_trait_destroyer_engine
@@ -1523,17 +1516,17 @@ USF_mike_douglas_organization = {
 
 	tree_header_text = {
 		text = mio_hull_production
-		x = 1
+		x = 1.5
 	}
 
 	tree_header_text = {
 		text = mio_battery_production
-		x = 5
+		x = 4.5
 	}
 
 	tree_header_text = {
 		text = mio_misc_production
-		x = 9
+		x = 7.5
 	}
 
 	#最优质的金属
@@ -1543,7 +1536,7 @@ USF_mike_douglas_organization = {
 
 		position = { x = 2 y=0 }
 
-		icon = GFX_generic_mio_trait_icon_reliability
+		icon = GFX_generic_mio_trait_icon_max_strength
 
 		
 		equipment_bonus = {
@@ -1560,7 +1553,7 @@ USF_mike_douglas_organization = {
 		position = { x = 1 y=0 }
 
 
-		icon = GFX_generic_mio_trait_icon_reliability
+		icon = GFX_generic_mio_trait_icon_maximum_speed
 		
 		equipment_bonus = {
 			maximum_speed = 0.1
@@ -1576,7 +1569,7 @@ USF_mike_douglas_organization = {
 
 		position = { x = 1 y=4 }
 
-		icon = GFX_generic_mio_trait_icon_reliability
+		icon = GFX_generic_mio_trait_icon_naval_speed
 		
 		equipment_bonus = {
 			naval_range = 0.05
@@ -1594,7 +1587,7 @@ USF_mike_douglas_organization = {
 
 		position = { x = -1 y=1 }
 
-		icon = GFX_generic_mio_trait_icon_reliability
+		icon = GFX_generic_mio_trait_icon_resources
 		
 		equipment_bonus = {
 			build_cost_ic = 0.02
@@ -1617,7 +1610,7 @@ USF_mike_douglas_organization = {
 			USF_mio_trait_refine_details
 		}
 
-		icon = GFX_generic_mio_trait_icon_reliability
+		icon = GFX_generic_mio_trait_icon_efficiency_cap
 		
 		equipment_bonus = {
 			build_cost_ic = -0.1
@@ -1649,7 +1642,7 @@ USF_mike_douglas_organization = {
 			USF_mio_trait_quality_metal
 		}
 
-		icon = GFX_generic_mio_trait_icon_reliability
+		icon = GFX_generic_mio_trait_icon_armor_value
 		
 		equipment_bonus = {
 			max_strength = 0.15
@@ -1666,7 +1659,7 @@ USF_mike_douglas_organization = {
 
 		relative_position_id = USF_mio_trait_quality_metal
 
-		icon = GFX_generic_mio_trait_icon_reliability
+		icon = GFX_generic_mio_trait_icon_batteries_hit_chance
 		
 		equipment_bonus = {
 			reliability = 0.07
@@ -1706,7 +1699,7 @@ USF_mike_douglas_organization = {
 
 		relative_position_id = USF_mio_trait_quality_metal
 
-		icon = GFX_generic_mio_trait_icon_reliability
+		icon = GFX_generic_mio_trait_icon_naval_strike_targetting
 		
 		equipment_bonus = {
 			naval_heavy_gun_hit_chance_factor = 0.03
@@ -1726,7 +1719,7 @@ USF_mike_douglas_organization = {
 
 		relative_position_id = USF_mio_trait_stabilizer
 
-		icon = GFX_generic_mio_trait_icon_reliability
+		icon = GFX_generic_mio_trait_icon_naval_range
 		
 		equipment_bonus = {
 			naval_heavy_gun_hit_chance_factor = 0.07
@@ -1744,7 +1737,7 @@ USF_mike_douglas_organization = {
 
 		relative_position_id = USF_mio_trait_quality_metal
 
-		icon = GFX_generic_mio_trait_icon_reliability
+		icon = GFX_generic_mio_trait_icon_sub_detection
 		
 		equipment_bonus = {
 			surface_detection = 0.03
@@ -1761,7 +1754,7 @@ USF_mike_douglas_organization = {
 
 		relative_position_id = USF_mio_trait_better_screen
 
-		icon = GFX_generic_mio_trait_icon_reliability
+		icon = GFX_generic_mio_trait_icon_soft_attack
 
 		any_parent = {
 			USF_mio_trait_better_screen
@@ -1785,7 +1778,7 @@ USF_mike_douglas_organization = {
 			USF_mio_trait_aa_marks
 		}
 
-		icon = GFX_generic_mio_trait_icon_reliability
+		icon = GFX_generic_mio_trait_icon_entrenchment
 		
 		equipment_bonus = {
 			anti_air_attack = 0.05
@@ -1811,7 +1804,7 @@ USF_mike_douglas_organization = {
 			USF_mio_trait_mass_production
 		}
 
-		icon = GFX_generic_mio_trait_icon_reliability
+		icon = GFX_generic_mio_trait_icon_hardness
 		
 		equipment_bonus = {
 			build_cost_ic = 0.1
@@ -1837,7 +1830,7 @@ USF_mike_douglas_organization = {
 
 		relative_position_id = USF_mio_trait_quality_metal
 
-		icon = GFX_generic_mio_trait_icon_reliability
+		icon = GFX_generic_mio_trait_icon_supply_consumption
 		
 		equipment_bonus = {
 			max_strength = 0.04
@@ -1893,13 +1886,13 @@ USF_roosevelt_organization = {
 	}
 
 	tree_header_text = {
-		text = mio_hull_production
+		text = mio_hull_production_FDR
 		x = 2
 	}
 
 	tree_header_text = {
 		text = mio_cv_aircraft_production
-		x = 8
+		x = 6.5
 	}
 
 	initial_trait = {
@@ -1921,7 +1914,7 @@ USF_roosevelt_organization = {
 	trait = {
 		token = USF_mio_trait_better_metal
 		name = USF_mio_trait_better_metal
-		icon = GFX_generic_mio_trait_icon_reliability
+		icon = GFX_generic_mio_trait_icon_max_strength
 
 		position = { x = 0 y=1 }
 
@@ -1961,7 +1954,7 @@ USF_roosevelt_organization = {
 	trait = {
 		token = USF_mio_trait_angled_armour
 		name = USF_mio_trait_angled_armour
-		icon = GFX_generic_mio_trait_icon_reliability
+		icon = GFX_generic_mio_trait_icon_armor_value
 
 		relative_position_id = USF_mio_trait_better_metal
 
@@ -1993,7 +1986,7 @@ USF_roosevelt_organization = {
 	trait = {
 		token = USF_mio_trait_better_engine
 		name = USF_mio_trait_better_engine
-		icon = GFX_generic_mio_trait_icon_reliability
+		icon = GFX_generic_mio_trait_icon_naval_speed
 
 		relative_position_id = USF_mio_trait_stop_rope
 
@@ -2043,7 +2036,7 @@ USF_roosevelt_organization = {
 	trait = {
 		token = USF_mio_trait_drop_manual
 		name = USF_mio_trait_drop_manual
-		icon = GFX_generic_mio_trait_icon_reliability
+		icon = GFX_generic_mio_trait_icon_naval_range
 
 		relative_position_id = USF_mio_trait_no_bird
 
@@ -2068,7 +2061,7 @@ USF_roosevelt_organization = {
 	trait = {
 		token = USF_mio_trait_add_light_bullet
 		name = USF_mio_trait_add_light_bullet
-		icon = GFX_generic_mio_trait_icon_reliability
+		icon = GFX_generic_mio_trait_icon_naval_strike_targetting
 
 		relative_position_id = USF_mio_trait_drop_manual
 
@@ -2091,7 +2084,7 @@ USF_roosevelt_organization = {
 	trait = {
 		token = USF_mio_trait_add_fire_bullet
 		name = USF_mio_trait_add_fire_bullet
-		icon = GFX_generic_mio_trait_icon_reliability
+		icon = GFX_generic_mio_trait_icon_soft_attack
 
 		relative_position_id = USF_mio_trait_add_light_bullet
 
@@ -2114,7 +2107,7 @@ USF_roosevelt_organization = {
 	trait = {
 		token = USF_mio_trait_add_he_bullet
 		name = USF_mio_trait_add_he_bullet
-		icon = GFX_generic_mio_trait_icon_reliability
+		icon = GFX_generic_mio_trait_icon_batteries_hit_chance
 
 		relative_position_id = USF_mio_trait_add_fire_bullet
 
@@ -2138,7 +2131,7 @@ USF_roosevelt_organization = {
 	trait = {
 		token = USF_mio_trait_drop_bomb_good
 		name = USF_mio_trait_drop_bomb_good
-		icon = GFX_generic_mio_trait_icon_reliability
+		icon = GFX_generic_mio_trait_icon_hardness
 
 		relative_position_id = USF_mio_trait_no_bird
 
@@ -2164,7 +2157,7 @@ USF_roosevelt_organization = {
 	trait = {
 		token = USF_mio_trait_light_wing
 		name = USF_mio_trait_light_wing
-		icon = GFX_generic_mio_trait_icon_reliability
+		icon = GFX_generic_mio_trait_icon_production_capacity
 
 		relative_position_id = USF_mio_trait_drop_bomb_good
 
@@ -2190,7 +2183,7 @@ USF_roosevelt_organization = {
 	trait = {
 		token = USF_mio_trait_folded_wing
 		name = USF_mio_trait_folded_wing
-		icon = GFX_generic_mio_trait_icon_reliability
+		icon = GFX_generic_mio_trait_icon_efficiency_gain
 
 		relative_position_id = USF_mio_trait_light_wing
 
@@ -2212,7 +2205,7 @@ USF_roosevelt_organization = {
 	trait = {
 		token = USF_mio_trait_add_bomb_lock
 		name = USF_mio_trait_add_bomb_lock
-		icon = GFX_generic_mio_trait_icon_reliability
+		icon = GFX_generic_mio_trait_icon_air_ground_attack
 
 
 		position = { x=8 y=6 }
@@ -2237,7 +2230,7 @@ USF_roosevelt_organization = {
 	trait = {
 		token = USF_mio_trait_add_heavy_gun_barrel
 		name = USF_mio_trait_add_heavy_gun_barrel
-		icon = GFX_generic_mio_trait_icon_reliability
+		icon = GFX_generic_mio_department_icon_tank_general_weapons
 
 
 		position = { x=5 y=6 }
@@ -2279,17 +2272,17 @@ USF_Wchester_organization = {
 
 	tree_header_text = {
 		text = mio_torpedo_production
-		x = 2
+		x = 1
 	}
 
 	tree_header_text = {
 		text = mio_hull_production
-		x = 5
+		x = 4
 	}
 
 	tree_header_text = {
 		text = mio_mines_production
-		x = 8
+		x = 7
 	}
 
 	initial_trait = {
@@ -2305,7 +2298,7 @@ USF_Wchester_organization = {
 	trait = {
 		token = USF_mio_trait_longer_torpedo
 		name = USF_mio_trait_longer_torpedo
-		icon = GFX_generic_mio_trait_icon_reliability
+		icon = GFX_generic_mio_trait_icon_torpedo_attack
 
 		#relative_position_id = USF_mio_trait_stronger_sonar
 
@@ -2323,7 +2316,7 @@ USF_Wchester_organization = {
 	trait = {
 		token = USF_mio_trait_safer_torpedo
 		name = USF_mio_trait_safer_torpedo
-		icon = GFX_generic_mio_trait_icon_reliability
+		icon = GFX_generic_mio_trait_icon_naval_torpedo_damage_reduction_factor
 
 		relative_position_id = USF_mio_trait_longer_torpedo
 
@@ -2341,7 +2334,7 @@ USF_Wchester_organization = {
 	trait = {
 		token = USF_mio_trait_stabilizer
 		name = USF_mio_trait_stabilizer
-		icon = GFX_generic_mio_trait_icon_reliability
+		icon = GFX_generic_mio_trait_icon_naval_speed
 
 		relative_position_id = USF_mio_trait_safer_torpedo
 
@@ -2360,7 +2353,7 @@ USF_Wchester_organization = {
 	trait = {
 		token = USF_mio_trait_signal_increaser
 		name = USF_mio_trait_signal_increaser
-		icon = GFX_generic_mio_trait_icon_reliability
+		icon = GFX_generic_mio_trait_icon_sub_detection
 
 		relative_position_id = USF_mio_trait_safer_torpedo
 
@@ -2376,7 +2369,7 @@ USF_Wchester_organization = {
 	trait = {
 		token = USF_mio_trait_invisibility
 		name = USF_mio_trait_invisibility
-		icon = GFX_generic_mio_trait_icon_reliability
+		icon = GFX_generic_mio_trait_icon_sub_visibility
 
 		relative_position_id = USF_mio_trait_signal_increaser
 
@@ -2395,7 +2388,7 @@ USF_Wchester_organization = {
 	trait = {
 		token = USF_mio_trait_better_men
 		name = USF_mio_trait_better_men
-		icon = GFX_generic_mio_trait_icon_reliability
+		icon = GFX_generic_mio_trait_icon_entrenchment
 
 		relative_position_id = USF_mio_trait_signal_increaser
 
@@ -2414,7 +2407,7 @@ USF_Wchester_organization = {
 	trait = {
 		token = USF_mio_trait_invisible_torpedo
 		name = USF_mio_trait_invisible_torpedo
-		icon = GFX_generic_mio_trait_icon_reliability
+		icon = GFX_generic_mio_trait_icon_naval_torpedo_hit_chance_factor
 
 		relative_position_id = USF_mio_trait_signal_increaser
 
@@ -2433,7 +2426,7 @@ USF_Wchester_organization = {
 	trait = {
 		token = USF_mio_trait_thick_propeler
 		name = USF_mio_trait_thick_propeler
-		icon = GFX_generic_mio_trait_icon_reliability
+		icon = GFX_generic_mio_trait_icon_naval_speed
 
 		relative_position_id = USF_mio_trait_better_men
 
@@ -2463,14 +2456,14 @@ USF_Wchester_organization = {
 	trait = {
 		token = USF_mio_trait_engine_support
 		name = USF_mio_trait_engine_support
-		icon = GFX_generic_mio_trait_icon_reliability
+		icon = GFX_generic_mio_trait_icon_mines
 
 		relative_position_id = USF_mio_trait_safer_torpedo
 
 		position = { x=5 y=0 }
 
 		equipment_bonus = {
-			mines_planting = 0.05
+			mines_planting = 0.1
 		}
 	}
 
@@ -2478,7 +2471,7 @@ USF_Wchester_organization = {
 	trait = {
 		token = USF_mio_trait_bigger_mines
 		name = USF_mio_trait_bigger_mines
-		icon = GFX_generic_mio_trait_icon_reliability
+		icon = GFX_generic_mio_trait_icon_mines
 
 		relative_position_id = USF_mio_trait_engine_support
 
@@ -2494,7 +2487,7 @@ USF_Wchester_organization = {
 	trait = {
 		token = USF_mio_trait_steal_mines
 		name = USF_mio_trait_steal_mines
-		icon = GFX_generic_mio_trait_icon_reliability
+		icon = GFX_generic_mio_trait_icon_mines
 
 		relative_position_id = USF_mio_trait_bigger_mines
 
@@ -2551,12 +2544,12 @@ USF_mLee_organization = {
 	}
 
 	tree_header_text = {
-		text = mio_fighter_weapons_production
-		x = 3
+		text = mio_bomber_weapons_production
+		x = 1.5
 	}
 
 	tree_header_text = {
-		text = mio_airframe_production
+		text = mio_airframe_production_mLee
 		x = 6
 	}
 
@@ -2580,7 +2573,7 @@ USF_mLee_organization = {
 	trait = {
 		token = USF_mio_trait_more_oil
 		name = USF_mio_trait_more_oil
-		icon = GFX_generic_mio_trait_icon_reliability
+		icon = GFX_generic_mio_trait_icon_weight
 
 		#relative_position_id = USF_mio_trait_bigger_mines
 
@@ -2596,7 +2589,7 @@ USF_mLee_organization = {
 	trait = {
 		token = USF_mio_trait_sealed_fuel
 		name = USF_mio_trait_sealed_fuel
-		icon = GFX_generic_mio_trait_icon_reliability
+		icon = GFX_generic_mio_trait_icon_defense
 
 		#relative_position_id = USF_mio_trait_bigger_mines
 
@@ -2613,7 +2606,7 @@ USF_mLee_organization = {
 	trait = {
 		token = USF_mio_trait_more_armour
 		name = USF_mio_trait_more_armour
-		icon = GFX_generic_mio_trait_icon_reliability
+		icon = GFX_generic_mio_trait_icon_max_strength
 
 		#relative_position_id = USF_mio_trait_bigger_mines
 
@@ -2631,7 +2624,7 @@ USF_mLee_organization = {
 	trait = {
 		token = USF_mio_trait_oil_up
 		name = USF_mio_trait_oil_up
-		icon = GFX_generic_mio_trait_icon_reliability
+		icon = GFX_generic_mio_trait_icon_supply_consumption
 
 		relative_position_id = USF_mio_trait_eletronics
 
@@ -2680,7 +2673,7 @@ USF_mLee_organization = {
 	trait = {
 		token = USF_mio_trait_heavy_barrel
 		name = USF_mio_trait_heavy_barrel
-		icon = GFX_generic_mio_trait_icon_reliability
+		icon = GFX_generic_mio_department_icon_tank_general_weapons
 
 		relative_position_id = USF_mio_trait_oil_up
 
@@ -2698,7 +2691,7 @@ USF_mLee_organization = {
 	trait = {
 		token = USF_mio_trait_bomber_engine
 		name = USF_mio_trait_bomber_engine
-		icon = GFX_generic_mio_trait_icon_reliability
+		icon = GFX_generic_mio_trait_icon_maximum_speed
 
 		any_parent = { USF_mio_trait_oil_up }
 		any_parent = { USF_mio_trait_back_wing }
@@ -2716,7 +2709,7 @@ USF_mLee_organization = {
 	trait = {
 		token = USF_mio_trait_back_wing
 		name = USF_mio_trait_back_wing
-		icon = GFX_generic_mio_trait_icon_reliability
+		icon = GFX_generic_mio_trait_icon_air_agility
 
 		position = { x=0 y=2 }
 
@@ -2730,7 +2723,7 @@ USF_mLee_organization = {
 	trait = {
 		token = USF_mio_trait_eletronics
 		name = USF_mio_trait_eletronics
-		icon = GFX_generic_mio_trait_icon_reliability
+		icon = GFX_generic_mio_trait_icon_sub_detection
 
 		#relative_position_id = USF_mio_trait_bigger_mines
 
@@ -2754,7 +2747,7 @@ USF_mLee_organization = {
 	trait = {
 		token = USF_mio_trait_fire_bombs
 		name = USF_mio_trait_fire_bombs
-		icon = GFX_generic_mio_trait_icon_reliability
+		icon = GFX_generic_mio_trait_icon_air_ground_attack
 
 		#relative_position_id = USF_mio_trait_bigger_mines
 
@@ -2779,7 +2772,7 @@ USF_mLee_organization = {
 	trait = {
 		token = USF_mio_trait_cluster_bombs
 		name = USF_mio_trait_cluster_bombs
-		icon = GFX_generic_mio_trait_icon_reliability
+		icon = GFX_generic_mio_trait_icon_strategic_attack
 
 		relative_position_id = USF_mio_trait_fire_bombs
 
@@ -2800,7 +2793,7 @@ USF_mLee_organization = {
 	}
 }
 
-#轰炸机 
+#战斗机
 USF_crosair_organization = {
 	icon = GFX_idea_materiel_sunders
 	allowed = {	
@@ -2830,11 +2823,16 @@ USF_crosair_organization = {
 
 	tree_header_text = {
 		text = mio_fighter_production
-		x = 8
+		x = 5
+	}
+
+	tree_header_text = {
+		text = mio_light_fighter_production
+		x = 9
 	}
 
 	initial_trait = {
-		name = USF_mio_initial_trait_production_mLee
+		name = USF_mio_initial_trait_production_crosair
 		
 		equipment_bonus = {
 			air_attack = 0.1
@@ -2851,7 +2849,7 @@ USF_crosair_organization = {
 	trait = {
 		token = USF_mio_trait_eletronics
 		name = USF_mio_trait_eletronics
-		icon = GFX_generic_mio_trait_icon_reliability
+		icon = GFX_generic_mio_trait_icon_sub_detection	
 
 		#relative_position_id = USF_mio_trait_bigger_mines
 
@@ -2868,7 +2866,7 @@ USF_crosair_organization = {
 	trait = {
 		token = USF_mio_trait_he_bullets
 		name = USF_mio_trait_he_bullets
-		icon = GFX_generic_mio_trait_icon_reliability
+		icon = GFX_generic_mio_trait_icon_soft_attack
 
 		relative_position_id = USF_mio_trait_eletronics
 
@@ -2886,7 +2884,7 @@ USF_crosair_organization = {
 	trait = {
 		token = USF_mio_trait_frag_bullets
 		name = USF_mio_trait_frag_bullets
-		icon = GFX_generic_mio_trait_icon_reliability
+		icon = GFX_generic_mio_trait_icon_naval_strike_targetting
 
 		relative_position_id = USF_mio_trait_eletronics
 
@@ -2903,7 +2901,7 @@ USF_crosair_organization = {
 	trait = {
 		token = USF_mio_trait_armour_crosair
 		name = USF_mio_trait_armour_crosair
-		icon = GFX_generic_mio_trait_icon_reliability
+		icon = GFX_generic_mio_trait_icon_defense
 
 		#relative_position_id = USF_mio_trait_eletronics
 
@@ -2929,7 +2927,7 @@ USF_crosair_organization = {
 	trait = {
 		token = USF_mio_trait_hfigher_crosair
 		name = USF_mio_trait_hfighter_crosair
-		icon = GFX_generic_mio_trait_icon_reliability
+		icon = GFX_generic_mio_trait_icon_max_strength
 
 		relative_position_id = USF_mio_trait_armour_crosair
 
@@ -2958,7 +2956,7 @@ USF_crosair_organization = {
 	trait = {
 		token = USF_mio_trait_hfigher_crosair_production
 		name = USF_mio_trait_hfighter_crosair_production
-		icon = GFX_generic_mio_trait_icon_reliability
+		icon = GFX_generic_mio_trait_icon_efficiency_gain
 
 		relative_position_id = USF_mio_trait_armour_crosair
 
@@ -2985,7 +2983,7 @@ USF_crosair_organization = {
 	trait = {
 		token = USF_mio_trait_figher_crosair
 		name = USF_mio_trait_fighter_crosair
-		icon = GFX_generic_mio_trait_icon_reliability
+		icon = GFX_generic_mio_trait_icon_breakthrough
 
 		relative_position_id = USF_mio_trait_less_armour_crosair
 
@@ -3014,7 +3012,7 @@ USF_crosair_organization = {
 	trait = {
 		token = USF_mio_trait_figher_crosair_production
 		name = USF_mio_trait_fighter_crosair_production
-		icon = GFX_generic_mio_trait_icon_reliability
+		icon = GFX_generic_mio_trait_icon_efficiency_gain
 
 		relative_position_id = USF_mio_trait_less_armour_crosair
 
@@ -3040,7 +3038,7 @@ USF_crosair_organization = {
 	trait = {
 		token = USF_mio_trait_less_armour_crosair
 		name = USF_mio_trait_less_armour_crosair
-		icon = GFX_generic_mio_trait_icon_reliability
+		icon = GFX_generic_mio_trait_icon_air_agility
 
 		#relative_position_id = USF_mio_trait_eletronics
 
@@ -3065,7 +3063,7 @@ USF_crosair_organization = {
 	trait = {
 		token = USF_mio_trait_tail_mg_crosair
 		name = USF_mio_trait_tail_mg_crosair
-		icon = GFX_generic_mio_trait_icon_reliability
+		icon = GFX_generic_mio_trait_icon_anti_air_attack
 
 		#relative_position_id = USF_mio_trait_eletronics
 
@@ -3101,7 +3099,7 @@ USF_crosair_organization = {
 	trait = {
 		token = USF_mio_trait_propoganda_crosair
 		name = USF_mio_trait_propoganda_crosair
-		icon = GFX_generic_mio_trait_icon_reliability
+		icon = GFX_generic_mio_trait_icon_unique
 
 		relative_position_id = USF_mio_trait_tail_mg_crosair
 

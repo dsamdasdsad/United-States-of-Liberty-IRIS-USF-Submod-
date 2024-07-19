@@ -17,7 +17,7 @@ focus_tree = {
  
  
  
-    continuous_focus_position = { x = 0 y = 4000 }
+    continuous_focus_position = { x = 0 y = 200 }
  
  
  
@@ -113,7 +113,7 @@ focus_tree = {
     #增加党派
     focus = {
         id = USF_add_parties
-        icon = GFX_focus_generic_strike_at_democracy2
+        icon = GFX_goal_generic_national_unity
  
  
  
@@ -153,8 +153,8 @@ focus_tree = {
  
     #重建国会
     focus = {
-        id = USF_rebuild_government
-        icon = GFX_focus_generic_strike_at_democracy2
+        id = USF_rebuild_government_focus
+        icon = GFX_focus_generic_self_management
     
         ai_will_do = {
             base = 1
@@ -189,7 +189,7 @@ focus_tree = {
     #前进党
     focus = {
         id = USF_forward_party
-        icon = GFX_focus_generic_strike_at_democracy2
+        icon = GFX_goal_generic_demand_territory
  
  
  
@@ -217,7 +217,7 @@ focus_tree = {
  
  
         prerequisite = { focus = USF_add_parties  }
-        prerequisite = { focus = USF_rebuild_government  }
+        prerequisite = { focus = USF_rebuild_government_focus  }
         relative_position_id = USF_add_parties
  
  
@@ -237,7 +237,7 @@ focus_tree = {
     #军事改革
     focus = {
         id = USF_millitary_reform
-        icon = GFX_focus_generic_strike_at_democracy2
+        icon = GFX_focus_generic_combined_arms
  
  
  
@@ -282,7 +282,7 @@ focus_tree = {
     #军事改革-步兵
     focus = {
         id = USF_millitary_reform_infantry
-        icon = GFX_focus_generic_strike_at_democracy2
+        icon = GFX_goal_generic_allies_build_infantry
  
  
  
@@ -337,7 +337,7 @@ focus_tree = {
     #改进的装甲单位
     focus = {
         id = USF_millitary_reform_armoured_units
-        icon = GFX_focus_generic_strike_at_democracy2
+        icon = GFX_goal_generic_army_tanks
  
  
  
@@ -396,7 +396,7 @@ focus_tree = {
     #科研改革
     focus = {
         id = USF_research_reform
-        icon = GFX_focus_generic_strike_at_democracy2
+        icon = GFX_focus_research2
  
  
  
@@ -445,7 +445,7 @@ focus_tree = {
  
  
         completion_reward = {
-            add_ideas = { idea = USF_res_reform}
+            add_ideas =  USF_res_reform
             add_research_slot = 1
         }
     }
@@ -456,7 +456,7 @@ focus_tree = {
     #最后改革
     focus = {
         id = USF_final_reform
-        icon = GFX_focus_generic_strike_at_democracy2
+        icon = GFX_goal_generic_air_production
  
  
  
@@ -510,7 +510,7 @@ focus_tree = {
     #空军改革
     focus = {
         id = USF_air_force_reform
-        icon = GFX_focus_generic_strike_at_democracy2
+        icon = GFX_goal_generic_air_fighter
   
         ai_will_do = {
             base = 1
@@ -550,7 +550,7 @@ focus_tree = {
     #海军改革
     focus = {
         id = USF_navy_reform
-        icon = GFX_focus_generic_strike_at_democracy2
+        icon = GFX_goal_generic_navy_battleship
   
         ai_will_do = {
             base = 1
@@ -591,7 +591,7 @@ focus_tree = {
     #拥抱未来
     focus = {
         id = USF_future
-        icon = GFX_focus_generic_strike_at_democracy2
+        icon = GFX_goal_generic_intelligence_exchange
  
  
  
@@ -637,10 +637,10 @@ focus_tree = {
  
  
  
-    #第一次交易（少量交易）
+    #第一次交易
     focus = {
         id = USF_trade_one
-        icon = GFX_focus_generic_strike_at_democracy2
+        icon = GFX_focus_generic_industry_1
  
  
  
@@ -688,7 +688,7 @@ focus_tree = {
     #交易1.1
     focus = {
         id = USF_trade_one_point_one
-        icon = GFX_focus_generic_strike_at_democracy2
+        icon = GFX_focus_generic_industry_2
  
  
  
@@ -734,7 +734,7 @@ focus_tree = {
     #交易1.2（得加决议）USF_industry_quality
     focus = {
         id = USF_trade_one_point_two
-        icon = GFX_focus_generic_strike_at_democracy2
+        icon = GFX_focus_generic_industry_3
  
  
  
@@ -781,7 +781,7 @@ focus_tree = {
     #交易1.3（得加决议）USF_industry_quantity
     focus = {
         id = USF_trade_one_point_three
-        icon = GFX_focus_generic_strike_at_democracy2
+        icon = GFX_focus_generic_industry_3
  
  
  
@@ -829,7 +829,7 @@ focus_tree = {
     #交易2
     focus = {
         id = USF_trade_two
-        icon = GFX_focus_generic_strike_at_democracy2
+        icon = GFX_goal_generic_improve_relations
  
  
  
@@ -927,7 +927,8 @@ focus_tree = {
     #承认其他党派是非法组织
     focus = {
         id = USF_stablize_government 
-        icon = GFX_focus_generic_strike_at_democracy2
+        icon = GFX_goal_generic_forceful_treaty
+        # 
  
  
  
@@ -1068,7 +1069,7 @@ focus_tree = {
  
  
  
-        icon = GFX_focus_generic_strike_at_democracy2
+        icon = GFX_goal_demand_sudetenland
  
  
  
@@ -1148,7 +1149,7 @@ focus_tree = {
  
  
  
-        icon = GFX_focus_generic_strike_at_democracy2
+        icon = GFX_goal_tfv_sever_ties_with_uk
  
  
  
@@ -1306,7 +1307,7 @@ focus_tree = {
     #重掌政权
     focus = {
         id = USF_regain_power
-        icon = GFX_focus_generic_strike_at_democracy2
+        icon = GFX_goal_tfv_saf_anti_colonialist_crusade 
  
  
  
@@ -1360,7 +1361,7 @@ focus_tree = {
     #好战1
     focus = {
         id = USF_like_war_one
-        icon = GFX_focus_generic_strike_at_democracy2
+        icon = GFX_focus_generic_annex_country
  
  
  
@@ -1407,7 +1408,7 @@ focus_tree = {
     #好战2
     focus = {
         id = USF_like_war_two
-        icon = GFX_focus_generic_strike_at_democracy2
+        icon = GFX_focus_spr_crush_the_revolution
  
  
  
@@ -1450,7 +1451,7 @@ focus_tree = {
     #好战3
     focus = {
         id = USF_like_war_three
-        icon = GFX_focus_generic_strike_at_democracy2
+        icon = GFX_focus_generic_annex_country_2
  
  
  
@@ -1492,7 +1493,7 @@ focus_tree = {
     #爱和1
     focus = {
         id = USF_like_peace_one
-        icon = GFX_focus_generic_strike_at_democracy2
+        icon = GFX_focus_generic_treaty
  
  
  
@@ -1538,7 +1539,7 @@ focus_tree = {
     #爱和2
     focus = {
         id = USF_like_peace_two
-        icon = GFX_focus_generic_strike_at_democracy2
+        icon = GFX_goal_generic_construct_infrastructure
  
  
  
@@ -1604,7 +1605,7 @@ focus_tree = {
     #爱和3
     focus = {
         id = USF_like_peace_three
-        icon = GFX_focus_generic_strike_at_democracy2
+        icon = GFX_focus_generic_diplomatic_treaty
  
  
  
@@ -1647,7 +1648,7 @@ focus_tree = {
     #投资人民
     focus = {
         id = USF_civil_investments
-        icon = GFX_focus_generic_strike_at_democracy2
+        icon = GFX_focus_generic_concessions
  
  
  
@@ -1721,7 +1722,7 @@ focus_tree = {
     #投资陆军
     focus = {
         id = USF_invest_army
-        icon = GFX_focus_generic_strike_at_democracy2
+        icon = GFX_goal_generic_construct_mil_factory
  
         ai_will_do = {
             base = 10
@@ -1748,7 +1749,7 @@ focus_tree = {
     #投资步兵
     focus = {
         id = USF_infantry_investment
-        icon = GFX_focus_generic_strike_at_democracy2
+        icon = GFX_focus_generic_military_mission
  
         ai_will_do = {
             base = 10
@@ -1792,7 +1793,7 @@ focus_tree = {
     #轻步兵升级
     focus = {
         id = USF_light_infantry_upgrade
-        icon = GFX_focus_generic_strike_at_democracy2
+        icon = GFX_focus_ETH_freedom_at_gunpoint
  
         ai_will_do = {
             base = 10
@@ -1819,7 +1820,7 @@ focus_tree = {
     #投资特种部队
     focus = {
         id = USF_special_forces_investment
-        icon = GFX_focus_generic_strike_at_democracy2
+        icon = GFX_focus_SMB_a_land_of_mountains
  
         ai_will_do = {
             base = 10
@@ -1853,7 +1854,7 @@ focus_tree = {
     #特种部队升级
     focus = {
         id = USF_special_forces_upgrade
-        icon = GFX_focus_generic_strike_at_democracy2
+        icon = GFX_focus_GRE_a_land_of_mountains
  
         ai_will_do = {
             base = 10
@@ -1886,7 +1887,7 @@ focus_tree = {
     #投资支援
     focus = {
         id = USF_support_investment
-        icon = GFX_focus_generic_strike_at_democracy2
+        icon = GFX_focus_generic_supply_line
  
         ai_will_do = {
             base = 10
@@ -1917,7 +1918,7 @@ focus_tree = {
     #火车升级
     focus = {
         id = USF_train_upgrade
-        icon = GFX_focus_generic_strike_at_democracy2
+        icon = GFX_focus_generic_railroad
  
         ai_will_do = {
             base = 10
@@ -1944,7 +1945,7 @@ focus_tree = {
     #投资火炮
     focus = {
         id = USF_artillery_investment
-        icon = GFX_focus_generic_strike_at_democracy2
+        icon = GFX_goal_generic_army_artillery
  
         ai_will_do = {
             base = 10
@@ -1996,7 +1997,7 @@ focus_tree = {
     #火炮升级
     focus = {
         id = USF_artillery_upgrade
-        icon = GFX_focus_generic_strike_at_democracy2
+        icon = GFX_goal_generic_army_artillery2
  
         ai_will_do = {
             base = 10
@@ -2017,16 +2018,6 @@ focus_tree = {
 
         completion_reward = {
             unlock_decision_tooltip = USF_artillery
-			set_technology = {
-				USF_light_artillery = 1
-                USF_medium_artillery  = 1
-                USF_heavy_artillery  = 1
-			}
-            add_equipment_to_stockpile = {
-                type = artillery_equipment
-                amount = 1
-                producer = USF
-            }
         }
     }
 
@@ -2034,7 +2025,7 @@ focus_tree = {
     #投资自走炮
     focus = {
         id = USF_spg_investment
-        icon = GFX_focus_generic_strike_at_democracy2
+        icon = GFX_focus_usa_tank_destroyer_doctrine
  
         ai_will_do = {
             base = 10
@@ -2073,7 +2064,7 @@ focus_tree = {
     #自走炮升级
     focus = {
         id = USF_spg_upgrade
-        icon = GFX_focus_generic_strike_at_democracy2
+        icon = GFX_focus_generic_army_tanks2
  
         ai_will_do = {
             base = 10
@@ -2118,7 +2109,7 @@ focus_tree = {
     #投资装甲
     focus = {
         id = USF_armoured_investment
-        icon = GFX_focus_generic_strike_at_democracy2
+        icon = GFX_focus_NOR_rikstanken
  
         ai_will_do = {
             base = 10
@@ -2172,7 +2163,7 @@ focus_tree = {
     #底盘升级
     focus = {
         id = USF_chasis_upgrade
-        icon = GFX_focus_generic_strike_at_democracy2
+        icon = GFX_goal_continuous_armor_production
  
         ai_will_do = {
             base = 10
@@ -2201,7 +2192,7 @@ focus_tree = {
     #模块升级 (所有陆军学说-50）
     focus = {
         id = USF_invest_army_theory
-        icon = GFX_focus_generic_strike_at_democracy2
+        icon = GFX_goal_generic_army_doctrines
  
         ai_will_do = {
             base = 10
@@ -2238,7 +2229,7 @@ focus_tree = {
     #投资海军
     focus = {
         id = USF_invest_navy
-        icon = GFX_focus_generic_strike_at_democracy2
+        icon = GFX_goal_generic_construct_naval_dockyard
  
         ai_will_do = {
             base = 10
@@ -2264,7 +2255,7 @@ focus_tree = {
     #投资盾舰
     focus = {
         id = USF_invest_shield_ship
-        icon = GFX_focus_generic_strike_at_democracy2
+        icon = GFX_focus_generic_destroyer
  
         ai_will_do = {
             base = 10
@@ -2310,7 +2301,7 @@ focus_tree = {
     #投资小型舰船
     focus = {
         id = USF_invest_small_ship_hull
-        icon = GFX_focus_generic_strike_at_democracy2
+        icon = GFX_goal_generic_navy_submarine
  
         ai_will_do = {
             base = 10
@@ -2337,7 +2328,7 @@ focus_tree = {
     #投资矛舰
     focus = {
         id = USF_invest_spear_ship
-        icon = GFX_focus_generic_strike_at_democracy2
+        icon = GFX_focus_generic_navy_battleship2
  
         ai_will_do = {
             base = 10
@@ -2390,7 +2381,7 @@ focus_tree = {
     #投资大型舰船
     focus = {
         id = USF_invest_big_ship_hull
-        icon = GFX_focus_generic_strike_at_democracy2
+        icon = GFX_goal_generic_navy_carrier
  
         ai_will_do = {
             base = 10
@@ -2417,7 +2408,7 @@ focus_tree = {
     #投资小型舰船
     focus = {
         id = USF_invest_convoy
-        icon = GFX_focus_generic_strike_at_democracy2
+        icon = GFX_focus_generic_cruiser2
  
         ai_will_do = {
             base = 10
@@ -2450,7 +2441,7 @@ focus_tree = {
     #投资海军陆战队
     focus = {
         id = USF_invest_marine
-        icon = GFX_focus_generic_strike_at_democracy2
+        icon = GFX_goal_generic_navy_anti_submarine
  
         ai_will_do = {
             base = 10
@@ -2478,7 +2469,7 @@ focus_tree = {
     #投资海学说
     focus = {
         id = USF_invest_navy_theory
-        icon = GFX_focus_generic_strike_at_democracy2
+        icon = GFX_goal_generic_navy_doctrines_tactics
  
         ai_will_do = {
             base = 10
@@ -2510,7 +2501,7 @@ focus_tree = {
     #投资战斗机
     focus = {
         id = USF_invest_fighter
-        icon = GFX_focus_generic_strike_at_democracy2
+        icon = GFX_goal_generic_air_fighter2
  
         ai_will_do = {
             base = 10
@@ -2549,7 +2540,7 @@ focus_tree = {
     #投资机枪炮
     focus = {
         id = USF_invest_fighter_weapons
-        icon = GFX_focus_generic_strike_at_democracy2
+        icon = GFX_focus_generic_aircraft_production
  
         ai_will_do = {
             base = 10
@@ -2576,7 +2567,7 @@ focus_tree = {
     #投资轰炸机
     focus = {
         id = USF_invest_bomber
-        icon = GFX_focus_generic_strike_at_democracy2
+        icon = GFX_focus_usa_escort_fighters
  
         ai_will_do = {
             base = 10
@@ -2624,7 +2615,7 @@ focus_tree = {
     #投资轰炸机
     focus = {
         id = USF_invest_bombs
-        icon = GFX_focus_generic_strike_at_democracy2
+        icon = GFX_focus_SWE_marauder_bombers
  
         ai_will_do = {
             base = 10
@@ -2651,7 +2642,7 @@ focus_tree = {
     #投资运输机
     focus = {
         id = USF_invest_transport_planes
-        icon = GFX_focus_generic_strike_at_democracy2
+        icon = GFX_goal_generic_air_bomber
  
         ai_will_do = {
             base = 10
@@ -2683,7 +2674,7 @@ focus_tree = {
     #投资伞兵
     focus = {
         id = USF_invest_paratroopers
-        icon = GFX_focus_generic_strike_at_democracy2
+        icon = GFX_focus_generic_paratrooper
  
         ai_will_do = {
             base = 10
@@ -2710,7 +2701,7 @@ focus_tree = {
     #投资伞兵
     focus = {
         id = USF_invest_airforce_theory
-        icon = GFX_focus_generic_strike_at_democracy2
+        icon = GFX_goal_generic_air_doctrine
  
         ai_will_do = {
             base = 10
@@ -2741,7 +2732,7 @@ focus_tree = {
     #投资海军陆战队和伞兵学说
     focus = {
         id = USF_invest_marine_paratrooper_theory
-        icon = GFX_focus_generic_strike_at_democracy2
+        icon = GFX_goal_generic_special_forces
  
         ai_will_do = {
             base = 10
@@ -2782,7 +2773,7 @@ focus_tree = {
     #区域性干涉
     focus = {
         id = USF_local_interference
-        icon = GFX_focus_generic_the_giant_wakes
+        icon = GFX_focus_generic_provoke_border_clashes
  
         ai_will_do = {
             base = 10
@@ -2795,7 +2786,7 @@ focus_tree = {
         cost = 10
  
         x = 0
-        y = 8
+        y = 4
  
         prerequisite = { focus = USF_titan_awakes}
         relative_position_id = USF_titan_awakes
@@ -2809,7 +2800,7 @@ focus_tree = {
     #解放星之界
     focus = {
         id = USF_liberate_XZJ
-        icon = GFX_focus_generic_the_giant_wakes
+        icon = GFX_focus_generic_attack_venezuela
  
         ai_will_do = {
             base = 10
@@ -2836,7 +2827,7 @@ focus_tree = {
     #解放塔德里克
     focus = {
         id = USF_liberate_TDL
-        icon = GFX_focus_generic_the_giant_wakes
+        icon = GFX_focus_generic_attack_colombia
  
         ai_will_do = {
             base = 10
@@ -2862,7 +2853,7 @@ focus_tree = {
     #解放塔德里克
     focus = {
         id = USF_organize_southern_states
-        icon = GFX_focus_generic_the_giant_wakes
+        icon = GFX_focus_generic_improve_the_administration
  
         ai_will_do = {
             base = 10
@@ -2890,7 +2881,7 @@ focus_tree = {
     #瓜分中原
     focus = {
         id = USF_liberate_w_NAC
-        icon = GFX_focus_generic_the_giant_wakes
+        icon = GFX_goal_molotov_ribbentrop_pact
  
         ai_will_do = {
             base = 10
@@ -2929,7 +2920,7 @@ focus_tree = {
     #全球干涉
     focus = {
         id = USF_global_interference
-        icon = GFX_focus_generic_the_giant_wakes
+        icon = GFX_focus_usa_recruit_the_free_corps
  
         ai_will_do = {
             base = 10
@@ -2956,7 +2947,7 @@ focus_tree = {
     #加入战车道
     focus = {
         id = USF_join_senshado
-        icon = GFX_focus_generic_the_giant_wakes
+        icon = GFX_focus_OCE_join_USR
  
         ai_will_do = {
             base = 10
@@ -2991,7 +2982,7 @@ focus_tree = {
     #宣传
     focus = {
         id = USF_propoganda
-        icon = GFX_focus_generic_the_giant_wakes
+        icon = GFX_focus_chi_british_cooperation
  
         ai_will_do = {
             base = 10
@@ -3019,7 +3010,7 @@ focus_tree = {
     #宣传ANZ
     focus = {
         id = USF_propoganda_ANZ
-        icon = GFX_focus_generic_the_giant_wakes
+        icon = GFX_focus_befriend_italy
  
         ai_will_do = {
             base = 10
@@ -3045,7 +3036,7 @@ focus_tree = {
     #宣传USR
     focus = {
         id = USF_propoganda_USR
-        icon = GFX_focus_generic_the_giant_wakes
+        icon = GFX_focus_chi_mission_to_germany
  
         ai_will_do = {
             base = 10
@@ -3071,7 +3062,7 @@ focus_tree = {
     #间谍
     focus = {
         id = USF_intelligence
-        icon = GFX_focus_generic_the_giant_wakes
+        icon = GFX_focus_generic_secret_service_agency
  
         ai_will_do = {
             base = 10
@@ -3097,7 +3088,7 @@ focus_tree = {
     #间谍ELN
     focus = {
         id = USF_intelligence_ELN
-        icon = GFX_focus_generic_the_giant_wakes
+        icon = GFX_focus_attack_france
  
         ai_will_do = {
             base = 10
@@ -3124,7 +3115,7 @@ focus_tree = {
     #间谍UNG
     focus = {
         id = USF_intelligence_UNG
-        icon = GFX_focus_generic_the_giant_wakes
+        icon = GFX_focus_attack_britain
  
         ai_will_do = {
             base = 10
@@ -3150,7 +3141,7 @@ focus_tree = {
     #蓝色计划
     focus = {
         id = USF_plan_aqua
-        icon = GFX_focus_generic_the_giant_wakes
+        icon = GFX_goal_generic_attack_allies
  
         ai_will_do = {
             base = 10
@@ -3200,7 +3191,7 @@ focus_tree = {
     #加入自由国家联盟
     focus = {
         id = USF_join_EU
-        icon = GFX_focus_generic_the_giant_wakes
+        icon = GFX_focus_ARG_join_the_allies
  
         ai_will_do = {
             base = 10
@@ -3234,7 +3225,7 @@ focus_tree = {
     #Eln军事援助
     focus = {
         id = USF_ELN_arms
-        icon = GFX_focus_generic_the_giant_wakes
+        icon = GFX_focus_chi_reach_out_to_france
  
         ai_will_do = {
             base = 10
@@ -3259,7 +3250,7 @@ focus_tree = {
     #Eln后勤
     focus = {
         id = USF_ELN_logs
-        icon = GFX_focus_generic_the_giant_wakes
+        icon = GFX_focus_chi_reach_out_to_france
  
         ai_will_do = {
             base = 10
@@ -3287,7 +3278,7 @@ focus_tree = {
     #Eln军官团  
     focus = {
         id = USF_ELN_commanders
-        icon = GFX_focus_generic_the_giant_wakes
+        icon = GFX_focus_chi_reach_out_to_france
  
         ai_will_do = {
             base = 10
@@ -3315,7 +3306,7 @@ focus_tree = {
     #Eln志愿军
     focus = {
         id = USF_ELN_army
-        icon = GFX_focus_generic_the_giant_wakes
+        icon = GFX_focus_chi_reach_out_to_france
  
         ai_will_do = {
             base = 10
@@ -3344,7 +3335,7 @@ focus_tree = {
     #Eln志愿空军
     focus = {
         id = USF_ELN_airforce
-        icon = GFX_focus_generic_the_giant_wakes
+        icon = GFX_focus_chi_reach_out_to_france
  
         ai_will_do = {
             base = 10
@@ -3373,7 +3364,7 @@ focus_tree = {
     #Eln志愿海军
     focus = {
         id = USF_ELN_navy
-        icon = GFX_focus_generic_the_giant_wakes
+        icon = GFX_focus_chi_reach_out_to_france
  
         ai_will_do = {
             base = 10
@@ -3402,7 +3393,7 @@ focus_tree = {
     #必胜鸟计划
     focus = {
         id = USF_kingbird_intiative
-        icon = GFX_focus_generic_the_giant_wakes
+        icon = GFX_focus_POL_ban_nazi_party
  
         ai_will_do = {
             base = 10
@@ -3467,7 +3458,7 @@ focus_tree = {
     #成立SUN / S ocialist U nited N ations / 社会主义联合国
     focus = {
         id = USF_create_sun
-        icon = GFX_focus_generic_the_giant_wakes
+        icon = GFX_focus_SOV_the_supreme_soviet
  
         ai_will_do = {
             base = -1
@@ -3507,7 +3498,7 @@ focus_tree = {
     #真理
     focus = {
         id = USF_NAC_alliance_request
-        icon = GFX_focus_generic_the_giant_wakes
+        icon = GFX_focus_chi_mission_to_the_soviet_union
  
         ai_will_do = {
             base = 10
@@ -3543,7 +3534,7 @@ focus_tree = {
     #奥洗牙
     focus = {
         id = USF_OCE_alliance_request
-        icon = GFX_focus_generic_the_giant_wakes
+        icon = GFX_focus_generic_befriend_iceland
  
         ai_will_do = {
             base = 10
@@ -3562,7 +3553,7 @@ focus_tree = {
             OCE = {
                 democratic > 0.25   
                 communism > 0.25
-                has_country_leader = OCE_osia
+                ruling_party = neutrality
             }
         }
  
@@ -3579,7 +3570,7 @@ focus_tree = {
     #早樱
     focus = {
         id = USF_SKR_alliance_request
-        icon = GFX_focus_generic_the_giant_wakes
+        icon = GFX_focus_jap_pacific_guardian
  
         ai_will_do = {
             base = 10
@@ -3618,7 +3609,7 @@ focus_tree = {
     #真理
     focus = {
         id = USF_NAC_OCE_SKR_material_trade_deal
-        icon = GFX_focus_generic_the_giant_wakes
+        icon = GFX_focus_renounce_the_treaty_of_trianon
  
         ai_will_do = {
             base = 10
@@ -3657,7 +3648,7 @@ focus_tree = {
     #真理
     focus = {
         id = USF_NAC_OCE_SKR_research
-        icon = GFX_focus_generic_the_giant_wakes
+        icon = GFX_focus_generic_socialist_science
  
         ai_will_do = {
             base = 10
@@ -3676,9 +3667,8 @@ focus_tree = {
         relative_position_id = USF_NAC_OCE_SKR_material_trade_deal
 
         completion_reward = {
-            USF = {
-                add_ideas = USF_NAC_OCE_SKR_research
-            }
+            add_ideas = USF_NAC_OCE_SKR_research
+            
             NAC = {
                 add_ideas = USF_NAC_OCE_SKR_research
             }
@@ -3694,7 +3684,7 @@ focus_tree = {
     #真理
     focus = {
         id = USF_NAC_OCE_SKR_company_deal
-        icon = GFX_focus_generic_the_giant_wakes
+        icon = GFX_focus_spa_the_spanish_miracle
  
         ai_will_do = {
             base = 10
@@ -3731,7 +3721,7 @@ focus_tree = {
     #奇迹
     focus = {
         id = USF_operation_dawn
-        icon = GFX_focus_generic_the_giant_wakes
+        icon = GFX_focus_unknown
  
         ai_will_do = {
             base = 10

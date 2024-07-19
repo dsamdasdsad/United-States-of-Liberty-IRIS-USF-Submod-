@@ -22,10 +22,37 @@ news_event = {
         trigger = {
 			tag = USF 
 		}
-		hidden_effect = {
-            unlock_decision_tooltip = USF_decision_rebuild_senate
-            unlock_decision_tooltip = USF_decision_rebuild_house
+        unlock_decision_tooltip = USF_decision_rebuild_senate
+
+		
+	}
+	
+}
+#总统刺杀事件
+news_event = {
+	id = USFnews.11
+	title = USFnews.11.title 
+	desc = USFnews.11.desc 
+    picture = GFX_ocenews_1
+	
+	major = yes
+	
+	is_triggered_only = yes
+
+	fire_only_once = yes 
+
+	trigger = {
+		has_completed_focus = USF_add_parties
+	}
+	
+	option = {
+		name = USFnews.11.a
+        trigger = {
+			tag = USF 
 		}
+        unlock_decision_tooltip = USF_decision_rebuild_house
+
+		
 	}
 	
 }
@@ -71,10 +98,13 @@ news_event = {
 			tag = SKR
 		}
 		
-		add_timed_idea = {
-			idea = SKR_USF_trade_deal
-			days = 15
+		SKR = {
+			add_timed_idea = {
+				idea = USF_trade_deal
+				days = 15
+			}
 		}
+		
 
 		transfer_state = 557
 		transfer_state = 573
@@ -134,9 +164,16 @@ news_event = {
 			tag = BLA
 		}
 		
-		add_timed_idea = {
-			idea = BLA_USF_trade_deal
-			days = 15
+		BLA = {
+			add_timed_idea = {
+				idea = USF_trade_deal
+				days = 15
+			}
+
+			ai_will_do = {
+				base = 10
+			}
+
 		}
 
 		transfer_state = 551
@@ -202,9 +239,12 @@ news_event = {
 			tag = USR
 		}
 		
-		add_timed_idea = {
-			idea = USR_USF_trade_deal
-			days = 15
+		USR = {
+			add_timed_idea = {
+				idea = USF_trade_deal
+				days = 15
+			}
+
 		}
 
 		add_resource = {
@@ -268,10 +308,12 @@ news_event = {
 		trigger = {
 			tag = ELN
 		}
-		
-		add_timed_idea = {
-			idea = ELN_USF_trade_deal
-			days = 15
+		ELN = {
+			add_timed_idea = {
+				idea = USF_trade_deal
+				days = 15
+			}
+			
 		}
 
 		add_resource = {
@@ -342,10 +384,13 @@ news_event = {
 		trigger = {
 			tag = OCE
 		}
-		add_timed_idea = {
-			idea = OCE_USF_trade_deal
-			days = 30
+		OCE = {
+			add_timed_idea = {
+				idea = USF_trade_deal
+				days = 30
+			}
 		}
+		
 
 		transfer_state = 226
 		

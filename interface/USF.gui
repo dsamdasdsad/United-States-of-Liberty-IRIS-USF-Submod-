@@ -1,0 +1,106 @@
+guiTypes = {
+    #议会
+    containerWindowType = {
+        name = "USF_congress_window"
+        position = {
+            x = 0 y = 0
+        }
+        size = {
+            width = 500 height = 230
+        }
+
+        containerWindowType = {
+            name = "USF_gridbox_senate_seat_container"
+            position = {
+                x = 210 y = -30
+            }
+            size = {
+                width = 500 height = 400
+            }
+
+            gridboxtype = {
+                name = "USF_senate_seat_grid"
+                position = {
+                    x = 0 y = 0
+                }
+                size = {
+                    width = 100% height = 100%
+                }
+                slotsize = {
+                    width = 100% height = 0
+                }
+                max_slots_horizontal = 1
+            }
+        }
+
+        instantTextboxType = {
+            name = "USF_gridbox_seat_container_window_TT_2"
+            position = {
+                x = 223 y = 160
+            }
+            font = "hoi_20bs"
+            text = "USF_gridbox_seat_container_TT_desc"
+            format = center
+            maxWidth = 250
+            maxHeight = 500
+            fixedsize = yes
+        }
+
+        containerWindowType = {
+            name = "USF_gridbox_house_seat_container"
+            position = {
+                x = 30 y = 45
+            }
+            size = {
+                width = 500 height = 500
+            }
+
+            gridboxtype = {
+                name = "USF_house_seat_grid"
+                position = {
+                    x = 0 y = 0
+                }
+                size = {
+                    width = 100% height = 100%
+                }
+                slotsize = {
+                    width = 100% height = 0
+                }
+                max_slots_horizontal = 1
+            }
+        }
+	}
+    
+    containerWindowType = {
+        name = "USF_gridbox_senate_seat"
+        position = {
+            x = 0 y = 0
+        }
+
+        iconType = {
+            name = "USF_gridbox_senate_seat_icon"
+            position = {
+                x = 0 y = 0
+            }
+            spriteType = "GFX_USF_congress_parties"
+
+            orientation = UPPER_LEFT
+        }
+    }
+    containerWindowType = {
+        name = "USF_gridbox_house_seat"
+        position = {
+            x = 0 y = 0
+        }
+
+        iconType = {
+            name = "USF_gridbox_house_seat_icon"
+            position = {
+                x = 0 y = 0
+            }
+            spriteType = "GFX_USF_congress_parties"
+
+            orientation = UPPER_LEFT
+        }
+    }
+}

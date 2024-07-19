@@ -46,17 +46,14 @@ USF_rebuild_government_category = {
         }
 		
 		available = {
-			has_completed_focus = USF_rebuild_government
-			has_country_flag = USF_news_1_flag
-			num_of_civilian_factories > 5
-		}
-
-		is_valid = {
-			has_completed_focus = USF_rebuild_government
+			#has_completed_focus = USF_rebuild_government
+			#num_of_civilian_factories > 5
+			always = yes
 		}
 	
 		visible = {
-			has_completed_focus = USF_rebuild_government
+			always = yes
+			#has_completed_focus = USF_rebuild_government
 		}
 	
 		cost = 100
@@ -70,7 +67,11 @@ USF_rebuild_government_category = {
 		}
 	
 		remove_effect = {
+			set_country_flag = USF_senate_rebuild
 			remove_ideas = USF_rebuild_senate
+			hidden_effect = {
+				add_hidden_ideas = USF_rebuild_senate_finish
+			}
 		}
 	
 		ai_will_do = {
@@ -83,13 +84,14 @@ USF_rebuild_government_category = {
 		icon = xxx
 		fire_only_once = yes
 		available = {
-			has_completed_focus = USF_rebuild_government
-			has_country_flag = USF_news_1_flag
-			num_of_civilian_factories > 3
+			always = yes
+			#has_completed_focus = USF_rebuild_government
+			#num_of_civilian_factories > 3
 		}
 
 		visible = {
-			has_completed_focus = USF_rebuild_government
+			always = yes
+			#has_completed_focus = USF_rebuild_government
 		}
 
 		cost = 100
@@ -101,8 +103,64 @@ USF_rebuild_government_category = {
 		}
 
 		remove_effect = {
+			set_country_flag = USF_house_rebuild
 			remove_ideas = USF_rebuild_house
-			#add house lol[]
+			hidden_effect = {
+				add_hidden_ideas = USF_rebuild_house_finish
+			}
+		}
+	}
+
+	USF_decision_rebuild_congress = {
+		icon = xxx
+		fire_only_once = yes
+		available = {
+			if = {
+				limit = {
+					NOT = {
+						debug = yes
+					}
+				}
+				has_completed_focus = USF_rebuild_government
+				num_of_civilian_factories > 1
+				has_hidden_ideas = {
+					idea = USF_rebuild_senate_finish
+				}
+				has_hidden_ideas = {
+					idea = USF_rebuild_house_finish
+				}
+			}
+
+			else = {
+				always = yes
+			}
+		}
+
+		visible = {
+			always = yes
+			#has_completed_focus = USF_rebuild_government
+		}
+
+		cost = 100
+		
+		days_remove = 30 
+
+		remove_effect = {
+			set_country_flag = USF_congress_gaming
+			USF_congress_values = yes
+		}
+	}
+
+
+	USF_debug_activate_congress = {
+		fire_only_once = no
+		icon = xxx
+		visible ={
+			always = yes
+		}
+		complete_effect = {
+			USF_congress_values = yes
+			set_country_flag = USF_congress_gaming
 		}
 	}
 
@@ -124,7 +182,7 @@ USF_millitary_reform_category = {
 		}
 
 		complete_effect = {
-			add_ideas = USF_unlock_millitary_reform
+			set_country_flag = USF_unlock_millitary_reform
 			unlock_decision_tooltip = USF_decision_infantry_weapons_request
 			unlock_decision_tooltip = USF_decision_trucks_request
 			unlock_decision_tooltip = USF_decision_armoured_cars_request
@@ -155,7 +213,7 @@ USF_millitary_reform_category = {
 		}
 
 		visible = {
-			FROM = {has_idea = USF_unlock_millitary_reform}
+			USF = {has_country_flag = USF_unlock_millitary_reform}
 		}
 
 		complete_effect = {
@@ -183,15 +241,16 @@ USF_millitary_reform_category = {
 			else = {
 				army_experience = 10
 			}
-			add_ideas = USF_millitary_reformed_army
+			set_country_flag = USF_infantry_weapon_order
 		}
 	}
 
 	USF_decision_infantry_weapon_order = {     
 		activation = {                         
 			#触发任务的条件（满足这个条件就开始任务）
-			has_idea = USF_millitary_reformed_army
-		}                                    
+			has_country_flag = USF_infantry_weapon_order
+		}                      
+		              
 		available = {                           
 			#完成任务的条件
 			has_equipment = {
@@ -245,7 +304,7 @@ USF_millitary_reform_category = {
 		}
 
 		visible = {
-			FROM = {has_idea = USF_unlock_millitary_reform}
+			USF = {has_country_flag = USF_unlock_millitary_reform}
 		}
 
 		complete_effect = {
@@ -273,14 +332,14 @@ USF_millitary_reform_category = {
 			else = {
 				army_experience = 10
 			}
-			add_ideas = USF_millitary_reformed_trucks
+			set_country_flag = USF_trucks_order
 		}
 	}
 
 	USF_decision_trucks_order = {     
 		activation = {                         
 			#触发任务的条件（满足这个条件就开始任务）
-			has_idea = USF_millitary_reformed_trucks
+			has_country_flag = USF_trucks_order
 		}                                    
 		available = {                           
 			#完成任务的条件
@@ -335,7 +394,7 @@ USF_millitary_reform_category = {
 		}
 
 		visible = {
-			FROM = {has_idea = USF_unlock_millitary_reform}
+			USF = {has_country_flag = USF_unlock_millitary_reform}
 		}
 
 		complete_effect = {
@@ -363,7 +422,7 @@ USF_millitary_reform_category = {
 			else = {
 				army_experience = 10
 			}
-			add_ideas = USF_millitary_reformed_armoured_cars
+			set_country_flag = USF_armoured_cars_order
 		}
 	}
 
@@ -371,7 +430,7 @@ USF_millitary_reform_category = {
 	USF_decision_armoured_cars_order = {     
 		activation = {                         
 			#触发任务的条件（满足这个条件就开始任务）
-			has_idea = USF_millitary_reformed_armoured_cars
+			has_country_flag = USF_armoured_cars_order
 		}                                    
 		available = {                           
 			#完成任务的条件
@@ -427,7 +486,7 @@ USF_millitary_reform_category = {
 		}
 
 		visible = {
-			FROM = {has_idea = USF_unlock_millitary_reform}
+			USF = {has_country_flag = USF_unlock_millitary_reform}
 		}
 
 		complete_effect = {
@@ -455,7 +514,7 @@ USF_millitary_reform_category = {
 			else = {
 				army_experience = 10
 			}
-			add_ideas = USF_millitary_reformed_light_tank
+			set_country_flag = USF_light_tanks_order
 		}
 	}
 
@@ -464,7 +523,7 @@ USF_millitary_reform_category = {
 	USF_decision_light_tanks_order = {     
 		activation = {                         
 			#触发任务的条件（满足这个条件就开始任务）
-			has_idea = USF_millitary_reformed_light_tank
+			has_country_flag = USF_light_tanks_order
 		}                                    
 		available = {                           
 			#完成任务的条件
@@ -520,7 +579,7 @@ USF_millitary_reform_category = {
 		}
 
 		visible = {
-			FROM = {has_idea = USF_unlock_millitary_reform}
+			USF = {has_country_flag = USF_unlock_millitary_reform}
 		}
 
 		complete_effect = {
@@ -548,7 +607,7 @@ USF_millitary_reform_category = {
 			else = {
 				army_experience = 10
 			}
-			add_ideas = USF_millitary_reformed_medium_tank
+			set_country_flag = USF_medium_tanks_order
 		}
 	}
 
@@ -556,7 +615,7 @@ USF_millitary_reform_category = {
 	USF_decision_medium_tanks_order = {     
 		activation = {                         
 			#触发任务的条件（满足这个条件就开始任务）
-			has_idea = USF_millitary_reformed_medium_tank	
+			has_country_flag = USF_medium_tanks_order
 		}                                    
 		available = {                           
 			#完成任务的条件
@@ -611,7 +670,7 @@ USF_millitary_reform_category = {
 		}
 
 		visible = {
-			FROM = {has_idea = USF_unlock_millitary_reform}
+			USF = {has_country_flag = USF_unlock_millitary_reform}
 		}
 
 		complete_effect = {
@@ -639,7 +698,7 @@ USF_millitary_reform_category = {
 			else = {
 				army_experience = 10
 			}
-			add_ideas = USF_millitary_reformed_heavy_tank
+			set_country_flag = USF_heavy_tanks_order
 		}
 	}
 
@@ -648,7 +707,7 @@ USF_millitary_reform_category = {
 	USF_decision_heavy_tanks_order = {     
 		activation = {                         
 			#触发任务的条件（满足这个条件就开始任务）
-			has_idea = USF_millitary_reformed_heavy_tank
+			has_country_flag = USF_heavy_tanks_order
 		}                                    
 		available = {                           
 			#完成任务的条件
@@ -705,7 +764,7 @@ USF_millitary_reform_category = {
 		}
 
 		visible = {
-			FROM = {has_idea = USF_unlock_millitary_reform}
+			USF = {has_country_flag = USF_unlock_millitary_reform}
 		}
 
 		complete_effect = {
@@ -733,7 +792,7 @@ USF_millitary_reform_category = {
 			else = {
 				army_experience = 10
 			}
-			add_ideas = USF_millitary_reformed_artillery
+			set_country_flag = USF_artillery_order
 		}
 	}
 
@@ -742,7 +801,7 @@ USF_millitary_reform_category = {
 	USF_decision_artillery_order = {     
 		activation = {                         
 			#触发任务的条件（满足这个条件就开始任务）
-			has_idea = USF_millitary_reformed_artillery
+			has_country_flag = USF_artillery_order
 		}                                    
 		available = {                           
 			#完成任务的条件
@@ -799,7 +858,7 @@ USF_millitary_reform_category = {
 		}
 
 		visible = {
-			FROM = {has_idea = USF_unlock_millitary_reform}
+			USF = {has_country_flag = USF_unlock_millitary_reform}
 		}
 
 		complete_effect = {
@@ -827,7 +886,7 @@ USF_millitary_reform_category = {
 			else = {
 				army_experience = 10
 			}
-			add_ideas = USF_millitary_reformed_aa
+			set_country_flag = USF_aa_order
 		}
 	}
 
@@ -836,7 +895,7 @@ USF_millitary_reform_category = {
 	USF_decision_aa_order = {     
 		activation = {                         
 			#触发任务的条件（满足这个条件就开始任务）
-			has_idea = USF_millitary_reformed_aa
+			has_country_flag = USF_aa_order
 		}                                    
 		available = {                           
 			#完成任务的条件
@@ -893,7 +952,7 @@ USF_millitary_reform_category = {
 		}
 
 		visible = {
-			FROM = {has_idea = USF_unlock_millitary_reform}
+			USF = {has_country_flag = USF_unlock_millitary_reform}
 		}
 
 		complete_effect = {
@@ -921,7 +980,7 @@ USF_millitary_reform_category = {
 			else = {
 				army_experience = 10
 			}
-			add_ideas = USF_millitary_reformed_at
+			set_country_flag = USF_at_order
 		}
 	}
 
@@ -930,7 +989,7 @@ USF_millitary_reform_category = {
 	USF_decision_at_order = {     
 		activation = {                         
 			#触发任务的条件（满足这个条件就开始任务）
-			has_idea = USF_millitary_reformed_at
+			has_country_flag = USF_at_order
 		}                                    
 		available = {                           
 			#完成任务的条件
@@ -987,7 +1046,7 @@ USF_millitary_reform_category = {
 		}
 
 		visible = {
-			FROM = {has_idea = USF_unlock_millitary_reform}
+			USF = {has_country_flag = USF_unlock_millitary_reform}
 		}
 
 		complete_effect = {
@@ -1015,7 +1074,7 @@ USF_millitary_reform_category = {
 			else = {
 				navy_experience = 30
 			}
-			add_ideas = USF_millitary_reformed_dd
+			set_country_flag = USF_dd_order
 		}
 	}
 
@@ -1024,7 +1083,7 @@ USF_millitary_reform_category = {
 	USF_decision_dd_order = {     
 		activation = {                         
 			#触发任务的条件（满足这个条件就开始任务）
-			has_idea = USF_millitary_reformed_dd
+			has_country_flag = USF_dd_order
 		}                                    
 		available = {                           
 			#完成任务的条件
@@ -1081,7 +1140,7 @@ USF_millitary_reform_category = {
 		}
 
 		visible = {
-			FROM = {has_idea = USF_unlock_millitary_reform}
+			USF = {has_country_flag = USF_unlock_millitary_reform}
 		}
 
 		complete_effect = {
@@ -1109,7 +1168,7 @@ USF_millitary_reform_category = {
 			else = {
 				navy_experience = 30
 			}
-			add_ideas = USF_millitary_reformed_cl
+			set_country_flag = USF_cl_order
 		}
 	}
 
@@ -1118,7 +1177,7 @@ USF_millitary_reform_category = {
 	USF_decision_cl_order = {     
 		activation = {                         
 			#触发任务的条件（满足这个条件就开始任务）
-			has_idea = USF_millitary_reformed_cl
+			has_country_flag = USF_cl_order
 		}                                    
 		available = {                           
 			#完成任务的条件
@@ -1166,7 +1225,7 @@ USF_millitary_reform_category = {
 
 	#####################################
 
-	#巡洋舰订单
+	#战列舰订单
 	USF_decision_bb_request = {
 		icon = xxx
 		fire_only_once = yes
@@ -1175,7 +1234,7 @@ USF_millitary_reform_category = {
 		}
 
 		visible = {
-			FROM = {has_idea = USF_unlock_millitary_reform}
+			USF = {has_country_flag = USF_unlock_millitary_reform}
 		}
 
 		complete_effect = {
@@ -1203,7 +1262,7 @@ USF_millitary_reform_category = {
 			else = {
 				navy_experience = 30
 			}
-			add_ideas = USF_millitary_reformed_bb
+			set_country_flag = USF_bb_order
 		}
 	}
 
@@ -1212,7 +1271,7 @@ USF_millitary_reform_category = {
 	USF_decision_bb_order = {     
 		activation = {                         
 			#触发任务的条件（满足这个条件就开始任务）
-			has_idea = USF_millitary_reformed_cl
+			has_country_flag = USF_bb_order
 		}                                    
 		available = {                           
 			#完成任务的条件
@@ -1269,7 +1328,7 @@ USF_millitary_reform_category = {
 		}
 
 		visible = {
-			FROM = {has_idea = USF_unlock_millitary_reform}
+			USF = {has_country_flag = USF_unlock_millitary_reform}
 		}
 
 		complete_effect = {
@@ -1297,7 +1356,7 @@ USF_millitary_reform_category = {
 			else = {
 				navy_experience = 30
 			}
-			add_ideas = USF_millitary_reformed_cv
+			set_country_flag = USF_cv_order
 		}
 	}
 
@@ -1306,7 +1365,7 @@ USF_millitary_reform_category = {
 	USF_decision_cv_order = {     
 		activation = {                         
 			#触发任务的条件（满足这个条件就开始任务）
-			has_idea = USF_millitary_reformed_cv
+			has_country_flag = USF_cv_order
 		}                                    
 		available = {                           
 			#完成任务的条件
@@ -1363,7 +1422,7 @@ USF_millitary_reform_category = {
 		}
 
 		visible = {
-			FROM = {has_idea = USF_unlock_millitary_reform}
+			USF = {has_country_flag = USF_unlock_millitary_reform}
 		}
 
 		complete_effect = {
@@ -1391,7 +1450,7 @@ USF_millitary_reform_category = {
 			else = {
 				navy_experience = 30
 			}
-			add_ideas = USF_millitary_reformed_ss
+			set_country_flag = USF_ss_order
 		}
 	}
 
@@ -1400,7 +1459,7 @@ USF_millitary_reform_category = {
 	USF_decision_ss_order = {     
 		activation = {                         
 			#触发任务的条件（满足这个条件就开始任务）
-			has_idea = USF_millitary_reformed_ss
+			has_country_flag = USF_ss_order
 		}                                    
 		available = {                           
 			#完成任务的条件
@@ -1457,7 +1516,7 @@ USF_millitary_reform_category = {
 		}
 
 		visible = {
-			FROM = {has_idea = USF_unlock_millitary_reform}
+			USF = {has_country_flag = USF_unlock_millitary_reform}
 		}
 
 		complete_effect = {
@@ -1485,7 +1544,7 @@ USF_millitary_reform_category = {
 			else = {
 				navy_experience = 30
 			}
-			add_ideas = USF_millitary_reformed_convoy
+			set_country_flag = USF_convoy_order
 		}
 	}
 
@@ -1494,7 +1553,7 @@ USF_millitary_reform_category = {
 	USF_decision_convoy_order = {     
 		activation = {                         
 			#触发任务的条件（满足这个条件就开始任务）
-			has_idea = USF_millitary_reformed_convoy
+			has_country_flag = USF_convoy_order
 		}                                    
 		available = {                           
 			#完成任务的条件
@@ -1551,7 +1610,7 @@ USF_millitary_reform_category = {
 		}
 
 		visible = {
-			FROM = {has_idea = USF_unlock_millitary_reform}
+			USF = {has_country_flag = USF_unlock_millitary_reform}
 		}
 
 		complete_effect = {
@@ -1579,7 +1638,7 @@ USF_millitary_reform_category = {
 			else = {
 				air_experience = 30
 			}
-			add_ideas = USF_millitary_reformed_light_air
+			set_country_flag = USF_light_air_order
 		}
 	}
 
@@ -1587,7 +1646,7 @@ USF_millitary_reform_category = {
 	USF_decision_light_air_order = {     
 		activation = {                         
 			#触发任务的条件（满足这个条件就开始任务）
-			has_idea = USF_millitary_reformed_light_air
+			has_country_flag = USF_light_air_order
 		}                                    
 		available = {                           
 			#完成任务的条件
@@ -1646,7 +1705,7 @@ USF_millitary_reform_category = {
 		}
 
 		visible = {
-			FROM = {has_idea = USF_unlock_millitary_reform}
+			USF = {has_country_flag = USF_unlock_millitary_reform}
 		}
 
 		complete_effect = {
@@ -1674,7 +1733,7 @@ USF_millitary_reform_category = {
 			else = {
 				air_experience = 30
 			}
-			add_ideas = USF_millitary_reformed_medium_air
+			set_country_flag = USF_medium_air_order
 		}
 	}
 
@@ -1682,7 +1741,7 @@ USF_millitary_reform_category = {
 	USF_decision_medium_air_order = {     
 		activation = {                         
 			#触发任务的条件（满足这个条件就开始任务）
-			has_idea = USF_millitary_reformed_medium_air
+			has_country_flag = USF_medium_air_order
 		}                                    
 		available = {                           
 			#完成任务的条件
@@ -1739,7 +1798,7 @@ USF_millitary_reform_category = {
 		}
 
 		visible = {
-			FROM = {has_idea = USF_unlock_millitary_reform}
+			USF = {has_country_flag = USF_unlock_millitary_reform}
 		}
 
 		complete_effect = {
@@ -1767,7 +1826,7 @@ USF_millitary_reform_category = {
 			else = {
 				air_experience = 30
 			}
-			add_ideas = USF_millitary_reformed_heavy_air
+			set_country_flag = USF_heavy_air_order
 		}
 	}
 
@@ -1775,7 +1834,7 @@ USF_millitary_reform_category = {
 	USF_decision_heavy_air_order = {     
 		activation = {                         
 			#触发任务的条件（满足这个条件就开始任务）
-			has_idea = USF_millitary_reformed_heavy_air
+			has_country_flag = USF_heavy_air_order
 		}                                    
 		available = {                           
 			#完成任务的条件
@@ -1835,7 +1894,7 @@ USF_millitary_reform_category = {
 		}
 
 		visible = {
-			FROM = {has_idea = USF_unlock_millitary_reform}
+			USF = {has_country_flag = USF_unlock_millitary_reform}
 		}
 
 		complete_effect = {
@@ -1863,7 +1922,7 @@ USF_millitary_reform_category = {
 			else = {
 				air_experience = 30
 			}
-			add_ideas = USF_millitary_reformed_transport_air
+			set_country_flag = USF_transport_air_order
 		}
 	}
 
@@ -1871,7 +1930,7 @@ USF_millitary_reform_category = {
 	USF_decision_transport_air_order = {     
 		activation = {                         
 			#触发任务的条件（满足这个条件就开始任务）
-			has_idea = USF_millitary_reformed_transport_air
+			has_country_flag = USF_transport_air_order
 		}                                    
 		available = {                           
 			#完成任务的条件
@@ -1958,7 +2017,6 @@ USF_bop_catergory = {
 			always = yes
 		}	
 		available = {
-			is_debug = yes
 			#congress said so
 		}
 		days_remove = 30
@@ -1979,7 +2037,6 @@ USF_bop_catergory = {
 			always = yes
 		}	
 		available = {
-			is_debug = yes
 			#congress said so
 		}
 		days_remove = 30
@@ -2002,7 +2059,6 @@ USF_bop_catergory = {
 			always = yes
 		}	
 		available = {
-			is_debug = yes
 			communism > 0.15
 			#congress said so
 		}
@@ -2028,7 +2084,6 @@ USF_bop_catergory = {
 			always = yes
 		}	
 		available = {
-			is_debug = yes
 			democratic > 0.5
 			#congress said so
 		}
@@ -2057,9 +2112,9 @@ USF_army_category = {
 		icon = GFX_decision_icon_default
 
 		available = {
-			has_completed_focus = USF_infantry_investment
-			has_army_experience > 99
-			has_equipment = { infantry_equipment > 4999 }
+			has_completed_focus = USF_light_infantry_upgrade
+			#has_army_experience > 99
+			#has_equipment = { infantry_equipment > 4999 }
 		}
 	
 		visible = {
@@ -2087,8 +2142,8 @@ USF_army_category = {
 
 		available = {
 			has_idea = USF_light_infantry
-			has_army_experience > 99
-			has_equipment = { mechanized_equipment > 3999 }
+			#has_army_experience > 99
+			#has_equipment = { mechanized_equipment > 3999 }
 		}
 	
 		visible = {
@@ -2112,8 +2167,8 @@ USF_army_category = {
 
 		available = {
 			has_idea = USF_light_infantry
-			has_army_experience > 99
-			has_equipment = { motorized_equipment > 2999 }
+			#has_army_experience > 99
+			#has_equipment = { motorized_equipment > 2999 }
 		}
 	
 		visible = {
@@ -2138,8 +2193,8 @@ USF_army_category = {
 
 		available = {
 			has_idea = USF_light_infantry
-			has_army_experience > 99
-			has_equipment = { armored_car_equipment > 1999 }
+			#has_army_experience > 99
+			#has_equipment = { armored_car_equipment > 1999 }
 		}
 	
 		visible = {
@@ -2163,9 +2218,9 @@ USF_army_category = {
 		icon = GFX_decision_icon_default
 
 		available = {
-			has_completed_focus = USF_artillery_investment
-			has_army_experience > 99
-			has_equipment = { artillery_equipment > 2999 }
+			has_completed_focus = USF_artillery_upgrade
+			#has_army_experience > 99
+			#has_equipment = { artillery_equipment > 2999 }
 		}
 	
 		visible = {
@@ -2193,8 +2248,8 @@ USF_army_category = {
 
 		available = {
 			has_idea = USF_artilleries
-			has_army_experience > 99
-			has_equipment = { anti_tank_equipment > 1999 }
+			#has_army_experience > 99
+			#has_equipment = { anti_tank_equipment > 1999 }
 		}
 	
 		visible = {
@@ -2219,8 +2274,8 @@ USF_army_category = {
 
 		available = {
 			has_idea = USF_artilleries
-			has_army_experience > 99
-			has_equipment = { anti_air_equipment > 1999 }
+			#has_army_experience > 99
+			#has_equipment = { anti_air_equipment > 1999 }
 		}
 	
 		visible = {
@@ -2245,8 +2300,8 @@ USF_army_category = {
 
 		available = {
 			has_idea = USF_artilleries
-			has_army_experience > 99
-			has_equipment = { rocket_artillery_equipment > 999 }
+			#has_army_experience > 99
+			#has_equipment = { rocket_artillery_equipment > 999 }
 		}
 	
 		visible = {
@@ -2271,14 +2326,14 @@ USF_army_category = {
 
 		available = {
 			has_completed_focus = USF_chasis_upgrade
-			has_army_experience > 99
-			has_equipment = { light_tank_chassis > 1499 }
-			has_equipment = { medium_tank_chassis > 999 }
-			has_equipment = { heavy_tank_chassis > 499 }
+			#has_army_experience > 99
+			#has_equipment = { light_tank_chassis > 1499 }
+			#has_equipment = { medium_tank_chassis > 999 }
+			#has_equipment = { heavy_tank_chassis > 499 }
 		}
 	
 		visible = {
-			has_completed_focus = USF_chasis_upgrade
+			has_completed_focus = USF_armoured_investment
 		}
 	
 		fire_only_once = yes
@@ -2301,9 +2356,9 @@ USF_army_category = {
 
 		available = {
 			has_idea = USF_chasis
-			has_army_experience > 99
-			has_tech = armor_tech_2
-			has_tech = engine_tech_2
+			#has_army_experience > 99
+			#has_tech = armor_tech_2
+			#has_tech = engine_tech_2
 		}
 	
 		visible = {
@@ -2328,10 +2383,10 @@ USF_army_category = {
 
 		available = {
 			has_idea = USF_chasis
-			has_army_experience > 99
-			has_tech = tech_engineers2
-			has_tech = tech_logistics_company
-			has_tech = improved_equipment_conversion
+			#has_army_experience > 99
+			#has_tech = tech_engineers2
+			#has_tech = tech_logistics_company
+			#has_tech = improved_equipment_conversion
 		}
 	
 		visible = {
@@ -2356,8 +2411,8 @@ USF_army_category = {
 
 		available = {
 			has_idea = USF_trains
-			has_army_experience > 99
-			has_equipment = { support_equipment > 1999 }
+			#has_army_experience > 99
+			#has_equipment = { support_equipment > 1999 }
 		}
 	
 		visible = {
@@ -2382,8 +2437,8 @@ USF_army_category = {
 
 		available = {
 			has_idea = USF_trains
-			has_army_experience > 49
-			has_tech = tech_recon2
+			#has_army_experience > 49
+			#has_tech = tech_recon2
 		}
 	
 		visible = {
@@ -2407,14 +2462,14 @@ USF_army_category = {
 		icon = GFX_decision_icon_default
 
 		available = {
-			has_completed_focus = USF_trains
-			has_army_experience > 99
-			has_tech = railway_gun
-			has_equipment = { train_equipment > 19 }
+			has_completed_focus = USF_train_upgrade
+			#has_army_experience > 99
+			#has_tech = railway_gun
+			#has_equipment = { train_equipment > 19 }
 		}
 	
 		visible = {
-			has_completed_focus = USF_trains
+			has_completed_focus = USF_train_upgrade
 		}
 	
 		fire_only_once = yes
@@ -2440,13 +2495,13 @@ USF_navy_category = {
 
 		available = {
 			has_completed_focus = USF_invest_small_ship_hull
-			has_equipment = { light_cruiser > 2 }
-			has_equipment = { destroyer > 4 }
-			has_navy_experience = 99
+			#has_equipment = { light_cruiser > 2 }
+			#has_equipment = { destroyer > 4 }
+			#has_navy_experience > 99
 		}
 	
 		visible = {
-			has_completed_focus = USF_invest_small_ship_hull
+			has_completed_focus = USF_invest_shield_ship
 		}
 	
 		fire_only_once = yes
@@ -2471,8 +2526,8 @@ USF_navy_category = {
 
 		available = {
 			has_idea = USF_shield_ship_hull_upgrade
-			has_tech = improved_light_battery
-			has_navy_experience = 99
+			#has_tech = improved_light_battery
+			#has_navy_experience > 99
 		}
 	
 		visible = {
@@ -2497,8 +2552,8 @@ USF_navy_category = {
 
 		available = {
 			has_idea = USF_shield_ship_hull_upgrade
-			has_tech = advanced_ship_torpedo_launcher
-			has_navy_experience = 99
+			#has_tech = advanced_ship_torpedo_launcher
+			#has_navy_experience > 99
 		}
 	
 		visible = {
@@ -2523,8 +2578,8 @@ USF_navy_category = {
 
 		available = {
 			has_idea = USF_shield_ship_hull_upgrade
-			has_tech = degaussing
-			has_navy_experience = 99
+			#has_tech = degaussing
+			#has_navy_experience > 99
 		}
 	
 		visible = {
@@ -2549,8 +2604,8 @@ USF_navy_category = {
 
 		available = {
 			has_idea = USF_shield_ship_hull_upgrade
-			has_tech = advanced_depth_charges
-			has_navy_experience = 99
+			#has_tech = advanced_depth_charges
+			#has_navy_experience > 99
 		}
 	
 		visible = {
@@ -2575,13 +2630,13 @@ USF_navy_category = {
 
 		available = {
 			has_completed_focus = USF_invest_big_ship_hull
-			has_navy_experience = 99
-			has_equipment = {ship_hull_heavy > 0 }
-			has_equipment = {ship_hull_carrier > 0 }
+			#has_navy_experience > 99
+			#has_equipment = {ship_hull_heavy > 0 }
+			#has_equipment = {ship_hull_carrier > 0 }
 		}
 	
 		visible = {
-			has_completed_focus = USF_invest_big_ship_hull
+			has_completed_focus = USF_invest_spear_ship
 		}
 	
 		fire_only_once = yes
@@ -2605,13 +2660,13 @@ USF_navy_category = {
 		icon = GFX_decision_icon_default
 
 		available = {
-			has_idea = USF_shield_ship_hull_upgrade
-			has_navy_experience = 99
-			has_tech = improved_heavy_battery
+			has_idea = USF_spear_hull_upgrade
+			#has_navy_experience > 99
+			#has_tech = improved_heavy_battery
 		}
 	
 		visible = {
-			has_idea = USF_shield_ship_hull_upgrade
+			has_idea = USF_spear_hull_upgrade
 		}
 	
 		fire_only_once = yes
@@ -2632,13 +2687,13 @@ USF_navy_category = {
 		icon = GFX_decision_icon_default
 
 		available = {
-			has_idea = USF_shield_ship_hull_upgrade
-			has_navy_experience = 99
-			has_tech = basic_dp_light_battery
+			has_idea = USF_spear_hull_upgrade
+			#has_navy_experience > 99
+			#has_tech = basic_dp_light_battery
 		}
 	
 		visible = {
-			has_idea = USF_shield_ship_hull_upgrade
+			has_idea = USF_spear_hull_upgrade
 		}
 	
 		fire_only_once = yes
@@ -2659,13 +2714,13 @@ USF_navy_category = {
 		icon = GFX_decision_icon_default
 
 		available = {
-			has_idea = USF_shield_ship_hull_upgrade
-			has_navy_experience = 99
-			has_equipment = {ship_hull_carrier > 1}
+			has_idea = USF_spear_hull_upgrade
+			#has_navy_experience > 99
+			#has_equipment = {ship_hull_carrier > 1}
 		}
 	
 		visible = {
-			has_idea = USF_shield_ship_hull_upgrade
+			has_idea = USF_spear_hull_upgrade
 		}
 	
 		fire_only_once = yes
@@ -2689,13 +2744,13 @@ USF_airforce_category = {
 
 		available = {
 			has_completed_focus = USF_invest_fighter_weapons
-			has_air_experience > 99
-			has_equipment = {fighter > 999}
-			has_equipment = {heavy_fighter > 499}
+			#has_air_experience > 99
+			#has_equipment = {fighter > 999}
+			#has_equipment = {heavy_fighter > 499}
 		}
 	
 		visible = {
-			has_completed_focus = USF_invest_fighter_weapons
+			has_completed_focus = USF_invest_fighter
 		}
 	
 		fire_only_once = yes
@@ -2719,8 +2774,8 @@ USF_airforce_category = {
 
 		available = {
 			has_idea = USF_fighter_airframe_upgrade
-			has_air_experience > 99
-			has_tech = aa_hmg
+			#has_air_experience > 99
+			#has_tech = aa_hmg
 		}
 	
 		visible = {
@@ -2747,8 +2802,8 @@ USF_airforce_category = {
 
 		available = {
 			has_idea = USF_fighter_airframe_upgrade
-			has_air_experience > 99
-			has_tech = engines_3
+			#has_air_experience > 99
+			#has_tech = engines_3
 		}
 	
 		visible = {
@@ -2775,8 +2830,8 @@ USF_airforce_category = {
 
 		available = {
 			has_idea = USF_fighter_airframe_upgrade
-			has_air_experience > 99
-			has_tech = improved_decimetric_radar
+			#has_air_experience > 99
+			#has_tech = improved_decimetric_radar
 		}
 	
 		visible = {
@@ -2803,14 +2858,14 @@ USF_airforce_category = {
 
 		available = {
 			has_completed_focus = USF_invest_bombs
-			has_air_experience > 99
-			has_equipment = {cas = 699}
-			has_equipment = {tactical_bomber = 399}
-			has_equipment = {strategic_bomber = 199}
+			#has_air_experience > 99
+			#has_equipment = {cas = 699}
+			#has_equipment = {tactical_bomber = 399}
+			#has_equipment = {strategic_bomber = 199}
 		}
 	
 		visible = {
-			has_completed_focus = USF_invest_bombs
+			has_completed_focus = USF_invest_bomber
 		}
 	
 		fire_only_once = yes
@@ -2835,8 +2890,8 @@ USF_airforce_category = {
 
 		available = {
 			has_idea = USF_bomber_airframe_upgrade
-			has_tech = heavy_bombs
-			has_air_experience > 99
+			#has_tech = heavy_bombs
+			#has_air_experience > 99
 		}
 	
 		visible = {
@@ -2864,8 +2919,8 @@ USF_airforce_category = {
 
 		available = {
 			has_idea = USF_bomber_airframe_upgrade
-			has_tech = aa_hmg
-			has_air_experience > 99
+			#has_tech = aa_hmg
+			#has_air_experience > 99
 		}
 	
 		visible = {
@@ -2893,9 +2948,9 @@ USF_airforce_category = {
 
 		available = {
 			has_idea = USF_bomber_airframe_upgrade
-			has_tech = engines_3
-			has_tech = range_improvements
-			has_air_experience > 99
+			#has_tech = engines_3
+			#has_tech = range_improvements
+			#has_air_experience > 99
 		}
 	
 		visible = {
@@ -2923,8 +2978,8 @@ USF_airforce_category = {
 
 		available = {
 			has_idea = USF_bomber_airframe_upgrade
-			has_air_experience > 99
-			has_tech = improved_decimetric_radar
+			#has_air_experience > 99
+			#has_tech = improved_decimetric_radar
 		}
 	
 		visible = {
@@ -3106,7 +3161,7 @@ USF_war_intergrations = {
 		}
 
 		visible = {
-			has_completed_focus = USF_organize_TDL
+			has_completed_focus = USF_organize_southern_states
 		}
 
 		cost = 0
@@ -3170,6 +3225,7 @@ USF_war_propoganda = {
 		icon = generic_operation
 		available = {
 			has_completed_focus = USF_propoganda_ANZ
+			has_completed_focus = USF_propoganda_USR
 		}
 		visible = {
 			has_completed_focus = USF_propoganda
@@ -3251,14 +3307,12 @@ USF_Socialist_United_Nations = {
 		days_remove = 98
 
 		remove_effect = {
-			add_to_variable = {USF_SUN_members_mixed_history_value = 10}
 			custom_effect_tooltip = USF_add_mixed_hisotry_value_script
 		}
 
 		complete_effect = {
 			add_hidden_ideas = USF_history_publicization
 			USF = {
-				add_to_variable = {USF_SUN_members_mixed_history_value = 10}
 			}
 			custom_effect_tooltip = USF_add_mixed_history_value_script
 		}
@@ -3417,9 +3471,6 @@ USF_Socialist_United_Nations = {
 				annex_country = {
 					target = NAC
 					transfer_troops = yes
-					transfer_navy = {
-						target = NAC
-					}
 				}
 				annex_country = {
 					target = OCE

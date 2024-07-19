@@ -1,0 +1,7 @@
+spriteTypes = {
+	spriteType = {
+		name = "GFX_USF_congress_parties"
+		textureFile = "gfx/interface/IRIS_gui/USF/USF_parties.png"
+		noOfFrames = 5
+	}
+}

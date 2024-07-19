@@ -1,0 +1,51 @@
+################
+##### USF ######
+################
+
+
+scripted_gui = {
+    USF_congress_window = {
+        window_name = "USF_congress_window"
+        context_type = decision_category
+        dynamic_lists = {
+            #众议院
+            USF_senate_seat_grid = {
+                array = USF_gridbox_senate_seat_array
+                index = idx
+                entry_container = USF_gridbox_senate_seat
+                change_scope = no
+            }
+            #参议院
+            USF_house_seat_grid = {
+                array = USF_gridbox_house_seat_array
+                index = idx
+                entry_container = USF_gridbox_house_seat
+                change_scope = no
+            }
+        }
+        triggers = {
+            USF_gridbox_senate_seat_icon_visible = {
+                has_country_flag = USF_congress_gaming
+            }
+            USF_gridbox_house_seat_icon_visible = {
+                has_country_flag = USF_congress_gaming
+            }
+        }
+
+        effects = {
+        }
+
+        properties = {
+            USF_gridbox_senate_seat_icon = {
+                x = USF_senate_seat_x_array^idx
+                y = USF_senate_seat_y_array^idx
+                frame = USF_gridbox_senate_seat_array^idx
+            }
+            USF_gridbox_house_seat_icon = {
+                x = USF_house_seat_x_array^idx
+                y = USF_house_seat_y_array^idx
+                frame = USF_gridbox_house_seat_array^idx
+            }
+        }
+    }
+}

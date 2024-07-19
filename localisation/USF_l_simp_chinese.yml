@@ -23,17 +23,9 @@
  ###########################################################
  ##########################FOCUS############################
  ###########################################################
- TAU_break_down_technological_barrier:0 "打破科技壁垒"
- TAU_break_down_technological_barrier_desc:0 "在聚集了大量人力物力后，我们终于有能力开始自主研发武器装备与工业设备。"
- USF_artificial_weapon_technology:0 "人造兵器"
- USF_artificial_weapon_units:0 "人造兵器支援连"
- modifier_army_sub_unit_USF_artificial_weapon_units_attack_factor:0 "人造兵器支援连攻击"
-
- USF_cooperate_with_iowa_tooltip:0 "我们已经选择与衣阿华合作"
- USF_cooperate_with_yeager_tooltip:0 "我们已经选择与耶格尔合作"
 
  USF_defend_democracy:0 "捍卫民主！"
- USF_defend_democracy_desc:0 "就算党派却已经摇摇欲坠，就算这场灾难却还看不到丝毫结束的迹象，就算大洋党和大陆党的分歧变得愈加严重，就算矛盾的爆发似乎已经变得不可避免，我们还是要孤注一掷的捍卫民主。不仅仅因为我们是世界的灯塔而且我们唯一需要恐惧的仅是恐惧本身"
+ USF_defend_democracy_desc:0 "就算党派却已经摇摇欲坠，就算这场灾难却还看不到丝毫结束的迹象，就算大洋党和大陆党的分歧变得愈加严重，就算矛盾的爆发似乎已经变得不可避免，我们还是要孤注一掷的捍卫民主。不仅仅因为我们是世界的灯塔并且我们唯一需要恐惧的仅是恐惧本身"
 
  USF_economy_revolution:0 "经济改革"
  USF_economy_revolution_desc:0 "凯伊仍旧希望通过自己的努力做些什么，她并不愿意让自己的祖国就此堕落下去。但是她，不，不只是她。 全国上下的人民都明白凭靠他们自己的能力是完全不够拯救这个国家的。"
@@ -41,11 +33,13 @@
  USF_future:0 "放下历史"
  USF_future_desc:0 "为了国家的稳定发展，为了名族的伟大复兴，我们只好放下历史，跟我们以前的敌人拥抱未来"
 
+ USF_we_refuse:0 "我们拒绝"
+
  USF_add_parties:0 "寻找新的党派"
  USF_add_parties_desc:0 "激昂的行动并非能够解决一切问题，更何况解决日益严峻的派系纷争。我们必须把两级分化的民主党和共和党重新划分，而这最有效的方式是增加一个新的党派。"
 
- USF_rebuiLd_government:0 "重建政府"
- USF_rebuiLd_government_desc:0 "现在我们政府的分裂和腐败程度还不如炸了重建。我们需要一场意外的恐怖袭击把这些畜生们送走。这很激进但是这也是我们唯一的选择了。"
+ USF_rebuild_government_focus:0 "重建政府"
+ USF_rebuiLd_government_focus_desc:0 "现在我们政府的分裂和腐败程度还不如炸了重建。我们需要一场意外的恐怖袭击把这些畜生们送走。这很激进但是这也是我们唯一的选择了。"
 
  USF_forward_party:0 "前进党"
  USF_forward_party_desc:0 "前进党，一个专注军事与科技的民主主义的党派。他们的口号是，不偏左，不靠右，只向前"
@@ -55,14 +49,182 @@
  
  #"我们绝不能再次掩盖国家内的矛盾，应当行动而非无视。经济危机，不平等，环境恶化，军人干政等，这就是我们祖国所面临的危机与困难，我们必须向人民承认事实，更重要的是让我们接受这个事实。"
  
- USF_millitary_reform_infantry:0 "临时搁置"
- USF_millitary_reform_infantry_desc:0 "尽管这并非处于我们的本意，但严峻的事实已经使我们的政府无法再承受任何一次打击，因此，信息管制与隐瞒是必要的，至少在眼下这无法避免。"
+ USF_millitary_reform_infantry:0 "军事改革-步兵"
+ USF_millitary_reform_infantry_desc:0 ""
  
- USF_millitary_reform_armoured_units:0 "成功的改革"
- USF_millitary_reform_armoured_units_desc:0 "凯伊的提案通过了，没人能想象到几乎是被推上台前的凯伊竟能带领合众国度过眼前的危机，上帝再次派来他的使者再次拯救了这座“山巅之城”。"
+ USF_millitary_reform_armoured_units:0 "军事改革-坦克"
+ USF_millitary_reform_armoured_units_desc:0 ""
  
- USF_neutral_army:0 "中立的军队"
- USF_neutral_army_desc:0 "在新的改革下，我们受政治影响的军队已经清理完毕，再也没有什么派系斗争能够牵扯住军队的辫子了，只有这样我们的政党政治才是真正清白的。"
+ USF_research_reform:0 "科研改革"
+ USF_research_reform_desc:0 ""
+ 
+ USF_final_reform:0 "最后的改革"
+ 
+ USF_air_force_reform:0 "空军改革"
+ 
+ USF_navy_reform:0 "海军改革"
+ 
+ USF_trade_one:0 "第一次交易"
+ 
+ USF_trade_one_point_one:0 "与罗西亚的交易" 
+ 
+ USF_trade_one_point_two:0 "与爱丽诺的交易"
+ 
+ USF_trade_one_point_three:0 "与乌斯拉尔的交易"
+ 
+ USF_trade_two:0 "与奥西娅的交易"
+ 
+ USF_stablize_government:0 "宣告其他党派是非法组织"
+ 
+ USF_kill_left:0 "灭左"
+ 
+ USF_kill_reac:0 "矫反"
+ 
+ USF_kill_king:0 "斩王"
+ 
+ USF_kill_right:0 "消右"
+ 
+ USF_regain_power:0 "重掌政权"
+ 
+ USF_like_war_one:0 "威胁扩张"
+ 
+ USF_like_war_two:0 "镇压暴动"
+ 
+ USF_like_war_three:0 "暴力扩张"
+ 
+ USF_like_peace_one:0 "和平扩张"
+ 
+ USF_like_peace_two:0 "增加基建"
+ 
+ USF_like_peace_three:0 "温和扩张"
+ 
+ USF_civil_investments:0 "投资人民"
+ 
+ USF_titan_awakes:0 "泰坦的苏醒"
+ 
+ USF_invest_army:0 "投资陆军"
+ 
+ USF_infantry_investment:0 "投资步兵"
+ 
+ USF_light_infantry_upgrade:0 "轻步兵升级"
+ 
+ USF_special_forces_investment:0 "投资山地步兵"
+ 
+ USF_special_forces_upgrade:0 "山地步兵升级"
+ 
+ USF_support_investment:0 "投资后勤"
+ 
+ USF_train_upgrade:0 "火车升级"
+ 
+ USF_artillery_investment:0 "投资火炮"
+ 
+ USF_artillery_upgrade:0 "火炮升级"
+ 
+ USF_spg_investment:0 "投资自走炮"
+ 
+ USF_spg_upgrade:0 "自走炮升级"
+ 
+ USF_armoured_investment:0 "投资坦克"
+ 
+ USF_chasis_upgrade:0 "底盘升级"
+ 
+ USF_invest_army_theory:0 "陆军理论突破"
+
+ #########################################
+ 
+ USF_invest_navy:0 "投资海军"
+ 
+ USF_invest_shield_ship:0 "投资盾舰"
+ 
+ USF_invest_small_ship_hull:0 "盾舰升级"
+ 
+ USF_invest_spear_ship:0 "投资矛舰"
+ 
+ USF_invest_big_ship_hull:0 "矛舰升级"
+ 
+ USF_invest_convoy:0 "投资运输船"
+ 
+ USF_invest_marine:0 "投资海军陆战队"
+ 
+ USF_invest_navy_theory:0 "海军理论突破"
+ 
+ USF_invest_fighter:0 "投资战斗机"
+ 
+ USF_invest_fighter_weapons:0 "机载武器升级"
+ 
+ USF_invest_bomber:0 "投资轰炸机"
+ 
+ USF_invest_bombs:0 "炸弹升级"
+ 
+ USF_invest_transport_planes:0 "投资运输机"
+ 
+ USF_invest_paratroopers:0 "投资伞兵"
+ 
+ USF_invest_airforce_theory:0 "空军理论突破"
+ 
+ USF_invest_marine_paratrooper_theory:0 "港口突击队理论突破"
+ 
+ USF_local_interference:0 "区域性干涉"
+ 
+ USF_liberate_XZJ:0 "解放星之界"
+ 
+ USF_liberate_TDL:0 "解放塔德里克"
+ 
+ USF_organize_southern_states:0 "整合南方区域"
+ 
+ USF_liberate_w_NAC:0 "瓜分中原"
+ 
+ USF_global_interference:0 "全球干涉"
+ 
+ USF_join_senshado:0 "加入战车道"
+ 
+ USF_propoganda:0 "宣传战争"
+ 
+ USF_propoganda_ANZ:0 "宣传安齐奥"
+ 
+ USF_propoganda_USR:0 "宣传乌斯拉尔"
+ 
+ USF_intelligence:0 "间谍入侵"
+ 
+ USF_intelligence_ELN:0 "监视爱丽诺"
+ 
+ USF_intelligence_UNG:0 "监视卡美洛"
+ 
+ USF_plan_aqua:0 "蓝色计划"
+ 
+ USF_join_EU:0 "加入爱丽诺联盟"
+ 
+ USF_ELN_arms:0 "爱丽诺军事援助"
+ 
+ USF_ELN_logs:0 "爱丽诺后勤援助"
+ 
+ USF_ELN_commanders:0 "爱丽诺指挥援助"
+ 
+ USF_ELN_army:0 "志愿路军"
+ 
+ USF_ELN_airforce:0 "志愿空军"
+ 
+ USF_ELN_navy:0 "志愿海军"
+ 
+ USF_kingbird_intiative:0 "必胜鸟计划"
+ 
+ USF_create_sun:0 "成立SUN"
+ 
+ USF_NAC_alliance_request:0 "联合真理"
+ 
+ USF_OCE_alliance_request:0 "联合奥西娅"
+ 
+ USF_SKR_alliance_request:0 "联合早樱"
+ 
+ USF_NAC_OCE_SKR_material_trade_deal:0 "与盟友的经济往来"
+ 
+ USF_NAC_OCE_SKR_research:0 "与盟友的联合科研"
+ 
+ USF_NAC_OCE_SKR_company_deal:0 "与盟友的建筑公司"
+ 
+ USF_operation_dawn:0 "代号：黎明"
+
+############################################
  
  USF_solidarity_party:0 "团结的政党"
  USF_solidarity_party_desc:0 "凯伊凭借着她的个人魅力与激昂的热情征服了党内的成员，现在他们终于愿意暂时放下利益与偏见，团结起来对抗这次危机了。"
@@ -254,10 +416,206 @@
 
  USF_united_states_Civil_War:0 "合众国内战"
 
+ USF_add_forward_party_prepare:0 "增加前进党的准备"
+
+ USF_forward_party:0 "前进党"
+
+ USF_rebuild_senate:0 "重建国会"
+
+ USF_rebuild_house:0 "重建议会"
+
+ USF_gone_beacon:0 "消失的民主灯塔"
+
+ USF_divided_beacon:0 "分裂的民主灯塔"
+
+ USF_broken_beacon:0 "破碎的民主灯塔"
+
+ USF_fixed_beacon:0 "修复的民主灯塔"
+
+ USF_repaired_beacon:0 "改进的民主灯塔"
+
+ USF_completed_beacon:0 "完整的民主灯塔"
+
+ USF_shining_beacon:0 "闪耀的民主灯塔"
+
+ USF_begining_of_the_end:0 "这是结束这一切的开始"
+
+ USF_test:0 "试探"
+
+ USF_start_trading:0 "正式开始交易"
+
+ USF_more_trading:0 "增加交易"
+
+ USF_industry_quality:0 "工业质量"
+
+ USF_industry_quantity:0 "工业数量"
+
+ USF_even_more_trading:0 "进行更深一步的交易"
+
+ USF_broken_in_the_army:0 "支离破碎的路军"
+
+ USF_improved_infantry:0 "改进的步兵"
+
+ USF_improved_armoured_units:0 "改进的装甲单位"
+
+ USF_broken_in_the_nairvy:0 "破败不堪的海空军"
+
+ USF_improved_navy:0 "改进的海军"
+
+ USF_improved_air_force:0 "改进的空军"
+
+ USF_res_reform:0 "科研改革"
+
+ USF_love_war_one:0 "初期好战"
+
+ USF_love_war_two:0 "中期好战"
+
+ USF_love_war_thre:0 "后期好战"
+
+ USF_love_peace_one:0 "初期好和"
+
+ USF_love_peace_three:0 "后期好和"
+
+ USF_civilian_investments:0 "投资人民"
+
+ USF_ignited_left:0 "激怒的左派"
+
+ USF_calm_left:0 "谈和的左派"
+
+ USF_ignited_right:0 "激怒的右派"
+
+ USF_calm_right:0 "谈和的右派"
+
+ USF_ignited_neutrality:0 "激怒的皇派"
+
+ USF_calm_neutrality:0 "谈和的皇派"
+
+ USF_millitary_investment:0 "投资军队"
+
+ USF_navy_investment:0 "投资海军"
+
+ USF_light_infantry:0 "轻步兵升级"
+
+ USF_motorized_infantry:0 "摩托化步兵升级"
+
+ USF_mechanized_infantry:0 "机械化步兵升级"
+
+ USF_armoured_infantry:0 "装甲化步兵升级"
+
+ USF_logistics:0 "后勤升级"
+
+ USF_recon:0 "侦查升级"
+
+ USF_trains:0 "火车升级"
+
+ USF_aa_guns:0 "防空炮升级"
+
+ USF_artilleries:0 "牵引火炮升级"
+
+ USF_rocket_artilleries:0 "火箭炮升级"
+
+ USF_at_guns:0 "反坦克炮升级"
+
+ USF_spg:0 "自走炮升级"
+
+ USF_chasis:0 "底盘升级"
+
+ USF_engine_armour:0 "引擎/装甲升级"
+
+ USF_modules:0 "模块"
+
+ USF_special_forces_upgrade:0 "特种部队升级"
+
+ USF_shield_ship_hull_upgrade:0 "盾舰船体升级"
+
+ USF_shield_cannons_upgrade:0 "盾舰舰炮升级"
+
+ USF_shield_torpedo_upgrade:0 "盾舰鱼雷升级"
+
+ USF_shield_mines_upgrade:0 "盾舰雷升级"
+
+ USF_shield_hunt_sub_upgrade:0 "盾舰反艇升级"
+
+ USF_spear_hull_upgrade:0 "矛舰船体升级"
+
+ USF_spear_heavy_battery_upgrade:0 "矛舰船重炮组升级"
+
+ USF_spear_secondary_upgrade:0 "矛舰船副炮/aa炮组升级"
+
+ USF_spear_carrier_upgrade:0 "航母甲板升级"
+
+ USF_convoy_upgrade:0 "运输船升级"
+
+ USF_transport_plane_upgrade:0 "运输机升级"
+
+ USF_fighter_airframe_upgrade:0 "战斗机身升级"
+
+ USF_fighter_weapons_upgrade:0 "战斗机枪/炮升级"
+
+ USF_fighter_radar_upgrade:0 "战斗机引擎升级"
+
+ USF_bomber_airframe_upgrade:0 "轰炸机身升级"
+
+ USF_bomber_bombs_upgrade:0 "轰炸机炸弹升级"
+
+ USF_bomber_turrets_upgrade:0 "轰炸机炮塔升级"
+
+ USF_bomber_engine_upgrade:0 "轰炸机引擎升级"
+
+ USF_bomber_radar_upgrade:0 "轰炸机雷达升级"
+
+ USF_local_interference:0 "区域性干涉"
+
+ USF_global_interference:0 "全球战略"
+
+ USF_intelligence:0 "CIA"
+
+ USF_propoganda_ANZ:0 "对安齐奥的宣传"
+
+ USF_propoganda_USR:0 "对乌斯拉尔的宣传"
+
+ USF_propoganda_SLL:0 "对圣铃兰的宣传"
+
+ USF_intel_UNG:0 "对卡美洛的渗透"
+
+ USF_intel_ELN:0 "对爱丽诺的渗透"
+
+ USF_plan_aqua:0 "蓝色计划"
+
+ USF_logistics_ELN:0 "对爱丽诺的后勤援助"
+
+ USF_commanders_ELN:0 "对爱丽诺的指挥援助"
+
+ USF_varmy_ELN:0 "合众国志愿路军"
+
+ USF_vairforce_ELN:0 "合众国志愿空军"
+
+ USF_navvy_ELN:0 "合众国志愿海军"
+
+ USF_kingbird_intiative:0 "必胜鸟方案"
+
+ USF_NAC_OCE_SKR_material_trade_deal:0 "与盟友的经济往来"
+
+ USF_NAC_OCE_SKR_weapons_trade_deal:0 "与盟友的建筑公司"
+
+ USF_NAC_OCE_SKR_research:0 "与盟友的联合科研"
+
+ USF_NAC_OCE_SKR_mixed_history:0 "和盟友交换历史"
+
+ USF_NAC_OCE_SKR_mixed_language:0 "和盟友宣传语言"
+
+ USF_NAC_OCE_SKR_mixed_politics:0 "和盟友政治谈话"
+
+ USF_trade_deal:0 "与合众国的贸易"
+
+ ##########################################################
+
  USF_rhineLab_artificial_weapon:0 "莱茵生命人造武器库"
  USF_rhineLab_database_service:0 "莱茵生命数据库服务"
+
  USF_rhineLab_database_service_desc:0 "万物的演化本就是不可动摇的自然法则。莱茵生命却妄图修改它，甚至想要支配它，多么愚蠢的图谋......"
- USF_rhineLab_database_service_desc:0 "莱茵生命数据维护员白面鸮，如果方便的话，请使用命令行完成您所需的操作。"
+ USF_rhineLab_database_service_desc:0 "莱茵生命数据维护员白面鸮，如果方便的话，请使用命令行制造您所需的操作。"
+
  USF_rhineLab_energy_section:0 "莱茵生命能量科"
  USF_rhineLab_energy_section_desc:0 "莱茵生命，埃琳娜·乌比卡研究员，很高兴认识你。在这里是要用代号互相称呼吧，啊没问题，那就叫我星源好了，简单又好记。"
  ###########################################################
@@ -265,36 +623,282 @@
  ###########################################################
 
 
- USF.1:0 "左派游行！"
+
+ USF.1.title:0 "左派游行！"
  USF.1.desc:0 "左派游行"
  USF.1.b:0 "和平谈判"
  USF.1.a:0 "暴力镇压"
+
+ USF.0.title:0 "右派游行！"
+ USF.0.desc:0 "右派游行"
+ USF.0.b:0 "和平谈判"
+ USF.0.a:0 "暴力镇压"
+
+ USF.2.title:0 "皇派游行！"
+ USF.2.desc:0 "皇派游行"
+ USF.2.b:0 "和平谈判"
+ USF.2.a:0 "暴力镇压"
+
+ USF.3.title:0 "与真理的互不侵犯"
+ USF.3.desc:0 ""
+ USF.3.a:0 "好！"
+ USF.3.b:0 "不行！"
+
+ USF.4.title:0 "加入战车道申请"
+ USF.4.desc:0 ""
+ USF.4.a:0 "好！"
+ USF.4.b:0 "不行！"
+
+ USF.5.title:0 "加入爱丽诺联盟申请"
+ USF.5.desc:0 ""
+ USF.5.a:0 "好！"
+ USF.5.b:0 "不行！"
+
+ USF.6.title:0 "邀请真理加入SUN"
+ USF.6.desc:0 ""
+ USF.6.a:0 "好！"
+ USF.6.b:0 "不行！"
+
+ USF.7.title:0 "邀请奥西娅加入SUN"
+ USF.7.desc:0 ""
+ USF.7.a:0 "好！"
+ USF.7.b:0 "不行！"
+
+ USF.8.title:0 "邀请早樱加入SUN"
+ USF.8.desc:0 ""
+ USF.8.a:0 "好！"
+ USF.8.b:0 "不行！"
+
+ USFnews.1:0 "国会恐怖袭击"
+ USFnews.1.title:0 "国会恐怖袭击"
+ USFnews.1.desc:0 "关于恐怖分子袭击参议会的事"
+ USFnews.1.a:0 "淦！！！！"
+
+ USFnews.11:0 "总统刺杀"
+ USFnews.11.title:0 "总统刺杀"
+ USFnews.11.desc:0 "关于众议会刺杀总统的事"
+ USFnews.11.a:0 "卧槽！吓死我了"
+
+ USFnews.2:0 "早樱国与合众国交易"
+ USFnews.2.title:0 "早樱国与合众国交易"
+ USFnews.2.desc:0 ""
+ USFnews.2.a:0 "好！"
+
+ USFnews.3:0 "罗西亚与合众国交易"
+ USFnews.3.title:0 "罗西亚与合众国交易"
+ USFnews.3.desc:0 ""
+ USFnews.3.a:0 "好！"
+
+ USFnews.41:0 "乌斯拉尔与合众国交易"
+ USFnews.41.title:0 "乌斯拉尔与合众国交易"
+ USFnews.41.desc:0 ""
+ USFnews.41.a:0 "好！"
+
+ USFnews.42:0 "爱丽诺与合众国交易"
+ USFnews.42.title:0 "爱丽诺与合众国交易"
+ USFnews.42.desc:0 ""
+ USFnews.42.a:0 "好！"
+
+ USFnews.5:0 "奥西娅与合众国交易"
+ USFnews.5.title:0 "奥西娅与合众国交易"
+ USFnews.5.desc:0 ""
+ USFnews.5.a:0 "好！"
 
  ###########################################################
  ########################DECISIONS##########################
  ###########################################################
 
- USF_decision_increasingly_divided_country:0 "愈发分裂的国家"
- USF_decision_increasingly_divided_country_desc:0 "自3012年以来东西方的伟大妥协过后，现如今已经过去将近100年，与众多先贤们所预料不同，矛盾并未因为时间的消磨而作罢，而是携着恐怖与腐败继续撕裂着我们的国家。\n种族，文化，阶级，无数的矛盾此刻都复杂的交织在一起，颤颤巍巍的兜着我们当下脆弱的政府，而黑墨夜危机无疑是锤在我们头上的最后一棒，不论怎么说，我们祖国的未来就得看这件事情的走向了……"
- USF_free_states_map_category_name:0 "自由州"
- USF_contract_states_map_category_name:0 "契约州"
- USF_border_states_map_category_name:0 "边境州"
+ USF_rebuild_government_category:0 "重建政府"
+ USF_decision_rebuild_senate:0 "重建参议会"
+ USF_decision_rebuild_house:0 "重建众议会"
+ USF_decision_rebuild_congress:0 "重建国会"
+
+ #################################################
+
+ USF_millitary_reform_category:0 "来自国会的订单"
+ USF_decision_unlock_millitary_reform:0 "正式开始MPA法案"
+
+ USF_decision_infantry_weapons_request:0 "步兵装备订单"
+ USF_decision_infantry_weapon_order:0 "制造步兵装备"
+
+ USF_decision_trucks_request:0 "卡车订单"
+ USF_decision_trucks_order:0 "制造卡车"
+
+ USF_decision_armoured_cars_request:0 "装甲车订单"
+ USF_decision_armoured_cars_order:0 "制造装甲车订单"
+
+ USF_decision_light_tanks_request:0 "轻坦订单"
+ USF_decision_light_tanks_order:0 "制造轻坦"
+
+ USF_decision_medium_tanks_request:0 "中坦订单"
+ USF_decision_medium_tanks_order:0 "制造中坦"
+
+ USF_decision_heavy_tanks_request:0 "重坦订单"
+ USF_decision_heavy_tanks_order:0 "制造重坦"
+
+ USF_decision_artillery_request:0 "火炮订单"
+ USF_decision_artillery_order:0 "制造火炮"
+
+ USF_decision_aa_request:0 "防空炮订单"
+ USF_decision_aa_order:0 "制造防空炮"
+
+ USF_decision_at_request:0 "反坦克炮订单"
+ USF_decision_at_order:0 "制造反坦克炮"
+
+ USF_decision_dd_request:0 "驱逐舰订单"
+ USF_decision_dd_order:0 "制造驱逐舰"
+
+ USF_decision_cl_request:0 "巡洋舰订单"
+ USF_decision_cl_order:0 "制造巡洋舰"
+
+ USF_decision_bb_request:0 "战列舰订单"
+ USF_decision_bb_order:0 "制造战列舰"
+
+ USF_decision_cv_request:0 "航母订单"
+ USF_decision_cv_order:0 "制造航母"
+
+ USF_decision_ss_request:0 "潜艇订单"
+ USF_decision_ss_order:0 "制造潜艇"
+
+ USF_decision_convoy_request:0 "运输船订单"
+ USF_decision_convoy_order:0 "制造运输船"
+
+ USF_decision_light_air_request:0 "轻型机身订单"
+ USF_decision_light_air_order:0 "制造轻型机身"
+
+ USF_decision_medium_air_request:0 "中型机身订单"
+ USF_decision_medium_air_order:0 "制造中型机身"
+
+ USF_decision_heavy_air_request:0 "重型机身订单"
+ USF_decision_heavy_air_order:0 "制造重型机身"
+
+ USF_decision_transport_air_request:0 "运输机订单"
+ USF_decision_transport_air_order:0 "制造运输机"
+
+ #############################################
+ USF_move_left_10:0 "工业化"
+
+ USF_move_right_10:0 "民生化"
+
+ USF_labour_time_8_hours:0 "8小时工作制"
+
+ USF_less_interference:0 "减少干预"
  
- decision_breakdown_of_negotiations:0 "谈判破裂"
- decision_breakdown_of_negotiations_desc:0 "谈判破裂"
+ #####################################
 
- USF_will_split_the_country_category:0 "即将分裂的国家"
- negotiation_countdown_decision:0 "谈判倒计时"
- diplomatic_demonstration_decision:0 "外交示威"
- diplomatic_detente_decision:0 "外交缓和"
- set_aside_a_dispute_decision:0 "搁置争议"
- stand_firm_decision:0 "坚定不移"
+ USF_army_category:0 "陆军升级"
 
+ USF_light_infantry:0 "轻步兵升级"
 
- USF_antiwar_sentiment_category:0 "反战情绪"
- decision_antiwar_sentiment_rampant:0 "日渐增加的不满"
+ USF_mechanized_infantry:0 "机械化步兵升级"
 
+ USF_motorized_infantry:0 "摩托化升级"
 
+ USF_armoured_infantry:0 "装甲化升级"
+
+ USF_artillery:0 "火炮升级"
+
+ USF_anti_tank_gun:0 "反坦克炮升级"
+
+ USF_aa_guns:0 "防空炮升级"
+
+ USF_light_infa:0 "火箭炮升级"
+
+ USF_rocket_artillery:0 "升级"
+
+ USF_chasis:0 "底盘升级"
+
+ USF_engine_armour:0 "装甲和引擎升级"
+
+ USF_modules:0 "模块升级"
+
+ USF_logistics:0 "后勤升级"
+
+ USF_recon:0 "侦查升级"
+
+ USF_trains:0 "火车升级"
+
+ USF_navy_category:0 "海军升级"
+
+ USF_shield_ship_hull:0 "盾舰体升级"
+
+ USF_shield_cannons_upgrade:0 "盾舰炮升级"
+
+ USF_shield_torpedo_upgrade:0 "盾舰鱼雷升级"
+
+ USF_shield_mines_upgrade:0 "盾舰海雷升级"
+
+ USF_shield_hunt_sub_upgrade:0 "盾舰深水炸弹升级"
+
+ USF_spear_ship_hull:0 "矛舰体升级"
+
+ USF_spear_heavy_battery_upgrade:0 "矛舰炮升级"
+
+ USF_spear_secondary_upgrade:0 "矛舰副炮升级"
+
+ USF_spear_carrier_upgrade:0 "矛舰载机升级"
+
+ USF_airforce_category:0 "空军升级"
+
+ USF_fighter_airframe:0 "战斗机身升级"
+
+ USF_fighter_weapons_upgrade:0 "战斗机武器升级"
+
+ USF_fighter_engine_upgrade:0 "战斗机引擎升级"
+
+ USF_fighter_radar_upgrade:0 "战斗机雷达升级"
+
+ USF_bomber_airframe:0 "轰炸机身升级"
+
+ USF_bomber_bombs_upgrade:0 "轰炸机炸弹升级"
+
+ USF_bomber_turrets_upgrade:0 "轰炸机炮塔升级"
+
+ USF_bomber_engine_upgrade:0 "轰炸机引擎升级"
+
+ USF_bomber_radar_upgrade:0 "轰炸机雷达升级"
+
+ ###########################################
+
+ USF_war_plans:0 "作战方案"
+
+ USF_war_plan_orange:0 "橙色方案"
+
+ USF_war_plan_brown:0 "棕色方案"
+
+ ########################################
+ 
+ USF_war_intergrations:0 "整合地区"
+
+ USF_southern_states_intergration:0 "南方区域整合"
+
+ ##################################################
+
+ USF_war_propoganda:0 "战争宣传"
+
+ USF_propoganda_ANZ:0 "战争宣传 安齐奥"
+
+ USF_propoganda_USR:0 "战争宣传 乌斯拉尔"
+
+ USF_propoganda_SLL:0 "战争宣传 圣铃兰"
+
+ USF_intel_UNG:0 "战争宣传 卡美洛"
+
+ USF_intel_ELN:0 "战争宣传 爱丽诺"
+ 
+ ################################
+
+ USF_Socialist_United_Nations:0 "社会主义联合国"
+ USF_Socialist_United_Nations_desc:0 "当太阳升起之时，这世间便无需灯塔了！"
+ 
+ USF_history_publicization:0 "交流历史"
+ 
+ USF_language_publicization:0 "交流语言"
+ 
+ USF_politics_publicization:0 "政治谈话"
+
+ USF_SUN:0 "SUN"
+ 
  ###########################################################
  #########################TOOLTIPS##########################
  ###########################################################
@@ -327,3 +931,388 @@
  USF_security_expert_desc:0 "担任莱茵生命防卫科主任，精通医术的同时还精通体术。"
  USF_ashen_witch:0 "灰之魔女"
  USF_ashen_witch_desc:0 "从乌斯拉尔远道而来的旅人，精通各种魔法，是名副其实的魔女。"
+
+ #bop
+  USF_industrialization_vs_civilization:0 "未来亦或当下？"
+
+  left_side_range:0 "彻底工业化"
+
+  USF_industrialization_stage_one:0 "初步工业化"
+
+  USF_industrialization_stage_two:0 "小量工业化"
+
+  USF_industrialization_stage_three:0 "更多工业化"
+
+  USF_industrialization_stage_four:0 "大量工业化"
+
+  right_side_range:0 "彻底民生化"
+
+  USF_civilization_stage_one:0 "初步民生化"
+
+  USF_civilization_stage_two:0 "小量民生化"
+
+  USF_civilization_stage_three:0 "更多民生化"
+
+  USF_civilization_stage_four:0 "大量民生化"
+
+  USF_default_right_side:0 "彻底民生化"
+
+  USF_default_left_side:0 "彻底工业化"
+
+ USF_gridbox_congress_container_window_T_1:0 "test"
+
+ USF_gridbox_congress_container_window_T_desc:0 "12345"
+
+ #mio
+ USF_slam_organization:0 "斯拉目有限工业与生产公司"
+
+ USF_mio_initial_trait_production_tank_slam:0 "轻型与两栖坦克制造商"
+
+ mio_suspension_production_slam:0 "底盘生产"
+
+ mio_turret_production_slam:0 "炮塔生产"
+
+ mio_armour_production_slam:0 "装甲生产"
+ 
+ USF_mio_trait_improved_suspension_light_tank:0 "底盘升级-轻坦"
+ 
+ USF_mio_trait_wide_tracks_light_tank:0 "冬季履带-轻坦"
+ 
+ USF_mio_trait_engine_moves_turret_light_tank:0 "发动机转动炮塔-轻坦"
+ 
+ USF_mio_trait_less_shake_light_tank:0 "火炮减震-轻坦"
+ 
+ USF_mio_trait_faster_light_tank:0 "更快"
+ 
+ USF_mio_trait_recon_binoculars_light_tank:0 "望远侦查镜"
+ 
+ USF_mio_trait_improved_turret_speed_light_tank:0 "炮塔转速升级-轻坦"
+ 
+ USF_mio_trait_combined_turret_ammo_light_tank:0 "一体式弹药架-轻坦"
+ 
+ USF_mio_trait_good_metal_light_tank:0 "优质钢材-轻坦"
+ 
+ USF_mio_trait_fire_extinquisher_light_tank:0 "灭火装置-轻坦"
+ 
+ USF_mio_trait_interchangeable_piecies:0 "通用配件"
+ 
+ USF_mio_trait_spg_upgrade_light_tank:0 "轻型自行火炮升级"
+ 
+ USF_mio_trait_td_upgrade_light_tank:0 "轻型坦歼升级"
+ 
+ USF_mio_trait_spaa_upgrade_light_tank:0 "轻型自行防空炮升级"
+ 
+ USF_mio_trait_amp_upgrade_light_tank:0 "两栖坦克升级"
+
+ #####################################################################
+
+ USF_saunders_organization:0 "桑达斯工业与生产有限公司"
+
+ USF_mio_initial_trait_production_medium_tank_saunders:0 "中型与现代坦克制造商"
+
+ mio_suspension_production_saunders:0 "底盘生产"
+
+ mio_turret_production_saunders:0 "炮塔生产"
+
+ mio_armour_production_saunders:0 "装甲生产"
+ 
+ USF_mio_trait_improved_suspension:0 "底盘升级-中坦"
+ 
+ USF_mio_trait_wide_tracks:0 "冬季履带-中坦"
+ 
+ USF_mio_trait_engine_moves_turret:0 "发动机转动炮塔-中坦"
+ 
+ USF_mio_trait_less_shake:0 "火炮减震-中坦"
+ 
+ USF_mio_trait_improved_turret_speed:0 "炮塔转速升级-中坦"
+ 
+ USF_mio_trait_combined_turret_ammo:0 "一体式弹药架-中坦"
+ 
+ USF_mio_trait_turret_armour:0 "炮塔增加装甲-中坦"
+ 
+ USF_mio_trait_good_metal:0 "优质钢材-中坦"
+ 
+ USF_mio_trait_fire_extinquisher:0 "灭火装置-中坦"
+ 
+ USF_mio_trait_360_hmg:0 "车顶机枪-中坦"
+ 
+ USF_mio_trait_interchangeable_piecies:0 "通用配件"
+ 
+ USF_mio_trait_spg_upgrade:0 "中型自行火炮升级"
+ 
+ USF_mio_trait_td_upgrade:0 "中型坦歼升级"
+ 
+ USF_mio_trait_spaa_upgrade:0 "中型自行防空炮升级"
+ 
+ USF_mio_trait_mbt_upgrade:0 "现代坦克升级"
+
+ #####################################################################
+
+ USF_ka_co_organization:0 "卡扣工业与生产有限公司"
+
+ USF_mio_initial_trait_production_heavy_tank_ka_co:0 "重型与超重型坦克制造商"
+
+ mio_suspension_production_ka_co:0 "底盘生产"
+
+ mio_turret_production_ka_co:0 "炮塔生产"
+
+ mio_armour_production_ka_co:0 "装甲生产"
+ 
+ USF_mio_trait_improved_suspension_heavy_tank:0 "底盘升级-重坦"
+ 
+ USF_mio_trait_wide_tracks_heavy_tank:0 "冬季履带-重坦"
+ 
+ USF_mio_trait_improved_turret_speed_heavy_tank:0 "炮塔转速升级-重坦"
+ 
+ USF_mio_trait_combined_turret_ammo_heavy_tank:0 "一体式弹药架-重坦"
+ 
+ USF_mio_trait_turret_armour_heavy_tank:0 "炮塔增加装甲-重坦"
+ 
+ USF_mio_trait_chassis_armour_heavy_tank:0 "车身增加装甲-重坦"
+ 
+ USF_mio_trait_artillery_strike_heavy_tank:0 "呼叫火炮打击"
+ 
+ USF_mio_trait_good_metal_heavy_tank:0 "优质钢材-重坦"
+ 
+ USF_mio_trait_fire_extinquisher_heavy_tank:0 "灭火装置-重坦"
+ 
+ USF_mio_trait_360_hmg_heavy_tank:0 "车顶机枪-重坦"
+ 
+ USF_mio_trait_interchangeable_piecies_heavy_tank:0 "通用配件"
+ 
+ USF_mio_trait_spg_upgrade_heavy_tank:0 "重型自行火炮升级"
+ 
+ USF_mio_trait_td_upgrade_heavy_tank:0 "重型坦歼升级"
+ 
+ USF_mio_trait_spaa_upgrade_heavy_tank:0 "重型自行防空炮升级"
+ 
+ USF_mio_trait_superheavy_upgrade_heavy_tank:0 "超重坦升级"
+
+ #####################################################################
+
+ USF_EllenS_organization:0 "诶论斯海运有限公司"
+
+ mio_destroyer_production:0 "驱逐舰生产"
+
+ mio_cruiser_production:0 "巡洋舰生产"
+
+ USF_mio_initial_trait_production_EllenS:0 "护航舰制造商"
+ 
+ USF_mio_trait_light_crusier_battery:0 "主炮-巡洋舰"
+ 
+ USF_mio_trait_light_crusier_torpedo:0 "鱼雷-巡洋舰"
+ 
+ USF_mio_trait_light_crusier_radar:0 "雷达-巡洋舰"
+ 
+ USF_mio_trait_light_crusier_armour:0 "装甲-巡洋舰"
+ 
+ USF_mio_trait_light_crusier_engine:0 "引擎-巡洋舰"
+ 
+ USF_mio_trait_light_crusier_aagun:0 "防空-巡洋舰"
+ 
+ USF_mio_trait_destroyer_qf:0 "主炮-驱逐舰"
+ 
+ USF_mio_trait_destroyer_fire_control:0 "火控-驱逐舰"
+ 
+ USF_mio_trait_destroyer_engine:0 "引擎-驱逐舰"
+ 
+ USF_mio_trait_destroyer_torpedo:0 "鱼雷-驱逐舰"
+ 
+ USF_mio_trait_destroyer_depth_charge:0 "深水炸弹-驱逐舰"
+
+ #####################################################################
+ 
+ USF_mike_douglas_organization:0 "麦克多克拉斯海运有限公司"
+
+ mio_hull_production:0 "船身生产"
+
+ mio_battery_production:0 "舰炮生产"
+
+ mio_misc_production:0 "细节生产"
+
+ USF_mio_initial_trait_production_mdouglas:0 "主力舰制造商"
+ 
+ USF_mio_trait_quality_metal:0 "最优质的金属"
+ 
+ USF_mio_trait_green_engine:0 "绿海引擎"
+ 
+ USF_mio_trait_blue_engine:0 "蓝海引擎"
+ 
+ USF_mio_trait_extracted_oil:0 "最优质的石油"
+ 
+ USF_mio_trait_mass_production:0 "数量"
+ 
+ USF_mio_trait_extra_armour:0 "最优质的角度"
+ 
+ USF_mio_trait_rifling:0 "最优质的膛线"
+ 
+ USF_mio_trait_air_tunnels:0 "增加通风管道"
+ 
+ USF_mio_trait_stabilizer:0 "增加炮塔稳定器"
+ 
+ USF_mio_trait_elecngine:0 "最优质的电机"
+ 
+ USF_mio_trait_better_screen:0 "屏幕显示升级"
+ 
+ USF_mio_trait_better_guides:0 "炮塔手书"
+ 
+ USF_mio_trait_aa_marks:0 "防空标码"
+ 
+ USF_mio_trait_refine_details:0 "打磨细节"
+ 
+ USF_mio_trait_better_food:0 "好吃的饭菜"
+ 
+ USF_mio_trait_water_pipes:0 "通水管道"
+
+ #####################################################################
+ 
+ USF_roosevelt_organization:0 "罗斯福海运有限公司"
+
+ mio_hull_production_FDR:0 "航母船身生产"
+
+ mio_cv_aircraft_production:0 "舰载机生产"
+
+ USF_mio_initial_trait_production_roosevelt:0 "舰载机与航母制造商"
+ 
+ USF_mio_trait_better_metal:0 "优质钢材"
+ 
+ USF_mio_trait_angled_armour:0 "倾斜装甲"
+ 
+ USF_mio_trait_stop_rope:0 "阻拦索升级"
+ 
+ USF_mio_trait_better_engine:0 "加大引擎"
+ 
+ USF_mio_trait_no_bird:0 "除雾器"
+ 
+ USF_mio_trait_drop_manual:0 "投弹手册"
+ 
+ USF_mio_trait_add_light_bullet:0 "增加曳光弹"
+ 
+ USF_mio_trait_add_fire_bullet:0 "增加燃烧弹"
+ 
+ USF_mio_trait_add_he_bullet:0 "增加高爆弹"
+ 
+ USF_mio_trait_drop_bomb_good:0 "机械臂强化"
+ 
+ USF_mio_trait_light_wing:0 "轻量化机翼"
+ 
+ USF_mio_trait_folded_wing:0 "折叠机翼"
+ 
+ USF_mio_trait_add_bomb_lock:0 "额外炸弹挂件"
+ 
+ USF_mio_trait_add_heavy_gun_barrel:0 "重型枪管"
+
+ #####################################################################
+ 
+ USF_Wchester_organization:0 "切斯特海运有限公司"
+
+ mio_torpedo_production:0 "鱼雷生产"
+
+ mio_hull_production:0 "艇身生产"
+
+ mio_mines_production:0 "海雷生产"
+
+ USF_mio_initial_trait_production_wChester:0 "潜艇制造商"
+ 
+ USF_mio_trait_longer_torpedo:0 "加长鱼雷"
+ 
+ USF_mio_trait_safer_torpedo:0 "加装保险"
+ 
+ USF_mio_trait_stabilizer:0 "稳定器"
+ 
+ USF_mio_trait_signal_increaser:0 "信号增幅器"
+ 
+ USF_mio_trait_invisibility:0 "隐身涂层"
+ 
+ USF_mio_trait_better_men:0 "最优质的战士"
+ 
+ USF_mio_trait_invisible_torpedo:0 "隐蔽的发射管"
+ 
+ USF_mio_trait_thick_propeler:0 "螺旋桨加厚"
+ 
+ USF_mio_trait_engine_support:0 "引擎辅助布雷"
+ 
+ USF_mio_trait_bigger_mines:0 "加大水雷装药"
+ 
+ USF_mio_trait_steal_mines:0 "抢水雷"
+
+ #####################################################################
+ 
+ USF_mLee_organization:0 "梅李航空有限公司"
+
+ mio_bomber_weapons_production:0 "航弹生产"
+
+ mio_airframe_production_mLee:0 "轰炸与运输机身生产"
+
+ USF_mio_initial_trait_production_mLee:0 "轰炸机与运输机制造商"
+ 
+ USF_mio_trait_more_oil:0 "增加油量"
+ 
+ USF_mio_trait_sealed_fuel:0 "密封油箱"
+ 
+ USF_mio_trait_more_armour:0 "额外装甲"
+ 
+ USF_mio_trait_oil_up:0 "润滑油"
+ 
+ USF_mio_trait_glider:0 "滑翔版"
+ 
+ USF_mio_trait_heavy_barrel:0 "重型枪管"
+ 
+ USF_mio_trait_bomber_engine:0 "驱逐舰"
+ 
+ USF_mio_trait_bomber_engine:0 "引擎升级-轰炸机"
+ 
+ USF_mio_trait_back_wing:0 "尾翼升级-轰炸机"
+ 
+ USF_mio_trait_eletronics:0 "电子设备升级-轰炸机"
+ 
+ USF_mio_trait_fire_bombs:0 "燃烧弹"
+ 
+ USF_mio_trait_cluster_bombs:0 "集束弹"
+
+ #####################################################################
+ 
+ USF_crosair_organization:0 "克洛塞尔航空有限公司"
+
+ mio_heavy_fighter_production:0 "重型战斗机生产"
+
+ mio_fighter_production:0 "战斗机生产"
+
+ mio_light_fighter_production:0 "轻型战斗机生产"
+
+ USF_mio_initial_trait_production_crosair:0 "战斗机制造商"
+ 
+ USF_mio_trait_eletronics:0 "雷达升级"
+ 
+ USF_mio_trait_he_bullets:0 "高爆弹"
+ 
+ USF_mio_trait_frag_bullets:0 "破片弹"
+ 
+ USF_mio_trait_armour_crosair:0 "加装装甲-战斗机"
+ 
+ USF_mio_trait_hfigher_crosair:0 "重型战斗机升级"
+ 
+ USF_mio_trait_hfigher_crosair_production:0 "重型战斗机生产"
+ 
+ USF_mio_trait_figher_crosair:0 "轻型战斗机升级"
+ 
+ USF_mio_trait_figher_crosair_production:0 "轻型战斗机生产"
+ 
+ USF_mio_trait_less_armour_crosair:0 "轻量化"
+ 
+ USF_mio_trait_tail_mg_crosair:0 "尾部机枪"
+ 
+ USF_mio_trait_aerodynamics_crosair:0 "空气动力学"
+ 
+ USF_mio_trait_propoganda_crosair:0 "宣传轰炸"
+
+ ############################
+ 
+ USF_infantry_weapons_mio:0 "步兵装备"
+ 
+ USF_support_equipment_mio:0 "支援装备"
+ 
+ USF_attonP_mio:0 "装备化步兵"
+ 
+ USF_Isen_mio:0 "火炮"
+

@@ -5,6 +5,43 @@ on_actions = {
 				set_variable = {USF_SUN_members_mixed_language_value = 0}
 				set_variable = {USF_SUN_members_mixed_politics_value = 0}
 				set_variable = {USF_SUN_members_mixed_history_value = 0}
+
+				#大洋党-参议会
+				set_variable = {
+					USF_gridbox_senate_seat_array_1_original = 55
+				}
+				#大陆党-参议会
+				set_variable = {
+					USF_gridbox_senate_seat_array_2_original = 55
+				}
+				#前进党-参议会
+				set_variable = {
+					USF_gridbox_senate_seat_array_3_original = 0
+				}
+				#社会党-参议会
+				set_variable = {
+					USF_gridbox_senate_seat_array_4_original = 0
+				}
+
+				####################################
+
+				#大洋党-参议会
+				set_variable = {
+					USF_gridbox_house_seat_array_1_original = 240
+				}
+				#大陆党-参议会
+				set_variable = {
+					USF_gridbox_house_seat_array_2_original = 240
+				}
+				#前进党-参议会
+				set_variable = {
+					USF_gridbox_house_seat_array_3_original = 0
+				}
+				#社会党-参议会
+				set_variable = {
+					USF_gridbox_house_seat_array_4_original = 0
+				}
+				USF_congress_values = yes
 			}
 		}
 	}

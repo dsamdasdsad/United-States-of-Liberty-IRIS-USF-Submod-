@@ -145,7 +145,7 @@ USF_industrialization_vs_civilization = {
 
 	side = {
         id = USF_default_left_side
-        icon = GFX_idea_man_five_year_plan_industry
+        icon = ger_rebuild_the_nation
         range = {
             id = right_side_range
             min = 0.9

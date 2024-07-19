@@ -47,7 +47,11 @@ add_ideas = black_ink_night_economic_collapse #黑墨夜经济崩溃
 add_ideas = free_trade
 add_ideas = industrial_priority
 
-set_country_flag = USF_defend_democracy
+add_hidden_ideas = USF_rebuild_senate_finish
+add_hidden_ideas = USF_rebuild_house_finish
+
+
+set_country_flag = USF_congress_enabled
 
 #bop
 set_power_balance = {
@@ -56,14 +60,36 @@ set_power_balance = {
 }
 
 #国会
-set_variable = { var = senators_support value = 48 }
-set_variable = { var = senators_total value = 100 }
-set_variable = { var = representatives_support value = 218 }
-set_variable = { var = representatives_total value = 590 }
-set_variable = { var = quorum_low value = 39 }
-set_variable = { var = quorum_medium value = 49 }
-set_variable = { var = quorum_high value = 58 }
-USF_recalc_congress_icon_frames = yes
+set_variable = {
+	USF_gridbox_senate_seat_array_original_1 = 0
+}
+set_variable = {
+	USF_gridbox_senate_seat_array_original_2 = 0
+}
+set_variable = {
+	USF_gridbox_senate_seat_array_original_3 = 55
+}
+set_variable = {
+	USF_gridbox_senate_seat_array_original_4 = 55
+}
+
+##########################################
+
+
+set_variable = {
+	USF_gridbox_house_seat_array_original_1 = 0
+}
+set_variable = {
+	USF_gridbox_house_seat_array_original_2 = 0
+}
+set_variable = {
+	USF_gridbox_house_seat_array_original_3 = 240
+}
+set_variable = {
+	USF_gridbox_house_seat_array_original_4 = 240
+}
+
+USF_congress_values = yes
 
 #人物效果
 add_ideas = USF_leader_Asuka_Minato

@@ -112,8 +112,13 @@ ideologies = {
 			sub_USF_atlanticism = {
 			}
 			sub_USF_forwardism = {
+				can_be_randomly_selected = no
 			}
 			sub_USF_terrainism = {
+				popularity = 30
+			}
+			sub_USF_socialism = {
+				can_be_randomly_selected = no
 			}
 		}
 		dynamic_faction_names = {
